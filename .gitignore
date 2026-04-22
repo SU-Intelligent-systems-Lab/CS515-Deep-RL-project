@@ -1,0 +1,13 @@
+# Training outputs and model checkpoints
+data/
+*.pt
+*.pth
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Common editor/OS artifacts
+.DS_Store
+Thumbs.db
