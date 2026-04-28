@@ -2,21 +2,11 @@
 Load a trained TD3 model and watch it play (or record it as video).
 
 Usage:
-    # Watch at real-time speed (default)
+    # Record videos
     python test.py --env_name Ant-v4 --load_dir 
     "F:\master\SabanciCourse\Spring_2025_2026\DeepLearning\Project\TD3_algorithm\runs\td3_Ant-v4_28-04-2026_04-41-52"
          --record_video --episodes 3 --video_dir "F:\master\SabanciCourse\Spring_2025_2026\DeepLearning\Project\TD3_algorithm\test_videos"
          --max_episode_steps 300
-
-    # Cap each episode at 200 steps (useful for short demo clips)
-    python test.py --env_name Ant-v4 --load_dir ... --max_episode_steps 200
-
-    # Record videos instead of watching live
-    python test.py --env_name Ant-v4 --load_dir ... --record_video --episodes 3
-
-    # Both: cap each at 300 steps and save to mp4
-    python test.py --env_name Ant-v4 --load_dir ... \
-                   --max_episode_steps 300 --record_video --episodes 5
 """
 
 import argparse
@@ -28,9 +18,6 @@ import gym
 
 from agent import TD3Agent
 
-
-# Frame time per environment step (seconds of "real-world" simulated time
-# per env.step() call), used for real-time playback pacing.
 DEFAULT_DT = {
     # MuJoCo (v4/v5)
     'Ant':                       0.05,
@@ -60,7 +47,7 @@ def _make_env(env_name, render=True, record_video=False,
       - a custom per-episode step limit
     """
     if record_video:
-        render_mode = "rgb_array"   # frames captured by RecordVideo
+        render_mode = "rgb_array"   
     elif render:
         render_mode = "human"
     else:
@@ -102,7 +89,6 @@ def _make_env(env_name, render=True, record_video=False,
                   "video recording disabled.")
         else:
             os.makedirs(video_dir, exist_ok=True)
-            # episode_trigger=lambda x: True -> record EVERY episode
             env = RecordVideo(
                 env,
                 video_folder=video_dir,
@@ -160,7 +146,6 @@ def main():
                         help='Disable on-screen rendering '
                              '(automatic when --record_video is set)')
 
-    # NEW: testing-side time-limit and video recording
     parser.add_argument('--max_episode_steps', type=int, default=0,
                         help='Cap each test episode at N steps '
                              '(0 = use the env\'s own default time limit)')
@@ -208,7 +193,7 @@ def main():
     ac_dim     = env.action_space.shape[0]
     max_action = float(env.action_space.high[0])
 
-    # Pacing (only matters for live rendering, not for video recording)
+    # Pacing 
     step_dt = _get_step_dt(env, args.env_name)
     if args.record_video or args.no_render or args.speed <= 0:
         target_dt = 0.0   # don't throttle
