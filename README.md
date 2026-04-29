@@ -22,7 +22,8 @@ https://github.com/user-attachments/assets/f1d9cf69-169f-4caa-b921-5df91f2bf532
 #### PPO — Proximal Policy Optimization
 https://github.com/user-attachments/assets/9da8475b-4fb1-40c9-8cd7-744186ebc4b6
 
-#### PPO vs TD3 — Sample Efficiency
+---
+### PPO vs TD3 — Sample Efficiency
 
 <img width="2223" height="882" alt="Image" src="https://github.com/user-attachments/assets/2226d8c5-7e1b-4a08-a594-42f27c404f7f" />
 
