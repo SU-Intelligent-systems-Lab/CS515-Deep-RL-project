@@ -145,50 +145,22 @@ def plot_ant() -> None:
         return
 
     steps_ret, vals_ret = load_scalar(rd, "charts/episodic_return_mean")
-    steps_kl,  vals_kl  = load_scalar(rd, "ppo/approx_kl")
-    steps_cl,  vals_cl  = load_scalar(rd, "ppo/clip_fraction")
-
     if len(steps_ret) == 0:
         print("  [warn] no return data for Ant run")
         return
 
-    fig, axes = plt.subplots(3, 1, figsize=(8, 9), sharex=True)
-    fig.suptitle("PPO on Ant-v4", fontweight="bold", fontsize=13, y=1.01)
+    fig, ax = plt.subplots(figsize=(7, 4))
 
-    # ── Return ──
-    ax = axes[0]
     ax.plot(steps_ret, vals_ret, color=PPO_COLOR, linewidth=1.5, alpha=0.35)
     ax.plot(steps_ret, ema(vals_ret, 0.08), color=PPO_COLOR, linewidth=2.0,
             label="PPO (mean of last 100 ep.)")
+
+    ax.set_title("PPO on Ant-v4", fontweight="bold", pad=9)
+    ax.set_xlabel("Environment Steps")
     ax.set_ylabel("Episode Return")
     ax.legend(loc="upper left")
     ax.grid(True, linestyle="--", zorder=0)
-
-    # ── Approx KL ──
-    ax = axes[1]
-    if len(steps_kl):
-        ax.semilogy(steps_kl, vals_kl, color="#E67300", linewidth=1.4)
-        ax.axhline(0.02, color="#888888", linewidth=1.0, linestyle="--",
-                   label="target_kl = 0.02")
-        ax.set_ylabel("Approx. KL (log scale)")
-        ax.legend(loc="upper right")
-        ax.grid(True, linestyle="--", zorder=0, which="both")
-
-    # ── Clip fraction ──
-    ax = axes[2]
-    if len(steps_cl):
-        ax.plot(steps_cl, vals_cl, color="#6D28D9", linewidth=1.4)
-        ax.axhline(0.1, color="#888888", linewidth=1.0, linestyle="--",
-                   label="Healthy range lower bound (0.1)")
-        ax.axhline(0.25, color="#888", linewidth=1.0, linestyle=":",
-                   label="Healthy range upper bound (0.25)")
-        ax.set_ylabel("Clip Fraction")
-        ax.set_ylim(0, None)
-        ax.legend(loc="upper right", fontsize=9)
-        ax.grid(True, linestyle="--", zorder=0)
-
-    axes[-1].set_xlabel("Environment Steps")
-    fmt_steps(axes[-1])
+    fmt_steps(ax)
 
     plt.tight_layout()
     out = RESULTS_DIR / "ppo_ant_training.png"
