@@ -6,41 +6,30 @@ Implementations of deep reinforcement learning algorithms: REINFORCE, TD3, DDQN,
 
 ## Performance and Results
 
-### TD3
+The PPO and TD3 agents were trained to learn locomotion dynamics. Below are the trained behaviors for two distinct continuous control environments.
 
-The TD3 agent was trained to learn locomotion dynamics. Below are the trained behaviors for two distinct continuous control environments.
-
-#### Quadruped Locomotion (Ant)
+### Quadruped Locomotion (Ant)
+#### PPO:
+https://github.com/user-attachments/assets/03864d28-b7cd-4300-a662-c4a8a4d959aa
+#### TD3:
 https://github.com/user-attachments/assets/a72f22af-247c-4c26-9505-5bf836328068
 
-#### Bipedal Locomotion (Walker2d)
+### Bipedal Locomotion (Walker2d)
 https://github.com/user-attachments/assets/f1d9cf69-169f-4caa-b921-5df91f2bf532
 
 ---
-
-### PPO — Proximal Policy Optimization
-
-Clean PyTorch implementation of PPO with GAE, trained on MuJoCo continuous-control tasks.
-
-#### Pendulum-v1
-Converges to ~-200 (solved threshold) within 1M environment steps.
-
-![PPO Pendulum](ppo/results/ppo_pendulum_training.png)
-
-#### Ant-v4
-Reaches ~2200-2500 cumulative reward over 5M steps.
-
-![PPO Ant-v4](ppo/results/ppo_ant_training.png)
+### Pendulum-v1
+#### PPO — Proximal Policy Optimization
+https://github.com/user-attachments/assets/9da8475b-4fb1-40c9-8cd7-744186ebc4b6
 
 #### PPO vs TD3 — Sample Efficiency
 
-![PPO vs TD3](results/ppo_vs_td3_comparison.png)
+<img width="2223" height="882" alt="Image" src="https://github.com/user-attachments/assets/2226d8c5-7e1b-4a08-a594-42f27c404f7f" />
 
 Both curves show episodic return on a shared environment-steps x-axis.
 - **PPO** (blue): running mean of the last 100 episodes, logged every rollout (2048 steps).
-- **TD3** (red): per-episode reward smoothed with a trailing rolling mean (window = 40 ep. for Pendulum, 30 for Ant). Shaded band is ±1 std over the same window.
+- **TD3** (red): per-episode reward smoothed with a moving mean (window = 40 ep. for Pendulum, 30 for Ant).
 
-On Pendulum-v1, TD3 converges in ~300K steps vs ~600K for PPO. On Ant-v4, TD3 reaches comparable performance in 1M steps while PPO requires 5M — consistent with the expected off-policy sample-efficiency advantage.
 
 
 ## PPO Hyperparameters
