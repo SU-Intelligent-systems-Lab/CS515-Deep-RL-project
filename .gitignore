@@ -1,13 +1,18 @@
-# Python
+# Python bytecode
 __pycache__/
 *.pyc
 *.pyo
 *.egg-info/
 
-# TensorBoard event files (large — use plot_results.py to regenerate figures)
+# Training outputs and model checkpoints
+data/
+*.pt
+*.pth
+
+# TensorBoard event files
 ppo/data/*/events.out.*
 
-# Everything that's NOT part of this PPO repo
+# Everything outside PPO scope
 reinforce/
 trpo/
 report/
@@ -16,7 +21,7 @@ Deep-RL-intro-main/
 .claude/
 .vscode/
 
-# Generated video files
+# Videos
 *.mp4
 
 # OS
