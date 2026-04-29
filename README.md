@@ -42,41 +42,8 @@ Both curves show episodic return on a shared environment-steps x-axis.
 
 On Pendulum-v1, TD3 converges in ~300K steps vs ~600K for PPO. On Ant-v4, TD3 reaches comparable performance in 1M steps while PPO requires 5M — consistent with the expected off-policy sample-efficiency advantage.
 
----
 
-## PPO Code Structure
-
-```
-ppo/
-  config.py          # CLI argument parsing, PPOConfig dataclass
-  networks.py        # build_mlp + ActorCritic (discrete & continuous)
-  ppo_agent.py       # PPOAgent: act / bootstrap_value / update
-  rollout_buffer.py  # fixed-size on-policy buffer, GAE, minibatch iterator
-  train.py           # training loop
-  logger.py          # TensorBoard wrapper
-  ptu.py             # device helpers
-  plot_results.py    # regenerate result plots from saved TensorBoard events
-  results/           # pre-generated training-curve PNGs
-```
-
-## Running PPO
-
-```bash
-pip install -r ppo/requirements.txt
-
-# Pendulum-v1
-python -m ppo.train --env_name Pendulum-v1 --exp_name ppo_pendulum \
-  --total_timesteps 1000000 --n_steps 2048 --entropy_coef 0.0 --target_kl 0.02
-
-# Ant-v4
-python -m ppo.train --env_name Ant-v4 --exp_name ppo_ant \
-  --total_timesteps 5000000 --n_steps 2048 --size 256 --entropy_coef 0.0 --target_kl 0.02
-
-# Regenerate plots
-python ppo/plot_results.py
-```
-
-## Key PPO Hyperparameters
+## PPO Hyperparameters
 
 | Parameter | Pendulum | Ant-v4 |
 |-----------|----------|--------|
