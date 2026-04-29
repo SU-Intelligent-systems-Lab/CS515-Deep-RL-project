@@ -1,0 +1,4 @@
+torch>=2.0,<3.0
+gymnasium[classic-control,box2d]>=0.29,<1.0
+numpy>=1.24,<2.0
+tensorboard>=2.13

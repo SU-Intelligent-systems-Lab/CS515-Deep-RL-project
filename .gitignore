@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# TensorBoard event files (large — use plot_results.py to regenerate figures)
+ppo/data/*/events.out.*
+
+# Everything that's NOT part of this PPO repo
+reinforce/
+trpo/
+report/
+td3_result/
+Deep-RL-intro-main/
+.claude/
+.vscode/
+
+# Generated video files
+*.mp4
+
+# OS
+.DS_Store
+Thumbs.db
