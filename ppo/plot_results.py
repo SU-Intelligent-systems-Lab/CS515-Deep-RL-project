@@ -1,7 +1,7 @@
 """
 plot_results.py  --  PPO training curves
 =========================================
-Generates clean result plots for the PPO runs:
+Generates result plots for the PPO runs:
   - Pendulum-v1: episode return vs environment steps
   - Ant-v4:      episode return + KL / clip-fraction diagnostics
 
