@@ -85,7 +85,7 @@ pip install -r requirements.txt
 ---
 
 ## 2. Repository structure
-''' text
+``` text
 .
 ├── README.md
 ├── ddqn
@@ -149,7 +149,7 @@ pip install -r requirements.txt
     ├── rollout_buffer.py
     ├── train.py
     └── trpo_agent.py
-'''    
+```  
 
 Every run folder under `runs/<algo>/` contains:
 - `algo.txt`, `params.json` — written by `parameter.py` in order for `test.py` to
