@@ -1,0 +1,14 @@
+{
+  "env_name": "CartPole-v1",
+  "exp_name": "ddqn",
+  "seed": 0,
+  "use_ddqn": true,
+  "n_episodes_run": 1000,
+  "n_episodes_target": 1000,
+  "score_threshold": 475.0,
+  "solved_at_episode": null,
+  "score_mean": 262.354,
+  "score_last": 20.0,
+  "score_best": 500.0,
+  "score_last_100_mean": 251.11
+}

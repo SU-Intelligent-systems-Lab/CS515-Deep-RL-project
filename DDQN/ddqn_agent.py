@@ -5,8 +5,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 # Import local modules
-from networks import QNetwork
-from replay_buffer import ReplayBuffer
+from ddqn.networks import QNetwork
+from ddqn.replay_buffer import ReplayBuffer
 
 # Hyperparameters
 BUFFER_SIZE = int(1e5)  # Replay buffer size

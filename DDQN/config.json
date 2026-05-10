@@ -1,0 +1,31 @@
+{
+  "exp_name":         "ddqn",
+  "n_episodes":       1000,
+  "max_t":            1000,
+
+  "eps_start":        1.0,
+  "eps_end":          0.01,
+  "eps_decay":        0.995,
+
+  "use_ddqn":         true,
+
+  "score_threshold":  null,
+
+  "env_overrides": {
+    "CartPole-v1": {
+      "n_episodes":      1000,
+      "max_t":           1000,
+      "score_threshold": 475.0
+    },
+    "LunarLander-v2": {
+      "n_episodes":      2000,
+      "max_t":           1000,
+      "score_threshold": 200.0
+    },
+    "MountainCar-v0": {
+      "n_episodes":      3000,
+      "max_t":           200,
+      "eps_decay":       0.999
+    }
+  }
+}

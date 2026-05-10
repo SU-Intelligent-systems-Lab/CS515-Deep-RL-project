@@ -1,0 +1,29 @@
+{
+  "exp_name": "td3",
+  "max_timesteps": 1000000,
+  "start_timesteps": 25000,
+  "eval_freq": 5000,
+  "eval_episodes": 10,
+  "batch_size": 256,
+  "discount": 0.99,
+  "tau": 0.005,
+  "policy_noise": 0.2,
+  "noise_clip": 0.5,
+  "policy_freq": 2,
+  "expl_noise": 0.1,
+  "n_layers": 2,
+  "size": 256,
+  "learning_rate": 0.0003,
+  "buffer_size": 1000000,
+  "save_model": true,
+  "env_overrides": {
+    "Pendulum-v1": {
+      "start_timesteps": 1000,
+      "max_timesteps": 100000
+    },
+    "LunarLanderContinuous-v2": {
+      "start_timesteps": 10000,
+      "max_timesteps": 500000
+    }
+  }
+}

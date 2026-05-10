@@ -195,7 +195,11 @@ def run(cfg: PPOConfig) -> None:
     env.close()
 
     torch.save(agent.net.state_dict(), os.path.join(cfg.log_dir, "model_final.pt"))
-    print(f"Saved final model to {os.path.join(cfg.log_dir, 'model_final.pt')}")
+    print("\n" + "=" * 60)
+    print("Training complete. To watch the trained agent play:")
+    print(f'  python main.py --mode test --load_dir "{cfg.log_dir}"')
+    print("=" * 60)
+
 
 
 def main() -> None:
