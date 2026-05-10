@@ -1,4 +1,4 @@
-# CS515 Deep RL Project
+<img width="1145" height="361" alt="image" src="https://github.com/user-attachments/assets/36d13095-6417-4c55-b00b-efef9b86cf07" /># CS515 Deep RL Project
 
 Implementations of deep reinforcement learning algorithms: **REINFORCE**, **TD3**,
 **DDQN**, and **PPO**.
@@ -85,7 +85,7 @@ pip install -r requirements.txt
 ---
 
 ## 2. Repository structure
-
+''' text
 .
 ├── README.md
 ├── ddqn
@@ -149,7 +149,7 @@ pip install -r requirements.txt
     ├── rollout_buffer.py
     ├── train.py
     └── trpo_agent.py
-             
+'''    
 
 Every run folder under `runs/<algo>/` contains:
 - `algo.txt`, `params.json` — written by `parameter.py` in order for `test.py` to
