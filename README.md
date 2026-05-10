@@ -87,31 +87,69 @@ pip install -r requirements.txt
 ## 2. Repository structure
 
 .
-├── main.py                
-├── parameter.py          
-├── test.py               
+├── README.md
+├── ddqn
+│   ├── config.json
+│   ├── config.py
+│   ├── ddqn_agent.py
+│   ├── ddqn_train.py
+│   ├── dqn_vs_ddqn_result.png
+│   ├── networks.py
+│   └── replay_buffer.py
+├── main.py
+├── parameter.py
+├── ppo
+│   ├── README.md
+│   ├── __init__.py
+│   ├── config.json
+│   ├── config.py
+│   ├── logger.py
+│   ├── networks.py
+│   ├── plot_results.py
+│   ├── ppo_agent.py
+│   ├── ptu.py
+│   ├── results
+│   │   ├── ppo_ant_training.png
+│   │   └── ppo_pendulum_training.png
+│   ├── rollout_buffer.py
+│   ├── smoke_test.py
+│   └── train.py
+├── reinforce
+│   ├── __init__.py
+│   ├── config.json
+│   ├── config.py
+│   ├── logger.py
+│   ├── networks.py
+│   ├── ptu.py
+│   ├── reinforce_agent.py
+│   ├── render.py
+│   └── train.py
 ├── requirements.txt
-├── td3/
-│   ├── config.json       
-│   ├── config.py         
-│   ├── train.py          
-│   ├── agent.py, model.py, utils.py
-├── ppo/
+├── td3
+│   ├── agent.py
 │   ├── config.json
-│   ├── config.py        
-│   ├── train.py         
-│   ├── ppo_agent.py, networks.py, rollout_buffer.py, logger.py, ptu.py
-├── reinforce/
-│   ├── config.json
-│   ├── config.py          
-│   ├── train.py           
-│   ├── reinforce_agent.py, networks.py, logger.py, ptu.py
-├── ddqn/
-│   ├── config.json
-│   ├── config.py         
-│   ├── ddqn_train.py      
-│   ├── ddqn_agent.py, networks.py, replay_buffer.py
-└── runs/                
+│   ├── config.py
+│   ├── gym_test.py
+│   ├── model.py
+│   ├── results
+│   │   ├── ant_training_curves.png
+│   │   ├── pendulum_training_curveps.png
+│   │   └── walker_runner_training_curves.png
+│   ├── train.py
+│   └── utils.py
+├── test.py
+└── trpo
+    ├── __init__.py
+    ├── config.json
+    ├── config.py
+    ├── conjugate_gradient.py
+    ├── logger.py
+    ├── networks.py
+    ├── ptu.py
+    ├── rollout_buffer.py
+    ├── train.py
+    └── trpo_agent.py
+             
 
 Every run folder under `runs/<algo>/` contains:
 - `algo.txt`, `params.json` — written by `parameter.py` in order for `test.py` to
@@ -139,7 +177,7 @@ be overridden on the command line via `--set key=value`.
 
 ```bash
 # TD3 — continuous control
-python main.py --algo td3 --env_name Pendulum-v1
+python main.py --algo td3 --mode train --env_name Pendulum-v1
 python main.py --algo td3 --env_name LunarLanderContinuous-v2 --render
 python main.py --algo td3 --env_name HalfCheetah-v4 --seed 7
 
@@ -172,7 +210,7 @@ python main.py --algo ddqn --env_name LunarLander-v2 --seed 0
 | `--set k=v ...`  | Override any field in `<algo>/config.json`                    |
 | `--config PATH`  | Use a custom config JSON instead of `<algo>/config.json`      |
 | `--logroot DIR`  | Root for all run folders (default `runs/`)                    |
-
+| `--mode`          | select the mode {train, test} (defualt, train)               | 
 
 
 ---
@@ -183,7 +221,8 @@ To see the trained agent in action you could run it using test.py file
 
 ```bash
 # Live rendering, 5 episodes (default)
-python test.py --load_dir runs/td3/td3_Pendulum-v1_28-04-2026_04-41-52
+python test.py --load_dir runs/td3/td3_Pendulum-v1_28-04-2026_04-41-52      or
+python main.py --mode test --load_dir runs/td3/td3_Pendulum-v1_28-04-2026_04-41-52 
 
 # Record mp4s to <load_dir>/test_videos/
 python test.py --load_dir runs/td3/td3_Ant-v4_... \
