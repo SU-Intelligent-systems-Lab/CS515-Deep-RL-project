@@ -1,4 +1,3 @@
-<img width="1145" height="361" alt="image" src="https://github.com/user-attachments/assets/36d13095-6417-4c55-b00b-efef9b86cf07" /># CS515 Deep RL Project
 
 Implementations of deep reinforcement learning algorithms: **REINFORCE**, **TD3**,
 **DDQN**, and **PPO**.
