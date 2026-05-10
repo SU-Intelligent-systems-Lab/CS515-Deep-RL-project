@@ -86,6 +86,33 @@ pip install -r requirements.txt
 
 ## 2. Repository structure
 
+.
+├── main.py                
+├── parameter.py          
+├── test.py               
+├── requirements.txt
+├── td3/
+│   ├── config.json       
+│   ├── config.py         
+│   ├── train.py          
+│   ├── agent.py, model.py, utils.py
+├── ppo/
+│   ├── config.json
+│   ├── config.py        
+│   ├── train.py         
+│   ├── ppo_agent.py, networks.py, rollout_buffer.py, logger.py, ptu.py
+├── reinforce/
+│   ├── config.json
+│   ├── config.py          
+│   ├── train.py           
+│   ├── reinforce_agent.py, networks.py, logger.py, ptu.py
+├── ddqn/
+│   ├── config.json
+│   ├── config.py         
+│   ├── ddqn_train.py      
+│   ├── ddqn_agent.py, networks.py, replay_buffer.py
+└── runs/                
+
 Every run folder under `runs/<algo>/` contains:
 - `algo.txt`, `params.json` — written by `parameter.py` in order for `test.py` to
   auto detect the algorithm and rebuild the agent;
