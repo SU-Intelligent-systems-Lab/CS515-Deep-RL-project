@@ -27,3 +27,6 @@ Deep-RL-intro-main/
 # OS
 .DS_Store
 Thumbs.db
+
+runs/
+
