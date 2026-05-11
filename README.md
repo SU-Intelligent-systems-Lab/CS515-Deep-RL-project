@@ -59,7 +59,10 @@ one standard deviation.
 
 ### Learning curves on continuous control
 
-![continuous learning curves](results/plots/learning_curves_continuous.png)
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/b864079c-a437-4ede-a6f2-becb2b512c10" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/03deccc7-f6a9-4723-b2e3-f8cc0fd4f79a" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/53bd0acf-69e4-4cb9-a806-a147b4aa307d" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/dc26ae3c-75ab-45ab-9c52-7f436a2a2aa1" />
 
 
 ### Final returns
@@ -76,18 +79,19 @@ points. Bold is the best per row.
 
 ### Discrete benchmark on LunarLander-v2
 
-![discrete learning curves](results/plots/learning_curves_discrete.png)
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/2ad48140-dac3-46ea-84bf-52ba739ac8bf" />
 
 ### Wall-clock cost
 
-![wall-clock Hopper](results/plots/wallclock_hopper-v4_log.png)
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/5171b6f8-c081-4810-a7f2-7509f54d49df" />
 
 On Hopper-v4 the same 1M environment-step budget takes around 1.5k
 wall-clock seconds for PPO and around 12k seconds for TD3.
 
 ### Aggregate normalized score
 
-![aggregate](results/plots/aggregate_normalised_continuous.png)
+<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/7e0fca91-e51d-48e6-b7c7-5042c64b0b7c" />
+<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/aeb02ce0-0787-4bbd-9fee-485732a17d0c" />
 
 Each algorithm's final return per environment is normalized so the
 best algorithm scores 1.0 and the worst 0.0. The bars are the average
