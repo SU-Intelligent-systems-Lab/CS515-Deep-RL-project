@@ -78,7 +78,7 @@ points. Bold is the best per row.
 | HalfCheetah-v4   | 397 ± 324        | 682 ± 233        | 2912 ± 1192          | **9794 ± 913**       |
 | Walker2d-v4      | 261 ± 27         | 335 ± 73         | 2827 ± 438           | **3444 ± 1267**      |
 
-### Discrete benchmark on LunarLander-v2
+### Learning curves on discrete control (LunarLander-v2)
 
 <img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/2ad48140-dac3-46ea-84bf-52ba739ac8bf" />
 
