@@ -137,7 +137,7 @@ def _dispatch_reinforce(params):
 def _dispatch_ddqn(params):
     from ddqn.config     import DDQNConfig
     from ddqn.ddqn_train import run
- 
+
     cfg = DDQNConfig(
         env_name        = params["env_name"],
         exp_name        = params["exp_name"],
@@ -158,11 +158,39 @@ def _dispatch_ddqn(params):
     run(cfg)
 
 
+def _dispatch_trpo(params):
+    """Build a TRPOConfig from the merged JSON+CLI params, then run()."""
+    from trpo.config import TRPOConfig
+    from trpo.train  import run
+
+    cfg = TRPOConfig(
+        env_name        = params["env_name"],
+        exp_name        = params["exp_name"],
+        seed            = int(params["seed"]),
+        total_timesteps = int(params["total_timesteps"]),
+        n_steps         = int(params["n_steps"]),
+        max_kl          = float(params["max_kl"]),
+        cg_steps        = int(params["cg_steps"]),
+        cg_damping      = float(params["cg_damping"]),
+        backtrack_steps = int(params["backtrack_steps"]),
+        backtrack_coef  = float(params["backtrack_coef"]),
+        lr_value        = float(params["lr_value"]),
+        value_epochs    = int(params["value_epochs"]),
+        gamma           = float(params["gamma"]),
+        n_layers        = int(params["n_layers"]),
+        size            = int(params["size"]),
+        log_dir         = params["logdir"],
+        no_gpu          = bool(params["no_gpu"]),
+    )
+    run(cfg)
+
+
 _DISPATCH = {
     "td3":       _dispatch_td3,
     "ppo":       _dispatch_ppo,
+    "trpo":      _dispatch_trpo,
     "reinforce": _dispatch_reinforce,
-    "ddqn":       _dispatch_ddqn,
+    "ddqn":      _dispatch_ddqn,
 }
 
 # Main                                                                        
