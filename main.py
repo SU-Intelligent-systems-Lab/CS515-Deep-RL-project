@@ -135,8 +135,8 @@ def _dispatch_reinforce(params):
 
 
 def _dispatch_ddqn(params):
-    from ddqn.config     import DDQNConfig
-    from ddqn.ddqn_train import run
+    from DDQN.config     import DDQNConfig
+    from DDQN.ddqn_train import run
 
     cfg = DDQNConfig(
         env_name        = params["env_name"],

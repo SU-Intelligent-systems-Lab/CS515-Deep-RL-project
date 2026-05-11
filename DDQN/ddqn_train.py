@@ -12,8 +12,8 @@ import matplotlib
 import numpy as np
 import torch
 
-from ddqn.config     import DDQNConfig
-from ddqn.ddqn_agent import DQNAgent
+from DDQN.config     import DDQNConfig
+from DDQN.ddqn_agent import DQNAgent
 
 
 def _has_display():
