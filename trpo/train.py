@@ -1,20 +1,8 @@
 """
 TRPO training loop.
 
-Intentionally mirrors ppo/train.py — same step-based structure, same rollout
-collection, same truncation handling. The only difference is that the update
-call goes to TRPOAgent.update() instead of PPOAgent.update().
-
-Structure (canonical on-policy loop):
-  while total_steps < budget:
-      1. Collect n_steps of rollouts (obs, action, reward, done, value, log_prob).
-      2. Bootstrap the final value V(s_last).
-      3. Compute returns + advantages over the buffer.
-      4. One TRPO update (natural gradient + line search on policy,
-         value_epochs Adam steps on value net).
-      5. Reset the buffer.
-
-Uses `gymnasium` (not the deprecated `gym`).
+Same step-based rollout structure as ppo/train.py; the only difference
+is the update step (natural gradient + backtracking line search).
 """
 from __future__ import annotations
 
@@ -98,7 +86,7 @@ def run(cfg: TRPOConfig) -> None:
 
     logger = Logger(cfg.log_dir)
 
-    # -------------------- rollout + update loop --------------------
+    # rollout + update loop
     obs, _ = env.reset(seed=cfg.seed)
     episode_return = 0.0
     episode_length = 0
@@ -111,7 +99,7 @@ def run(cfg: TRPOConfig) -> None:
 
     n_updates = cfg.total_timesteps // cfg.n_steps
     for update_i in range(n_updates):
-        # --------------- 1. collect rollout ---------------
+        # 1. collect rollout
         for _ in range(cfg.n_steps):
             action, log_prob, value = agent.act(obs)
             env_action = maybe_clip_action(action, env, discrete)
@@ -146,18 +134,18 @@ def run(cfg: TRPOConfig) -> None:
             else:
                 obs = next_obs
 
-        # --------------- 2. bootstrap + 3. returns/advantages ---------------
+        # 2. bootstrap final value, 3. compute returns and advantages
         last_value = agent.bootstrap_value(obs)
         buffer.compute_returns_and_advantages(last_value, cfg.gamma)
 
-        # --------------- 4. TRPO update ---------------
+        # 4. TRPO update
         diagnostics = agent.update(buffer)
         updates += 1
 
-        # --------------- 5. reset buffer ---------------
+        # 5. reset buffer
         buffer.reset()
 
-        # --------------- logging ---------------
+        # logging
         sps = total_steps / max(1.0, time.time() - start_time)
         scalars = {
             "charts/env_steps": total_steps,

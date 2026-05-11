@@ -1,24 +1,14 @@
 """
-REINFORCEAgent — basic (vanilla) policy gradient with a learned value baseline.
+REINFORCEAgent: vanilla policy gradient with a learned value baseline.
 
-Algorithm (Williams 1992 / Sutton & Barto):
+For each batch of complete episodes:
+    G_t        = reward-to-go from step t
+    advantage  = G_t - V(s_t)
+    pol_loss   = -mean(log pi(a|s) * advantage)
+    value_loss = MSE(V(s), G_t)
 
-    For each batch of complete episodes:
-        G_t = sum_{t'=t}^{T} gamma^{t'-t} * r_{t'}     (reward-to-go)
-        advantage_t = G_t - V(s_t)                       (baseline subtraction)
-        policy_loss  = -mean(log π(a_t|s_t) * advantage_t)
-        value_loss   = MSE(V(s_t), G_t)
-
-Compared to the well-known PPO: no clipping, no trust region, no multiple epochs per
-rollout. One gradient step per batch. Has high variance so slower learning.
-
-Diagnostics returned each update:
- * losses/policy_loss   — mean PG loss
- * losses/value_loss    — MSE of value baseline
- * losses/entropy       — mean policy entropy
- * reinforce/explained_variance  — 1 - Var(G-V)/Var(G); tracks baseline fit
- * reinforce/mean_return         — mean episode return in this batch
- * reinforce/mean_length         — mean episode length in this batch
+No clipping, no trust region, no minibatch epochs. One gradient step per
+batch, which keeps the variance high and learning slow.
 """
 from __future__ import annotations
 
@@ -61,36 +51,27 @@ class REINFORCEAgent:
             size=size,
         ).to(ptu.device)
 
-        # Separate optimizers: the policy gradient step updates only the policy.
-        # The value network is updated independently with a supervised MSE step.
+        # separate optimizers: the policy step updates only the policy; the
+        # value net is trained with a supervised MSE step.
         self.policy_optimizer = torch.optim.Adam(self.policy.parameters(), lr=lr)
         self.value_optimizer = torch.optim.Adam(self.value.parameters(), lr=lr)
 
         self.discrete = discrete
 
-    # ------------------------------------------------------------------ rollout API
-
     def act(self, obs_np: np.ndarray):
-        """Sample (action, log_prob) for one step. Called during episode collection."""
+        """Sample (action, log_prob) for one step during rollout."""
         return self.policy.act(obs_np)
 
-    # ------------------------------------------------------------------ update API
-
     def update(self, trajectories: List[dict]) -> Dict[str, float]:
-        """One gradient update from a batch of complete episodes.
+        """One gradient update over a batch of complete episodes.
 
-        Each element of `trajectories` is a dict:
-            obs       : np.ndarray (T, ob_dim)
-            actions   : np.ndarray (T,) int64 or (T, ac_dim) float32
-            rewards   : list[float] length T
-            log_probs : np.ndarray (T,) — stored during rollout (not reused for update)
-
-        Note: we RECOMPUTE log_probs during the update (evaluate_actions) rather than
-        reusing the stored ones. REINFORCE does a single on-policy gradient step, so
-        the stored and recomputed log-probs are identical — but recomputing keeps the
-        computation graph intact for autograd.
+        Each element of `trajectories` is a dict with keys
+            obs       : (T, ob_dim) float32
+            actions   : (T,) int64 (discrete) or (T, ac_dim) float32 (continuous)
+            rewards   : list[float] of length T
+            log_probs : (T,) float32  (stored at rollout time, recomputed here)
         """
-        # ---- 1. concatenate all episodes ----
+        # 1. concatenate all episodes
         all_obs: list[np.ndarray] = []
         all_actions: list[np.ndarray] = []
         all_returns: list[float] = []
@@ -100,44 +81,39 @@ class REINFORCEAgent:
             rewards = traj["rewards"]
             T = len(rewards)
 
-            # Reward-to-go: G_t = r_t + gamma * G_{t+1}
+            # reward-to-go: G_t = r_t + gamma * G_{t+1}
             returns = np.zeros(T, dtype=np.float32)
             g = 0.0
             for t in reversed(range(T)):
                 g = rewards[t] + self.gamma * g
                 returns[t] = g
 
-            all_obs.append(traj["obs"])        # (T, ob_dim)
+            all_obs.append(traj["obs"])
             all_actions.append(traj["actions"])
             all_returns.append(returns)
             episode_returns.append(float(np.sum(rewards)))
 
-        obs_np = np.concatenate(all_obs, axis=0)          # (N, ob_dim)
-        returns_np = np.concatenate(all_returns, axis=0)   # (N,)
-
-        # Actions can be either 1-D (discrete) or 2-D (continuous).
+        obs_np = np.concatenate(all_obs, axis=0)
+        returns_np = np.concatenate(all_returns, axis=0)
+        # discrete actions: 1-D int64; continuous: 2-D float32
         actions_np = np.concatenate(all_actions, axis=0)
 
-        # ---- 2. move to tensors ----
-        obs_t = ptu.from_numpy(obs_np)                     # (N, ob_dim)
-        returns_t = ptu.from_numpy(returns_np)             # (N,)
+        # 2. move to tensors
+        obs_t = ptu.from_numpy(obs_np)
+        returns_t = ptu.from_numpy(returns_np)
         if self.discrete:
-            actions_t = torch.from_numpy(actions_np).to(device=ptu.device)  # int64
+            actions_t = torch.from_numpy(actions_np).to(device=ptu.device)
         else:
-            actions_t = ptu.from_numpy(actions_np)         # (N, ac_dim) float32
+            actions_t = ptu.from_numpy(actions_np)
 
-        # ---- 3. compute baseline and advantage ----
-        # Baseline evaluation under no_grad — we update the value net separately.
+        # 3. baseline and advantage (no grad through the baseline)
         with torch.no_grad():
-            baseline = self.value(obs_t)                   # (N,)
-
-        advantages = returns_t - baseline                  # (N,)
-
-        # Advantage normalisation: reduces variance across the batch, similar to
-        # the per-minibatch normalisation in PPO.
+            baseline = self.value(obs_t)
+        advantages = returns_t - baseline
+        # whitened advantages reduce gradient variance across the batch
         advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
 
-        # ---- 4. policy gradient loss ----
+        # 4. policy gradient loss
         log_probs, entropy = self.policy.evaluate_actions(obs_t, actions_t)
         policy_loss = -(log_probs * advantages.detach()).mean()
         entropy_mean = entropy.mean()
@@ -147,15 +123,14 @@ class REINFORCEAgent:
         total_policy_loss.backward()
         self.policy_optimizer.step()
 
-        # ---- 5. value (baseline) MSE loss ----
-        predicted_values = self.value(obs_t)               # (N,) with grad
+        # 5. value-net MSE step
+        predicted_values = self.value(obs_t)
         value_loss = F.mse_loss(predicted_values, returns_t)
-
         self.value_optimizer.zero_grad()
         value_loss.backward()
         self.value_optimizer.step()
 
-        # ---- 6. diagnostics ----
+        # 6. diagnostics
         var_returns = float(np.var(returns_np))
         var_residual = float(np.var(returns_np - ptu.to_numpy(baseline)))
         explained_var = 1.0 - var_residual / var_returns if var_returns > 0 else 0.0

@@ -1,7 +1,4 @@
-"""
-Minimal TensorBoard scalar logger.
-
-"""
+"""TensorBoard scalar logger."""
 import os
 from typing import Mapping
 

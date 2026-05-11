@@ -1,9 +1,4 @@
-"""
-Command-line argument parsing for REINFORCE training.
-
-No clip_eps, no value_coef, no target_kl, no
-minibatch_size, no update_epochs. One gradient step per episode batch.
-"""
+"""REINFORCE configuration dataclass and CLI parser."""
 import argparse
 import os
 import time

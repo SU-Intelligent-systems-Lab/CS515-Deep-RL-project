@@ -1,13 +1,6 @@
 """
-Fast NaN-free check.
-
-Runs a tiny PPO training session on CartPole-v1 (1000 steps, 2 epochs, 256-step
-rollout). Confirms:
-  * env loop works end-to-end with the gymnasium 5-tuple API,
-  * buffer fills + computes returns without shape errors,
-  * update produces finite losses / parameters (no NaNs, no infs),
-  * diagnostics come out in sane ranges.
-
+Quick smoke test: runs a tiny PPO session on CartPole-v1 and checks
+that the env loop, buffer, update, and diagnostics produce finite outputs.
 """
 from __future__ import annotations
 

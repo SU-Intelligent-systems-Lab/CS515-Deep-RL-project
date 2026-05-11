@@ -1,19 +1,10 @@
 """
 PPO training loop.
 
-Structure (the canonical on-policy loop):
-  while total_steps < budget:
-      1. Collect n_steps of rollouts from a single env (store obs, action,
-         reward, done, value, log_prob).
-      2. Bootstrap the final value V(s_last).
-      3. Compute returns + advantages over the buffer.
-      4. Run K epochs of minibatch PPO updates.
-      5. Reset the buffer.
+Repeats: collect n_steps of rollouts, compute returns and advantages,
+run K epochs of minibatch PPO updates, reset buffer.
 
-Uses `gymnasium` (not the deprecated `gym`), so env.step returns a 5-tuple:
-    obs, reward, terminated, truncated, info
-
-Episode returns/lengths are tracked in-loop and logged when an episode ends.
+Uses gymnasium (5-tuple step API).
 """
 from __future__ import annotations
 
@@ -43,8 +34,6 @@ def set_seeds(seed: int) -> None:
 
 def make_env(env_name: str, seed: int) -> gym.Env:
     env = gym.make(env_name)
-    # Seed once at creation. env.reset(seed=...) only on the very first reset,
-    # after that use unseeded reset() to preserve exploration variety.
     env.action_space.seed(seed)
     env.observation_space.seed(seed)
     return env
@@ -62,11 +51,8 @@ def env_spec(env: gym.Env):
 
 
 def maybe_clip_action(action, env: gym.Env, discrete: bool):
-    """For continuous envs, clip to the action_space bounds before env.step.
-
-    Important: clip for the env, but keep the UN-CLIPPED action in the buffer
-    (its log-prob is what we stored). Clipping only the env-facing action
-    preserves the importance ratio — clipping the stored action would drift it.
+    """Clip continuous actions to env bounds before stepping; keep the
+    un-clipped action in the buffer so its stored log-prob stays correct.
     """
     if discrete:
         return action
@@ -106,11 +92,10 @@ def run(cfg: PPOConfig) -> None:
 
     logger = Logger(cfg.log_dir)
 
-    # -------------------- rollout + update loop --------------------
-    obs, _ = env.reset(seed=cfg.seed)  # seed ONLY on the very first reset
+    # rollout + update loop
+    obs, _ = env.reset(seed=cfg.seed)
     episode_return = 0.0
     episode_length = 0
-    # Keep the last 100 episode returns for a smooth running mean.
     recent_returns: deque = deque(maxlen=100)
     recent_lengths: deque = deque(maxlen=100)
 
@@ -120,7 +105,7 @@ def run(cfg: PPOConfig) -> None:
 
     n_updates = cfg.total_timesteps // cfg.n_steps
     for update_i in range(n_updates):
-        # --------------- 1. collect rollout ---------------
+        # 1. collect rollout
         for _ in range(cfg.n_steps):
             action, log_prob, value = agent.act(obs)
             env_action = maybe_clip_action(action, env, discrete)
@@ -129,7 +114,7 @@ def run(cfg: PPOConfig) -> None:
 
             truncation_value = 0.0
             if truncated:
-                # Bootstrap the value of the actual state before auto-reset
+                # bootstrap value of the real next state before auto-reset
                 truncation_value = agent.bootstrap_value(next_obs)
 
             buffer.add(
@@ -142,7 +127,7 @@ def run(cfg: PPOConfig) -> None:
                 log_prob=log_prob,
                 truncation_value=truncation_value
             )
-            
+
             episode_return += float(reward)
             episode_length += 1
             total_steps += 1
@@ -152,22 +137,22 @@ def run(cfg: PPOConfig) -> None:
                 recent_lengths.append(episode_length)
                 episode_return = 0.0
                 episode_length = 0
-                obs, _ = env.reset()  # no seed — preserve exploration variety
+                obs, _ = env.reset()
             else:
                 obs = next_obs
 
-        # --------------- 2. bootstrap + 3. returns/advantages ---------------
+        # 2. bootstrap final value, 3. compute returns and advantages
         last_value = agent.bootstrap_value(obs)
         buffer.compute_returns_and_advantages(last_value, cfg.gamma, cfg.gae_lambda)
 
-        # --------------- 4. PPO update ---------------
+        # 4. PPO update
         diagnostics = agent.update(buffer)
         updates += 1
 
-        # --------------- 5. reset buffer ---------------
+        # 5. reset buffer
         buffer.reset()
 
-        # --------------- logging ---------------
+        # logging
         sps = total_steps / max(1.0, time.time() - start_time)
         scalars = {
             "charts/env_steps": total_steps,
@@ -181,7 +166,6 @@ def run(cfg: PPOConfig) -> None:
         logger.log_scalars(scalars, total_steps)
         logger.flush()
 
-        # A compact progress print every update; cheap and helps CLI debugging.
         ep_ret = f"{np.mean(recent_returns):7.2f}" if recent_returns else "  n/a  "
         print(
             f"[update {updates:4d} | steps {total_steps:8d} | sps {sps:6.0f}] "

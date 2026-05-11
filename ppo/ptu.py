@@ -1,7 +1,4 @@
-"""
-PyTorch device helpers.
-
-"""
+"""PyTorch device helpers."""
 import numpy as np
 import torch
 
@@ -21,10 +18,10 @@ def init_gpu(use_gpu: bool = True, gpu_id: int = 0) -> None:
 
 
 def from_numpy(array: np.ndarray, dtype: torch.dtype = torch.float32) -> torch.Tensor:
-    """numpy -> float32 tensor on `device`."""
+    """numpy array -> tensor on `device`."""
     return torch.from_numpy(array).to(dtype=dtype, device=device)
 
 
 def to_numpy(tensor: torch.Tensor) -> np.ndarray:
-    """tensor (any device) -> detached numpy array on CPU."""
+    """tensor -> detached numpy on CPU."""
     return tensor.detach().to("cpu").numpy()

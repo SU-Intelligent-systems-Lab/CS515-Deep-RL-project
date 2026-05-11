@@ -1,15 +1,8 @@
 """
-Render a trained REINFORCE policy live and report evaluation statistics.
+Replay a trained REINFORCE policy live and report evaluation statistics.
 
-Loads a checkpoint produced by `reinforce.train` (model_final.pt), builds the
-same environment with `render_mode="human"`, and plays
-`--episodes` full episodes while printing per-episode returns. A final summary
-reports mean ± std return.
-
-Example command:
-    python -m reinforce.render \\
-        --checkpoint reinforce/data/reinforce_CartPole-v1_2026-04-21_15-48-02/model_final.pt \\
-        --env_name CartPole-v1 --episodes 5
+Loads a model_final.pt checkpoint, rebuilds the env with render_mode="human",
+plays --episodes episodes, prints per-episode returns and a final mean/std.
 """
 from __future__ import annotations
 

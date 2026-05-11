@@ -1,19 +1,8 @@
 """
-PPOAgent — the core PPO update.
+PPOAgent: clipped-surrogate update with optional KL early stopping.
 
-The objective being minimised each minibatch step is:
-
+Loss per minibatch:
     L = -clipped_surrogate + value_coef * value_MSE - entropy_coef * entropy
-
-with clipped_surrogate = min(ratio * A, clip(ratio, 1-e, 1+e) * A) and
-ratio = exp(new_log_prob - old_log_prob). `old_log_prob` comes straight from
-the rollout (detached by construction — numpy in the buffer).
-
-Diagnostics returned each update (for TensorBoard):
- * approx_kl         ~ 0.5 * E[(old_logp - new_logp)^2]   (Schulman's k3 estimator)
- * clip_fraction     fraction of samples where |ratio - 1| > clip_eps
- * explained_variance  1 - Var(returns - values) / Var(returns); monitors critic fit
- * epochs_completed  how many of the K epochs actually ran (< K when KL early-stop fired)
 """
 from __future__ import annotations
 
@@ -54,7 +43,7 @@ class PPOAgent:
             size=size,
         ).to(ptu.device)
 
-        # Single optimiser over everything — policy, value, and (for continuous) log_std.
+        # One Adam over all parameters: policy, value, and log_std for continuous.
         self.optimizer = torch.optim.Adam(self.net.parameters(), lr=lr)
 
         self.clip_eps = clip_eps
@@ -68,11 +57,11 @@ class PPOAgent:
     # ------------------------------------------------------------------ rollout API
 
     def act(self, obs_np: np.ndarray):
-        """Return (action, log_prob, value) for a single observation."""
+        """Sample (action, log_prob, value) for one observation."""
         return self.net.get_action(obs_np)
 
     def bootstrap_value(self, obs_np: np.ndarray) -> float:
-        """V(obs) — used to bootstrap the final return in the rollout buffer."""
+        """V(obs) for the rollout-end bootstrap."""
         return self.net.get_value(obs_np)
 
     # ------------------------------------------------------------------ update API
@@ -90,11 +79,12 @@ class PPOAgent:
 
 
     def update(self, buffer: RolloutBuffer) -> Dict[str, float]:
-        """Run K epochs of minibatch PPO updates over `buffer`. Returns averaged diagnostics."""
+        """K epochs of minibatch updates on `buffer`. Returns averaged diagnostics."""
         b_advantages = buffer.advantages
         b_advantages = (b_advantages - b_advantages.mean()) / (b_advantages.std() + 1e-8)
         buffer.advantages = b_advantages
-        # For explained variance we need per-buffer variances, computed once.
+
+        # explained variance, computed once per buffer
         returns_all = buffer.returns.copy()
         values_all = buffer.values.copy()
         var_returns = np.var(returns_all)
@@ -104,7 +94,6 @@ class PPOAgent:
             else 0.0
         )
 
-        # Accumulate diagnostics.
         policy_losses: list[float] = []
         value_losses: list[float] = []
         entropies: list[float] = []
@@ -125,26 +114,21 @@ class PPOAgent:
                 advantages = mb["advantages"]
                 returns = mb["returns"]
 
-                # Per-minibatch advantage normalization — the standard PPO choice.
-                # Using std() + 1e-8 to guard against the degenerate |advantage| = 0 case.
                 advantages = mb["advantages"]
-
-                #advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
 
                 new_log_probs, entropy, value = self.net.evaluate_actions(obs, actions)
 
-                # ratio = pi_new / pi_old = exp(log_pi_new - log_pi_old)
+                # importance ratio = exp(log_pi_new - log_pi_old)
                 ratio = torch.exp(new_log_probs - old_log_probs)
 
-                # Clipped surrogate.
+                # clipped surrogate
                 surr1 = ratio * advantages
                 surr2 = torch.clamp(ratio, 1.0 - self.clip_eps, 1.0 + self.clip_eps) * advantages
                 policy_loss = -torch.min(surr1, surr2).mean()
 
-                # Value loss. MVP: plain MSE (no value clipping).
+                # plain MSE on the value head (no value clipping)
                 value_loss = F.mse_loss(value, returns)
 
-                # Entropy bonus (negative because we subtract it in the loss).
                 entropy_mean = entropy.mean()
 
                 loss = (
@@ -158,9 +142,8 @@ class PPOAgent:
                 nn.utils.clip_grad_norm_(self.net.parameters(), self.max_grad_norm)
                 self.optimizer.step()
 
-                # Diagnostics (cheap, done on the same minibatch).
+                # cheap diagnostics on the same minibatch
                 with torch.no_grad():
-                    # Schulman's k3 approximate KL: 0.5 * E[(old - new)^2]. Cheap and unbiased.
                     approx_kl = 0.5 * ((old_log_probs - new_log_probs) ** 2).mean().item()
                     clip_frac = ((ratio - 1.0).abs() > self.clip_eps).float().mean().item()
 
@@ -171,9 +154,8 @@ class PPOAgent:
                 epoch_kls.append(approx_kl)
                 clip_fractions.append(clip_frac)
 
-            # KL early stopping (opt-in — only active when target_kl is set).
-            # We check the MEAN KL over the epoch (not per-minibatch) — matches
-            # Per-minibatch checking is too noisy and stops far too aggressively.
+            # optional KL early stop, gated on the mean KL of the epoch
+            # (per-minibatch checking is too noisy)
             if self.target_kl is not None and epoch_kls:
                 mean_epoch_kl = float(np.mean(epoch_kls))
                 if mean_epoch_kl > self.target_kl:

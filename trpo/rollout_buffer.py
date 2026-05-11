@@ -1,13 +1,9 @@
 """
-On-policy rollout buffer for PPO.
+Fixed-size on-policy rollout buffer (same layout as the PPO buffer).
 
-Unlike the trajectory-based `ReplayBuffer` in Deep-RL-intro-main, this one is:
- * Fixed size (n_steps), pre-allocated numpy arrays.
- * Cleared at the start of every PPO iteration (on-policy!).
- * Stores `value` and `log_prob_old` per step — PPO needs both during the update.
-
-At the end of a rollout we call `compute_returns_and_advantages` once, then
-`get_minibatches` yields shuffled minibatches of tensors for the update loop.
+Stores (obs, action, reward, terminated, truncated, value, log_prob) for
+n_steps. After collection, compute_returns_and_advantages() fills in the
+returns and advantages; the TRPO update consumes the full buffer at once.
 """
 from __future__ import annotations
 

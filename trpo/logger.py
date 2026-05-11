@@ -1,9 +1,4 @@
-"""
-Minimal TensorBoard scalar logger.
-
-Trimmed port of the `Logger` class in `Deep-RL-intro-main/utils.py`. Only the
-scalar methods are kept — MVP PPO doesn't need video/figure logging.
-"""
+"""TensorBoard scalar logger."""
 import os
 from typing import Mapping
 

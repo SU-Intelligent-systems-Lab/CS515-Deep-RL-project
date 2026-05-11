@@ -1,7 +1,4 @@
-"""
-Command-line argument parsing for PPO training.
-
-"""
+"""PPO configuration dataclass and CLI parser."""
 import argparse
 import os
 import time

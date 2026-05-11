@@ -1,13 +1,8 @@
 """
-Networks for REINFORCE: MLP builder + separate PolicyNet and ValueNet.
+Networks for REINFORCE: separate PolicyNet and ValueNet (no shared trunk).
 
-Design notes:
- * Separate policy and value network. The policy optimiser only affects the policy net, the value optimiser only
-   affects the value net. This matches the separation in REINFORCE
-   with baseline (where the baseline is not part of the PG objective).
- * Continuous actions use a Normal distribution with a state-independent learnable
-   log_std.
- * ValueNet outputs a single scalar V(s).
+Continuous actions use a Normal with a state-independent learnable log_std.
+ValueNet returns a scalar V(s) and is trained separately from the policy.
 """
 from __future__ import annotations
 
@@ -42,7 +37,7 @@ def build_mlp(
     activation: Activation = "tanh",
     output_activation: Activation = "identity",
 ) -> nn.Sequential:
-    """Stack of Linear + activation layers. Adapted from Deep-RL-intro-main/model.py."""
+    """Stack of Linear + activation layers."""
     if isinstance(activation, str):
         activation = _str_to_activation[activation]
     if isinstance(output_activation, str):
@@ -60,7 +55,7 @@ def build_mlp(
 
 
 class PolicyNet(nn.Module):
-    """Stochastic policy network. Handles discrete (Categorical) and continuous (Normal)."""
+    """Stochastic policy (Categorical for discrete, Normal for continuous)."""
 
     def __init__(
         self,
@@ -79,8 +74,7 @@ class PolicyNet(nn.Module):
         self.net = build_mlp(ob_dim, ac_dim, n_layers, size)
 
         if not discrete:
-            # State-independent log_std, learned as a free parameter.
-            # init = -0.5  ->  std ~= 0.6 (avoids too-large initial actions on Pendulum).
+            # state-independent log_std; init = -0.5 -> std ~= 0.6
             self.log_std = nn.Parameter(
                 torch.full((ac_dim,), init_log_std, dtype=torch.float32)
             )
@@ -90,36 +84,29 @@ class PolicyNet(nn.Module):
     def _distribution(self, obs: torch.Tensor):
         if self.discrete:
             return Categorical(logits=self.net(obs))
-        else:
-            mean = self.net(obs)
-            std = torch.exp(self.log_std)
-            return Normal(mean, std)
+        mean = self.net(obs)
+        std = torch.exp(self.log_std)
+        return Normal(mean, std)
 
     @torch.no_grad()
     def act(self, obs_np: np.ndarray) -> Tuple[object, float]:
-        """Sample action for rollout. Returns (action, log_prob) — no value needed here."""
-        obs = ptu.from_numpy(obs_np[None])       # (1, ob_dim)
+        """Sample (action, log_prob) for one observation."""
+        obs = ptu.from_numpy(obs_np[None])
         dist = self._distribution(obs)
-        action = dist.sample()                    # (1,) or (1, ac_dim)
+        action = dist.sample()
         logp = dist.log_prob(action)
         if not self.discrete:
-            logp = logp.sum(-1)                   # sum over action dims
+            logp = logp.sum(-1)
 
         action_np = ptu.to_numpy(action)[0]
         if self.discrete:
             return int(action_np), float(ptu.to_numpy(logp)[0])
-        else:
-            return action_np, float(ptu.to_numpy(logp)[0])
+        return action_np, float(ptu.to_numpy(logp)[0])
 
     def evaluate_actions(
         self, obs: torch.Tensor, actions: torch.Tensor
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        """Forward pass with grad. Returns (log_prob, entropy), each (B,).
-
-        Called during the REINFORCE update.
-         * discrete  -> actions: int64 tensor (B,)
-         * continuous -> actions: float tensor (B, ac_dim)
-        """
+        """With-grad (log_prob, entropy) on the given batch."""
         dist = self._distribution(obs)
         logp = dist.log_prob(actions)
         if not self.discrete:
@@ -131,7 +118,7 @@ class PolicyNet(nn.Module):
 
 
 class ValueNet(nn.Module):
-    """Baseline / value function V(s) -> scalar."""
+    """Scalar value baseline V(s)."""
 
     def __init__(self, ob_dim: int, n_layers: int = 2, size: int = 64) -> None:
         super().__init__()
@@ -139,10 +126,10 @@ class ValueNet(nn.Module):
 
     @torch.no_grad()
     def get_value(self, obs_np: np.ndarray) -> float:
-        """V(s) for a single observation (numpy) — used at rollout time for baseline."""
+        """V(s) for one observation (rollout-time baseline lookup)."""
         obs = ptu.from_numpy(obs_np[None])
         return float(ptu.to_numpy(self.net(obs).squeeze(-1))[0])
 
     def forward(self, obs: torch.Tensor) -> torch.Tensor:
-        """V(s) for a batch of observations (tensor, B,). Called during update."""
+        """V(s) for a batch."""
         return self.net(obs).squeeze(-1)

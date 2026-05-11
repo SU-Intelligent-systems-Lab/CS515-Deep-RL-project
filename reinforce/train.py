@@ -1,17 +1,9 @@
 """
-REINFORCE training loop.
+REINFORCE training loop (episodic, on-policy).
 
-Structure (episodic on-policy loop):
-  while total_episodes < budget:
-      1. Collect min_episodes_per_update complete episodes.
-         For each step: obs -> act -> store (obs, action, reward, log_prob).
-         A truncated episode counts as complete.
-      2. Compute reward-to-go G_t for every step in every episode.
-      3. One gradient step on policy + value baseline.
-      4. Log diagnostics.
-
-Uses `gymnasium`, so env.step returns a 5-tuple:
-    obs, reward, terminated, truncated, info
+Repeats: collect `min_episodes_per_update` complete episodes, compute
+reward-to-go for each step, take one gradient step on policy and on the
+value baseline.
 """
 from __future__ import annotations
 
@@ -57,21 +49,14 @@ def env_spec(env: gym.Env):
 
 
 def maybe_clip_action(action, env: gym.Env, discrete: bool):
-    """Clip continuous actions to env bounds before env.step (log_prob stays correct)."""
+    """Clip continuous actions to env bounds before stepping the env."""
     if discrete:
         return action
     return np.clip(action, env.action_space.low, env.action_space.high)
 
 
 def collect_episode(env: gym.Env, agent: REINFORCEAgent, discrete: bool) -> dict:
-    """Run one complete episode and return a trajectory dict.
-
-    Returns:
-        obs       : np.ndarray (T, ob_dim)
-        actions   : np.ndarray (T,) int64  or  (T, ac_dim) float32
-        rewards   : list[float] length T
-        log_probs : np.ndarray (T,)  [stored but not used in update — for diagnostics]
-    """
+    """Run one full episode; return obs/actions/rewards/log_probs as numpy arrays."""
     obs, _ = env.reset()
     obs_list: list[np.ndarray] = []
     action_list: list = []
@@ -127,7 +112,7 @@ def run(cfg: REINFORCEConfig) -> None:
 
     logger = Logger(cfg.log_dir)
 
-    # -------------------- episode loop --------------------
+    # episode loop
     total_episodes = 0
     total_steps = 0
     updates = 0
@@ -136,7 +121,7 @@ def run(cfg: REINFORCEConfig) -> None:
     recent_lengths: deque = deque(maxlen=100)
 
     while total_episodes < cfg.total_episodes:
-        # --------------- 1. collect batch of episodes ---------------
+        # 1. collect a batch of episodes
         trajectories = []
         for _ in range(cfg.min_episodes_per_update):
             traj = collect_episode(env, agent, discrete)
@@ -147,15 +132,14 @@ def run(cfg: REINFORCEConfig) -> None:
             recent_returns.append(ep_ret)
             recent_lengths.append(len(traj["rewards"]))
 
-            # Stop collecting if we've hit the total budget.
             if total_episodes >= cfg.total_episodes:
                 break
 
-        # --------------- 2+3. compute returns + gradient step ---------------
+        # 2 + 3. compute returns and take one gradient step
         diagnostics = agent.update(trajectories)
         updates += 1
 
-        # --------------- logging ---------------
+        # logging
         sps = total_steps / max(1.0, time.time() - start_time)
         scalars = {
             "charts/env_steps": total_steps,

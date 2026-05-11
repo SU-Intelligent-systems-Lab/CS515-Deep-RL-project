@@ -1,28 +1,9 @@
 """
-TRPOAgent — Trust Region Policy Optimization (Schulman et al. 2015).
+TRPOAgent: trust-region policy update.
 
-The TRPO update solves the constrained optimisation problem:
-
-    maximise  E[ratio * A]          (surrogate objective)
-    s.t.      KL(π_old || π_new) ≤ δ   (trust region constraint)
-
-which PPO approximates cheaply with a clip. TRPO solves it exactly via:
-
-  1. Natural gradient direction  x = F⁻¹ · g   (CG solver, O(k·d))
-  2. Step size from theory:      α = sqrt(2δ / (x^T F x))
-  3. Backtracking line search to satisfy KL ≤ δ and surrogate improvement.
-
-Value function is updated separately with plain Adam + MSE (trust region only
-applies to the policy).
-
-Diagnostics returned each update:
- * losses/policy_loss     surrogate objective (before update) — for trending
- * losses/value_loss      MSE of value net
- * losses/entropy         policy entropy
- * trpo/approx_kl         KL between old and new policy after the update
- * trpo/backtrack_iters   how many line-search steps were taken (0 = full step)
- * trpo/step_accepted     1.0 if a valid step was found, 0.0 if we reverted
- * trpo/explained_variance  critic fit quality
+Maximise the surrogate E[ratio * A] subject to KL(pi_old || pi_new) <= delta.
+The policy step uses the natural gradient via conjugate gradient + a
+backtracking line search; the value net is trained separately with Adam.
 """
 from __future__ import annotations
 
@@ -39,10 +20,10 @@ from .networks import PolicyNet, ValueNet
 from .rollout_buffer import RolloutBuffer
 
 
-# ------------------------------------------------------------------ param helpers
+# flat-parameter helpers used by the line search
 
 def get_flat_params(net: torch.nn.Module) -> torch.Tensor:
-    """Flatten all parameters of `net` into a single 1-D tensor."""
+    """Flatten all parameters of `net` into a 1-D tensor."""
     return torch.cat([p.data.reshape(-1) for p in net.parameters()])
 
 
@@ -56,12 +37,10 @@ def set_flat_params(net: torch.nn.Module, flat_params: torch.Tensor) -> None:
 
 
 def get_flat_grad(loss: torch.Tensor, net: torch.nn.Module) -> torch.Tensor:
-    """Compute gradients of `loss` w.r.t. `net.parameters()` and flatten."""
+    """Flat gradient of `loss` w.r.t. all parameters of `net`."""
     grads = autograd.grad(loss, net.parameters(), retain_graph=False)
     return torch.cat([g.reshape(-1) for g in grads])
 
-
-# ------------------------------------------------------------------ agent
 
 class TRPOAgent:
     def __init__(
@@ -102,37 +81,31 @@ class TRPOAgent:
             size=size,
         ).to(ptu.device)
 
-        # Value net uses standard Adam. Policy has NO Adam — updated via natural gradient.
+        # value net uses Adam; the policy has no optimiser (natural gradient step)
         self.value_optimizer = torch.optim.Adam(self.value_net.parameters(), lr=lr_value)
 
-    # ------------------------------------------------------------------ rollout API
-
     def act(self, obs_np: np.ndarray):
-        """Return (action, log_prob, value) — same interface as PPOAgent.act()."""
+        """Return (action, log_prob, value), same interface as PPOAgent.act."""
         action, log_prob = self.policy.act(obs_np)
         value = self.value_net.get_value(obs_np)
         return action, log_prob, value
 
     def bootstrap_value(self, obs_np: np.ndarray) -> float:
-        """V(obs) — used to bootstrap the final return in the rollout buffer."""
+        """V(obs) for the rollout-end bootstrap."""
         return self.value_net.get_value(obs_np)
 
-    # ------------------------------------------------------------------ update API
-
     def update(self, buffer: RolloutBuffer) -> Dict[str, float]:
-        """TRPO update on a full rollout buffer.
+        """Run one TRPO update over a full rollout buffer.
 
         Steps:
-          1. Normalise advantages.
-          2. Compute surrogate loss and its flat gradient (policy gradient g).
-          3. Build the FVP callable over the full obs batch.
-          4. Solve F·x = g via CG to get the natural gradient direction.
-          5. Compute step size α = sqrt(2δ / x^T F x).
-          6. Backtracking line search: find largest fraction α·β^i such that
-             KL ≤ δ  AND  surrogate improves.
-          7. Update value net with MSE for value_epochs gradient steps.
+          1. normalise advantages
+          2. compute the surrogate loss and its flat gradient g
+          3. build the Fisher-vector product callable Fv
+          4. solve F x = g with conjugate gradient
+          5. step size = sqrt(2 delta / (x^T F x))
+          6. backtracking line search subject to KL <= delta and improvement
+          7. value-net Adam steps (MSE)
         """
-        # ---- pull full buffer onto device ----
         obs_t = ptu.from_numpy(buffer.obs)                    # (N, ob_dim)
         if self.discrete:
             actions_t = torch.from_numpy(buffer.actions).to(ptu.device)
@@ -146,7 +119,7 @@ class TRPOAgent:
         adv_std = float(np.std(advantages_np)) + 1e-8
         advantages_t = ptu.from_numpy((advantages_np - adv_mean) / adv_std)
 
-        # ---- for explained variance (computed before value update) ----
+        # explained variance, computed before the value update
         returns_all = buffer.returns.copy()
         values_all = buffer.values.copy()
         var_returns = np.var(returns_all)
@@ -156,61 +129,54 @@ class TRPOAgent:
             else 0.0
         )
 
-        # ---- 2. surrogate loss and policy gradient ----
-        # surrogate = E[ratio * A] = E[exp(new_logp - old_logp) * A]
-        # We maximise it, so the "loss" for autograd is the negative.
+        # 2. surrogate loss and its gradient
+        # surrogate = E[ exp(new_logp - old_logp) * A ]; we maximise it.
         new_log_probs, entropy = self.policy.evaluate_actions(obs_t, actions_t)
         entropy_mean = entropy.mean()
 
         ratio = torch.exp(new_log_probs - old_log_probs_t)
         surrogate = (ratio * advantages_t).mean()
-        policy_loss_before = -surrogate.item()   # store for diagnostics
+        policy_loss_before = -surrogate.item()
 
-        # Flat gradient of surrogate in the ASCENT direction: g = ∂surrogate/∂θ.
-        # We pass the negative surrogate to get_flat_grad (which calls .backward),
-        # then negate the result to get the true ascent gradient.
-        surrogate_loss = -surrogate   # we differentiate -surrogate for convenience
-        policy_grad_flat = -get_flat_grad(surrogate_loss, self.policy)  # flip → ascent
+        # differentiate -surrogate for convenience, then flip sign to get the
+        # ascent direction g = d(surrogate)/d(theta)
+        surrogate_loss = -surrogate
+        policy_grad_flat = -get_flat_grad(surrogate_loss, self.policy)
 
-        # ---- 3. FVP callable (closed over obs_t and cg_damping) ----
+        # 3. Fisher-vector product callable closed over obs_t
         def Fv(v: torch.Tensor) -> torch.Tensor:
             return fisher_vector_product(
                 self.policy, obs_t, v, damping=self.cg_damping
             )
 
-        # ---- 4. natural gradient via CG ----
-        # NOTE: cannot wrap in torch.no_grad() — autograd.grad is needed inside FVP.
-        # The CG solver itself doesn't build a computation graph (we detach v inside FVP),
-        # so the natural_grad result is effectively a plain tensor after the loop.
+        # 4. natural-gradient direction via conjugate gradient
+        # cannot wrap in torch.no_grad: autograd.grad is needed inside FVP
         natural_grad = conjugate_gradient(
             Fv, policy_grad_flat.detach(), n_steps=self.cg_steps
         ).detach()
 
-        # ---- 5. step size from theory ----
-        # α = sqrt(2δ / (ng^T F ng))
+        # 5. step size from the trust-region constraint
         Fng = Fv(natural_grad)
         sHs = (natural_grad * Fng).sum().item()
         step_size = (2.0 * self.max_kl / (sHs + 1e-8)) ** 0.5
-        fullstep = step_size * natural_grad   # direction * magnitude
+        fullstep = step_size * natural_grad
 
-        # ---- 6. backtracking line search ----
+        # 6. backtracking line search
         old_params = get_flat_params(self.policy).detach().clone()
 
         def surrogate_and_kl(params: torch.Tensor):
-            """Set policy to `params`, return (surrogate, mean_kl)."""
+            """Set the policy to `params`, return (surrogate, mean KL)."""
             set_flat_params(self.policy, params)
             with torch.no_grad():
                 lp_new, _ = self.policy.evaluate_actions(obs_t, actions_t)
                 ratio_new = torch.exp(lp_new - old_log_probs_t)
                 surr_new = (ratio_new * advantages_t).mean().item()
-
-                # KL(old || new) approximated as 0.5 * E[(old_logp - new_logp)^2]
-                # (Schulman's k3 estimator — fast and consistent with PPO diagnostics)
+                # quadratic approximation of KL(old || new)
                 kl_new = 0.5 * ((old_log_probs_t - lp_new) ** 2).mean().item()
             return surr_new, kl_new
 
         expected_improve = (policy_grad_flat * fullstep).sum().item()
-        accept_ratio = 0.1   # minimum fraction of expected improvement to accept
+        accept_ratio = 0.1  # minimum fraction of expected improvement we accept
 
         step_accepted = False
         backtrack_iters = 0
@@ -218,23 +184,23 @@ class TRPOAgent:
             frac = self.backtrack_coef ** i
             new_params = old_params + frac * fullstep
             surr_new, kl_new = surrogate_and_kl(new_params)
-            actual_improve = surr_new - (-policy_loss_before)   # vs surrogate before step
+            actual_improve = surr_new - (-policy_loss_before)
 
             if kl_new <= self.max_kl and actual_improve >= accept_ratio * frac * expected_improve:
                 step_accepted = True
                 backtrack_iters = i
                 break
         else:
-            # No valid step found — revert to old policy.
+            # no valid step found in the line search, revert to old policy
             set_flat_params(self.policy, old_params)
             backtrack_iters = self.backtrack_steps
 
-        # KL after the final policy parameters are set.
+        # KL at the final parameters
         with torch.no_grad():
             lp_final, _ = self.policy.evaluate_actions(obs_t, actions_t)
             approx_kl = 0.5 * ((old_log_probs_t - lp_final) ** 2).mean().item()
 
-        # ---- 7. value net: MSE for value_epochs gradient steps ----
+        # 7. value net: a few Adam steps on MSE
         value_losses = []
         for _ in range(self.value_epochs):
             predicted = self.value_net(obs_t)

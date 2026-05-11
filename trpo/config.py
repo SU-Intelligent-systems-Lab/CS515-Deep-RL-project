@@ -1,16 +1,4 @@
-"""
-Command-line argument parsing for TRPO training.
-
-TRPO-specific params vs PPO:
- * No clip_eps, no update_epochs, no minibatch_size (policy updated in one natural
-   gradient step per rollout, not K epochs of minibatches).
- * max_kl    : trust region radius δ (default 0.01 from Schulman 2015).
- * cg_steps  : conjugate gradient iterations (10 is standard).
- * cg_damping: Fisher damping λ for numerical stability (0.1 is standard).
- * backtrack_steps / backtrack_coef : line search parameters.
- * value_epochs : how many Adam steps to take on the value net per rollout.
- * lr_value  : Adam learning rate for the value net only.
-"""
+"""TRPO configuration dataclass and CLI parser."""
 import argparse
 import os
 import time

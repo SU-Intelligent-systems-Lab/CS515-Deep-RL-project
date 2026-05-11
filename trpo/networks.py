@@ -1,15 +1,8 @@
 """
-Networks for TRPO: MLP builder + separate PolicyNet and ValueNet.
+Networks for TRPO: separate PolicyNet and ValueNet (no shared trunk).
 
-Intentionally mirrors reinforce/networks.py — TRPO keeps the policy and value
-separate (value is updated with Adam MSE; only the policy is updated via the
-natural gradient / line search).
-
-The key difference from ppo/networks.py:
- * No shared ActorCritic trunk.
- * PolicyNet.distribution() is public — the TRPO agent needs to compute KL
-   divergences and Fisher-vector products on the distribution directly.
- * PolicyNet.get_flat_params() / set_flat_params() helpers used by line search.
+PolicyNet exposes distribution() so the agent can compute KL divergences
+and Fisher-vector products directly on the action distribution.
 """
 from __future__ import annotations
 
@@ -44,7 +37,7 @@ def build_mlp(
     activation: Activation = "tanh",
     output_activation: Activation = "identity",
 ) -> nn.Sequential:
-    """Stack of Linear + activation layers. Adapted from Deep-RL-intro-main/model.py."""
+    """Stack of Linear + activation layers."""
     if isinstance(activation, str):
         activation = _str_to_activation[activation]
     if isinstance(output_activation, str):
@@ -62,7 +55,7 @@ def build_mlp(
 
 
 class PolicyNet(nn.Module):
-    """Stochastic policy. Exposes distribution() for KL / FVP computation."""
+    """Stochastic policy; the public distribution() is used for KL and FVP."""
 
     def __init__(
         self,
@@ -87,17 +80,16 @@ class PolicyNet(nn.Module):
             self.log_std = None
 
     def distribution(self, obs: torch.Tensor):
-        """Return the distribution for `obs` (batch). Used for KL/FVP."""
+        """Distribution over actions for the given batch of obs."""
         if self.discrete:
             return Categorical(logits=self.net(obs))
-        else:
-            mean = self.net(obs)
-            std = torch.exp(self.log_std)
-            return Normal(mean, std)
+        mean = self.net(obs)
+        std = torch.exp(self.log_std)
+        return Normal(mean, std)
 
     @torch.no_grad()
     def act(self, obs_np: np.ndarray) -> Tuple[object, float]:
-        """Sample (action, log_prob) for rollout."""
+        """Sample (action, log_prob) for one observation."""
         obs = ptu.from_numpy(obs_np[None])
         dist = self.distribution(obs)
         action = dist.sample()
@@ -107,18 +99,12 @@ class PolicyNet(nn.Module):
         action_np = ptu.to_numpy(action)[0]
         if self.discrete:
             return int(action_np), float(ptu.to_numpy(logp)[0])
-        else:
-            return action_np, float(ptu.to_numpy(logp)[0])
-
-    @torch.no_grad()
-    def get_value_placeholder(self):
-        """Not used — TRPO rollout calls ValueNet.get_value() separately."""
-        pass
+        return action_np, float(ptu.to_numpy(logp)[0])
 
     def evaluate_actions(
         self, obs: torch.Tensor, actions: torch.Tensor
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        """(log_prob, entropy) with grad — called in surrogate loss and diagnostics."""
+        """With-grad (log_prob, entropy) on the given batch."""
         dist = self.distribution(obs)
         logp = dist.log_prob(actions)
         if not self.discrete:
@@ -130,7 +116,7 @@ class PolicyNet(nn.Module):
 
 
 class ValueNet(nn.Module):
-    """Baseline V(s) updated separately with Adam + MSE."""
+    """V(s) trained separately with Adam + MSE."""
 
     def __init__(self, ob_dim: int, n_layers: int = 2, size: int = 64) -> None:
         super().__init__()
