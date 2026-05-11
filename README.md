@@ -2,12 +2,13 @@
 Implementations of deep reinforcement learning algorithms: **REINFORCE**, **TD3**,
 **DDQN**, and **PPO**.
 
-| Algorithm                                  | Action space | Folder       |
-|--------------------------------------------|--------------|--------------|
-| **TD3** — Twin Delayed DDPG                | continuous   | `td3/`       |
-| **PPO** — Proximal Policy Optimisation     | both         | `ppo/`       |
-| **REINFORCE** with value baseline          | both         | `reinforce/` |
-| **DDQN** — Double Deep Q-Network           | discrete     | `ddqn/`      |
+| Algorithm                                   | Action space | Folder       |
+|---------------------------------------------|--------------|--------------|
+| **TD3** — Twin Delayed DDPG                 | continuous   | `td3/`       |
+| **PPO** — Proximal Policy Optimisation      | both         | `ppo/`       |
+| **TRPO** — Trust Region Policy Optimisation | both         | `trpo/`      |
+| **REINFORCE** with value baseline           | both         | `reinforce/` |
+| **DDQN** — Double Deep Q-Network            | discrete     | `ddqn/`      |
 
 ---
 
@@ -40,20 +41,62 @@ Both curves show episodic return on a shared environment-steps x-axis.
 - **PPO** (blue): running mean of the last 100 episodes, logged every rollout (2048 steps).
 - **TD3** (red): per-episode reward smoothed with a moving mean (window = 40 ep. for Pendulum, 30 for Ant).
 
+---
+
+## Multi-Seed Benchmark
+
+To make the comparison more reliable, we re-ran every (algorithm,
+environment) combination with 5 random seeds. Every 5 to 10k training
+steps we pause training, freeze the policy, and run 10 evaluation
+episodes with deterministic actions:
+
+- mean of the Gaussian for PPO, TRPO and REINFORCE
+- actor output with zero noise for TD3
+- argmax over Q values for DDQN
+
+The plots below show the mean across the 5 seeds with shaded bands at
+one standard deviation.
+
+### Learning curves on continuous control
+
+![continuous learning curves](results/plots/learning_curves_continuous.png)
 
 
-## PPO Hyperparameters
+### Final returns
 
-| Parameter | Pendulum | Ant-v4 |
-|-----------|----------|--------|
-| `n_steps` | 2048 | 2048 |
-| `update_epochs` | 10 | 10 |
-| `minibatch_size` | 64 | 64 |
-| `lr` | 3e-4 | 3e-4 |
-| `clip_eps` | 0.2 | 0.2 |
-| `target_kl` | 0.02 | 0.02 |
-| `entropy_coef` | 0.0 | 0.0 |
-| `hidden size` | 64 | 256 |
+Mean ± std over 5 seeds, computed from the last 10% of evaluation
+points. Bold is the best per row.
+
+| Environment      | REINFORCE        | TRPO             | PPO                  | TD3                  |
+|------------------|------------------|------------------|----------------------|----------------------|
+| Pendulum-v1      | -1071 ± 11       | -217 ± 94        | **-130 ± 11**        | -148 ± 5             |
+| Hopper-v4        | 339 ± 53         | 1132 ± 644       | **3100 ± 356**       | 2808 ± 874           |
+| HalfCheetah-v4   | 397 ± 324        | 682 ± 233        | 2912 ± 1192          | **9794 ± 913**       |
+| Walker2d-v4      | 261 ± 27         | 335 ± 73         | 2827 ± 438           | **3444 ± 1267**      |
+
+### Discrete benchmark on LunarLander-v2
+
+![discrete learning curves](results/plots/learning_curves_discrete.png)
+
+### Wall-clock cost
+
+![wall-clock Hopper](results/plots/wallclock_hopper-v4_log.png)
+
+On Hopper-v4 the same 1M environment-step budget takes around 1.5k
+wall-clock seconds for PPO and around 12k seconds for TD3.
+
+### Aggregate normalized score
+
+![aggregate](results/plots/aggregate_normalised_continuous.png)
+
+Each algorithm's final return per environment is normalized so the
+best algorithm scores 1.0 and the worst 0.0. The bars are the average
+across the continuous environments.
+
+The .npy arrays underlying every plot above are saved under `results/`.
+
+## Hyperparameters
+*The hyperparameters for eaach algorithm are in `<algo>/config.json` and follow the original paper defaults and the Stable-Baselines3 RL Zoo conventions. Use `--set key=value` to override any field on the command line (see §3.3).*
 
 
 ## 1. Setup
@@ -186,6 +229,10 @@ python main.py --algo ppo --env_name Pendulum-v1
 python main.py --algo ppo --env_name Ant-v4 \
                           --set entropy_coef=0.0 lr=1e-4
 
+# TRPO — both action spaces
+python main.py --algo trpo --env_name CartPole-v1
+python main.py --algo trpo --env_name Pendulum-v1 --seed 1
+
 # REINFORCE — both action spaces
 python main.py --algo reinforce --env_name CartPole-v1
 python main.py --algo reinforce --env_name Pendulum-v1 --seed 1
@@ -250,7 +297,7 @@ Every run folder contains:
 | `eval_rewards.csv`                                    | TD3                 | periodic eval returns             |
 | `episode_scores.csv`                                  | DDQN                | per-episode scores                |
 | `model_actor`, `model_critic`, `model_*_optimizer`    | TD3                 | torch state dicts                 |
-| `model_final.pt`                                      | PPO / REINFORCE     | torch state dict                  |
+| `model_final.pt`                                      | PPO / REINFORCE / TRPO | torch state dict               |
 | `model.pth`                                           | DDQN                | torch state dict                  |
 
 The model is **always saved** at the end of training, regardless of
