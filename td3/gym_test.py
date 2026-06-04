@@ -1,4 +1,4 @@
-import gym
+import gymnasium as gym
 
 ### For testing environments with basic RL
 '''
