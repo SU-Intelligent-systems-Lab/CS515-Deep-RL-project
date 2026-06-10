@@ -1,6 +1,5 @@
 # CS515 Deep RL Project
-Implementations of deep reinforcement learning algorithms: **REINFORCE**, **TD3**,
-**DDQN**, and **PPO**.
+Implementations of deep reinforcement learning algorithms: **REINFORCE**, ***TRPO**, **PPO**, **TD3**, and **DDQN**.
 
 | Algorithm                                   | Action space | Folder       |
 |---------------------------------------------|--------------|--------------|
@@ -8,7 +7,7 @@ Implementations of deep reinforcement learning algorithms: **REINFORCE**, **TD3*
 | **PPO** — Proximal Policy Optimisation      | both         | `ppo/`       |
 | **TRPO** — Trust Region Policy Optimisation | both         | `trpo/`      |
 | **REINFORCE** with value baseline           | both         | `reinforce/` |
-| **DDQN** — Double Deep Q-Network            | discrete     | `ddqn/`      |
+| **DDQN** — Double Deep Q-Network            | discrete     | `DDQN/`      |
 
 ---
 
@@ -60,10 +59,10 @@ one standard deviation.
 ### Learning curves on continuous control
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b864079c-a437-4ede-a6f2-becb2b512c10" width="49%" />
-  <img src="https://github.com/user-attachments/assets/03deccc7-f6a9-4723-b2e3-f8cc0fd4f79a" width="49%" />
-  <img src="https://github.com/user-attachments/assets/53bd0acf-69e4-4cb9-a806-a147b4aa307d" width="49%" />
-  <img src="https://github.com/user-attachments/assets/dc26ae3c-75ab-45ab-9c52-7f436a2a2aa1" width="49%" />
+  <img src="https://github.com/user-attachments/assets/b1240135-d511-488f-a4a8-d6c8eaf032bd" width="49%" />
+  <img src="https://github.com/user-attachments/assets/3c7faa4c-8339-4fc2-aa77-ec384f2c8cbf" width="49%" />
+  <img src="https://github.com/user-attachments/assets/091677cf-18f8-42d2-b973-c166af795d49" width="49%" />
+  <img src="https://github.com/user-attachments/assets/b8f41fc5-337e-483e-a06d-8a1f9fcdb42e" width="49%" />
 </p>
 
 ### Final returns
@@ -73,26 +72,26 @@ points. Bold is the best per row.
 
 | Environment      | REINFORCE        | TRPO             | PPO                  | TD3                  |
 |------------------|------------------|------------------|----------------------|----------------------|
-| Pendulum-v1      | -1071 ± 11       | -217 ± 94        | **-130 ± 11**        | -148 ± 5             |
-| Hopper-v4        | 339 ± 53         | 1132 ± 644       | **3100 ± 356**       | 2808 ± 874           |
-| HalfCheetah-v4   | 397 ± 324        | 682 ± 233        | 2912 ± 1192          | **9794 ± 913**       |
-| Walker2d-v4      | 261 ± 27         | 335 ± 73         | 2827 ± 438           | **3444 ± 1267**      |
+| Pendulum-v1      | -1071 ± 11       | **-124 ± 8**     | -130 ± 11            | -148 ± 5             |
+| Hopper-v4        | 339 ± 53         | 2666 ± 793       | **3100 ± 356**       | 2808 ± 874           |
+| HalfCheetah-v4   | 397 ± 324        | 1138 ± 73        | 2912 ± 1192          | **9794 ± 913**       |
+| Walker2d-v4      | 261 ± 27         | 1343 ± 694       | 2827 ± 438           | **3444 ± 1267**      |
 
 ### Learning curves on discrete control (LunarLander-v2)
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/2ad48140-dac3-46ea-84bf-52ba739ac8bf" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/f35edad2-da37-427d-a39a-a1e9da310193" />
 
 ### Wall-clock cost
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/5171b6f8-c081-4810-a7f2-7509f54d49df" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/f35edad2-da37-427d-a39a-a1e9da310193" />
 
 On Hopper-v4 the same 1M environment-step budget takes around 1.5k
 wall-clock seconds for PPO and around 12k seconds for TD3.
 
 ### Aggregate normalized score
 
-<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/7e0fca91-e51d-48e6-b7c7-5042c64b0b7c" />
-<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/aeb02ce0-0787-4bbd-9fee-485732a17d0c" />
+<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/3b14cf7b-7873-4254-a113-388d20ee7324" />
+<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/437513d8-d0f1-4e98-8f15-481d3d9800b6" />
 
 Each algorithm's final return per environment is normalized so the
 best algorithm scores 1.0 and the worst 0.0. The bars are the average
@@ -101,7 +100,7 @@ across the continuous environments.
 The .npy arrays underlying every plot above are saved under `results/`.
 
 ## Hyperparameters
-*The hyperparameters for eaach algorithm are in `<algo>/config.json` and follow the original paper defaults and the Stable-Baselines3 RL Zoo conventions. Use `--set key=value` to override any field on the command line (see §3.3).*
+*The hyperparameters for each algorithm are in `<algo>/config.json` and follow the original paper defaults and the Stable-Baselines3 RL Zoo conventions. Use `--set key=value` to override any field on the command line (see §3.3).*
 
 
 ## 1. Setup
@@ -135,7 +134,7 @@ pip install -r requirements.txt
 ``` text
 .
 ├── README.md
-├── ddqn
+├── DDQN
 │   ├── config.json
 │   ├── config.py
 │   ├── ddqn_agent.py
@@ -215,7 +214,7 @@ Every run folder under `runs/<algo>/` contains:
 python main.py --algo <ALGO> --env_name <ENV> [overrides]
 ```
 
-`<ALGO>` could be of of the following `{td3, ppo, reinforce, ddqn, trpo}`. Hyperparameters come from
+`<ALGO>` could be one of the following `{td3, ppo, reinforce, ddqn, trpo}`. Hyperparameters come from
 `<algo>/config.json`. The JSON supports an `env_overrides` block that
 adjusts hyperparameters per environment. Anything in JSON can
 be overridden on the command line via `--set key=value`.
@@ -261,7 +260,7 @@ python main.py --algo ddqn --env_name LunarLander-v2 --seed 0
 | `--set k=v ...`  | Override any field in `<algo>/config.json`                    |
 | `--config PATH`  | Use a custom config JSON instead of `<algo>/config.json`      |
 | `--logroot DIR`  | Root for all run folders (default `runs/`)                    |
-| `--mode`          | select the mode {train, test} (defualt, train)               | 
+| `--mode`          | select the mode {train, test} (default, train)               | 
 
 
 ---
