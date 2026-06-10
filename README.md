@@ -59,11 +59,19 @@ one standard deviation.
 ### Learning curves on continuous control
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/67f2f941-8328-49d0-8fa4-ff557e8ca9b0" width="49%" />
-  <img src="https://github.com/user-attachments/assets/a3d19e4f-30cc-419a-94a2-ffcf81b26001" width="49%" />
-  <img src="https://github.com/user-attachments/assets/48f93759-2e52-4eab-8a6b-b29088101257" width="49%" />
-  <img src="https://github.com/user-attachments/assets/09efdda9-47c3-4416-a9ce-161e3ec497f1" width="49%" />
+  <img src="https://github.com/user-attachments/assets/7822fea5-7dd7-48ba-9469-3d0dea1d9fd0" width="49%" />
+  <img src="https://github.com/user-attachments/assets/fffc2a9a-2340-469e-8187-d91496258532" width="49%" />
+  <img src="https://github.com/user-attachments/assets/fdaa23ce-68a1-4634-8892-175c72b3d600" width="49%" />
+  <img src="https://github.com/user-attachments/assets/3bda2a5a-c230-4fa4-b0c9-a11b05dc96c8" width="49%" />
 </p>
+
+<img width="728" height="532" alt="learning_curve_pendulum-v1" src="https://github.com/user-attachments/assets/7822fea5-7dd7-48ba-9469-3d0dea1d9fd0" />
+<img width="728" height="532" alt="learning_curve_hopper-v4" src="https://github.com/user-attachments/assets/fffc2a9a-2340-469e-8187-d91496258532" />
+<img width="728" height="532" alt="learning_curve_halfcheetah-v4" src="https://github.com/user-attachments/assets/fdaa23ce-68a1-4634-8892-175c72b3d600" />
+<img width="728" height="532" alt="learning_curve_walker2d-v4" src="https://github.com/user-attachments/assets/3bda2a5a-c230-4fa4-b0c9-a11b05dc96c8" />
+
+
+
 
 ### Final returns (continuous control)
 
