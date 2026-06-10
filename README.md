@@ -59,10 +59,10 @@ one standard deviation.
 ### Learning curves on continuous control
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b1240135-d511-488f-a4a8-d6c8eaf032bd" width="49%" />
-  <img src="https://github.com/user-attachments/assets/3c7faa4c-8339-4fc2-aa77-ec384f2c8cbf" width="49%" />
-  <img src="https://github.com/user-attachments/assets/091677cf-18f8-42d2-b973-c166af795d49" width="49%" />
-  <img src="https://github.com/user-attachments/assets/b8f41fc5-337e-483e-a06d-8a1f9fcdb42e" width="49%" />
+  <img src="https://github.com/user-attachments/assets/67f2f941-8328-49d0-8fa4-ff557e8ca9b0" width="49%" />
+  <img src="https://github.com/user-attachments/assets/a3d19e4f-30cc-419a-94a2-ffcf81b26001" width="49%" />
+  <img src="https://github.com/user-attachments/assets/48f93759-2e52-4eab-8a6b-b29088101257" width="49%" />
+  <img src="https://github.com/user-attachments/assets/09efdda9-47c3-4416-a9ce-161e3ec497f1" width="49%" />
 </p>
 
 ### Final returns (continuous control)
