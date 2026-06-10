@@ -65,11 +65,6 @@ one standard deviation.
   <img src="https://github.com/user-attachments/assets/3bda2a5a-c230-4fa4-b0c9-a11b05dc96c8" width="49%" />
 </p>
 
-<img width="728" height="532" alt="learning_curve_pendulum-v1" src="https://github.com/user-attachments/assets/7822fea5-7dd7-48ba-9469-3d0dea1d9fd0" />
-<img width="728" height="532" alt="learning_curve_hopper-v4" src="https://github.com/user-attachments/assets/fffc2a9a-2340-469e-8187-d91496258532" />
-<img width="728" height="532" alt="learning_curve_halfcheetah-v4" src="https://github.com/user-attachments/assets/fdaa23ce-68a1-4634-8892-175c72b3d600" />
-<img width="728" height="532" alt="learning_curve_walker2d-v4" src="https://github.com/user-attachments/assets/3bda2a5a-c230-4fa4-b0c9-a11b05dc96c8" />
-
 
 
 
@@ -87,7 +82,8 @@ points. Bold is the best per row.
 
 ### Learning curves on discrete control (LunarLander-v2)
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/f35edad2-da37-427d-a39a-a1e9da310193" />
+<img width="1456" height="532" alt="learning_curves_discrete" src="https://github.com/user-attachments/assets/c2b6c8d0-e927-495b-b4eb-f151aee3d0f3" />
+
 
 ### Final returns (discrete control)
 
@@ -100,15 +96,16 @@ points. Bold is the best per row.
 
 ### Wall-clock cost
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/c2014e7f-af7d-424b-a51b-6f5f8451355e" />
+<img width="728" height="532" alt="wallclock_hopper-v4_log" src="https://github.com/user-attachments/assets/271f3e43-7cc7-4bd0-818b-46682459f4da" />
+
 
 On Hopper-v4 the same 1M environment-step budget takes around 1.5k
 wall-clock seconds for PPO and around 12k seconds for TD3.
 
 ### Aggregate normalized score
 
-<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/3b14cf7b-7873-4254-a113-388d20ee7324" />
-<img width="980" height="560" alt="Image" src="https://github.com/user-attachments/assets/437513d8-d0f1-4e98-8f15-481d3d9800b6" />
+<img width="980" height="560" alt="aggregate_normalised_continuous" src="https://github.com/user-attachments/assets/32108aeb-3cb2-4188-9490-e4f9a83fbe1a" />
+<img width="980" height="560" alt="aggregate_normalised_discrete" src="https://github.com/user-attachments/assets/fd4bf813-826b-4858-bc9b-862fd075eb95" />
 
 Each algorithm's final return per environment is normalized so the
 best algorithm scores 1.0 and the worst 0.0. The bars are the average
