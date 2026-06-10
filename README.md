@@ -82,8 +82,7 @@ points. Bold is the best per row.
 
 ### Learning curves on discrete control (LunarLander-v2)
 
-<img width="1456" height="532" alt="learning_curves_discrete" src="https://github.com/user-attachments/assets/c2b6c8d0-e927-495b-b4eb-f151aee3d0f3" />
-
+<img width="728" height="532" alt="learning_curve_lunarlander-v2" src="https://github.com/user-attachments/assets/d0da47ea-c092-48bf-9bf8-26a83759c846" />
 
 ### Final returns (discrete control)
 
