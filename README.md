@@ -65,7 +65,7 @@ one standard deviation.
   <img src="https://github.com/user-attachments/assets/b8f41fc5-337e-483e-a06d-8a1f9fcdb42e" width="49%" />
 </p>
 
-### Final returns
+### Final returns (continuous control)
 
 Mean ± std over 5 seeds, computed from the last 10% of evaluation
 points. Bold is the best per row.
@@ -81,9 +81,18 @@ points. Bold is the best per row.
 
 <img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/f35edad2-da37-427d-a39a-a1e9da310193" />
 
+### Final returns (discrete control)
+
+Mean ± std over 5 seeds, computed from the last 10% of evaluation
+points. Bold is the best per row.
+
+| Environment      | REINFORCE        | TRPO             | PPO              | DDQN             |
+|------------------|------------------|------------------|------------------|------------------|
+| LunarLander-v2   | -394 ± 145       | 236 ± 29         | 206 ± 65         | **236 ± 27**     |
+
 ### Wall-clock cost
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/f35edad2-da37-427d-a39a-a1e9da310193" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/79de8dd9-171a-4ec1-9583-8823a6e99a97" />
 
 On Hopper-v4 the same 1M environment-step budget takes around 1.5k
 wall-clock seconds for PPO and around 12k seconds for TD3.
