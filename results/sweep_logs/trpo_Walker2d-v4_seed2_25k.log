@@ -1,0 +1,87 @@
+GPU not detected. Defaulting to CPU.
+########################
+logging outputs to trpo\data\trpo_sweep_Walker2d-v4_2026-05-13_14-08-40
+########################
+[eval @ step    25000] mean return =     6.75
+[update    1 | steps    25000 | sps   1699] ep_return    1.20  kl 0.0096  bt 0  ✓  ev 0.002
+[eval @ step    50000] mean return =    55.09
+[update    2 | steps    50000 | sps   1788] ep_return    6.79  kl 0.0098  bt 0  ✓  ev 0.333
+[eval @ step    75000] mean return =    61.54
+[update    3 | steps    75000 | sps   1637] ep_return    9.53  kl 0.0099  bt 0  ✓  ev 0.389
+[eval @ step   100000] mean return =   297.38
+[update    4 | steps   100000 | sps   1559] ep_return   21.94  kl 0.0098  bt 0  ✓  ev 0.429
+[eval @ step   125000] mean return =   334.18
+[update    5 | steps   125000 | sps   1525] ep_return   34.55  kl 0.0093  bt 0  ✓  ev 0.507
+[eval @ step   150000] mean return =   311.53
+[update    6 | steps   150000 | sps   1494] ep_return   69.29  kl 0.0091  bt 0  ✓  ev 0.572
+[eval @ step   175000] mean return =   304.01
+[update    7 | steps   175000 | sps   1497] ep_return   95.46  kl 0.0087  bt 0  ✓  ev 0.682
+[eval @ step   200000] mean return =   285.61
+[update    8 | steps   200000 | sps   1489] ep_return  152.08  kl 0.0087  bt 0  ✓  ev 0.767
+[eval @ step   225000] mean return =   292.37
+[update    9 | steps   225000 | sps   1491] ep_return  168.08  kl 0.0082  bt 0  ✓  ev 0.825
+[eval @ step   250000] mean return =   292.60
+[update   10 | steps   250000 | sps   1485] ep_return  202.36  kl 0.0084  bt 0  ✓  ev 0.827
+[eval @ step   275000] mean return =   272.13
+[update   11 | steps   275000 | sps   1492] ep_return  223.07  kl 0.0084  bt 0  ✓  ev 0.863
+[eval @ step   300000] mean return =   266.24
+[update   12 | steps   300000 | sps   1493] ep_return  252.97  kl 0.0076  bt 0  ✓  ev 0.880
+[eval @ step   325000] mean return =   270.73
+[update   13 | steps   325000 | sps   1514] ep_return  238.02  kl 0.0076  bt 0  ✓  ev 0.900
+[eval @ step   350000] mean return =   266.94
+[update   14 | steps   350000 | sps   1506] ep_return  249.77  kl 0.0078  bt 0  ✓  ev 0.917
+[eval @ step   375000] mean return =   263.33
+[update   15 | steps   375000 | sps   1498] ep_return  257.49  kl 0.0077  bt 0  ✓  ev 0.926
+[eval @ step   400000] mean return =   260.76
+[update   16 | steps   400000 | sps   1501] ep_return  253.84  kl 0.0080  bt 0  ✓  ev 0.935
+[eval @ step   425000] mean return =   270.63
+[update   17 | steps   425000 | sps   1500] ep_return  279.46  kl 0.0075  bt 0  ✓  ev 0.941
+[eval @ step   450000] mean return =   275.67
+[update   18 | steps   450000 | sps   1496] ep_return  273.20  kl 0.0079  bt 0  ✓  ev 0.954
+[eval @ step   475000] mean return =   276.64
+[update   19 | steps   475000 | sps   1489] ep_return  266.74  kl 0.0077  bt 0  ✓  ev 0.962
+[eval @ step   500000] mean return =   278.37
+[update   20 | steps   500000 | sps   1487] ep_return  273.11  kl 0.0079  bt 0  ✓  ev 0.952
+[eval @ step   525000] mean return =   281.38
+[update   21 | steps   525000 | sps   1485] ep_return  271.13  kl 0.0082  bt 0  ✓  ev 0.964
+[eval @ step   550000] mean return =   287.36
+[update   22 | steps   550000 | sps   1485] ep_return  269.71  kl 0.0081  bt 0  ✓  ev 0.976
+[eval @ step   575000] mean return =   291.04
+[update   23 | steps   575000 | sps   1483] ep_return  271.46  kl 0.0081  bt 0  ✓  ev 0.965
+[eval @ step   600000] mean return =   296.72
+[update   24 | steps   600000 | sps   1478] ep_return  270.18  kl 0.0086  bt 0  ✓  ev 0.959
+[eval @ step   625000] mean return =   304.51
+[update   25 | steps   625000 | sps   1480] ep_return  277.78  kl 0.0085  bt 0  ✓  ev 0.977
+[eval @ step   650000] mean return =   311.63
+[update   26 | steps   650000 | sps   1474] ep_return  287.23  kl 0.0085  bt 0  ✓  ev 0.972
+[eval @ step   675000] mean return =   320.30
+[update   27 | steps   675000 | sps   1475] ep_return  292.58  kl 0.0085  bt 0  ✓  ev 0.973
+[eval @ step   700000] mean return =   326.13
+[update   28 | steps   700000 | sps   1470] ep_return  292.63  kl 0.0089  bt 0  ✓  ev 0.977
+[eval @ step   725000] mean return =   331.34
+[update   29 | steps   725000 | sps   1471] ep_return  288.09  kl 0.0083  bt 0  ✓  ev 0.967
+[eval @ step   750000] mean return =   337.74
+[update   30 | steps   750000 | sps   1472] ep_return  294.23  kl 0.0088  bt 0  ✓  ev 0.977
+[eval @ step   775000] mean return =   346.71
+[update   31 | steps   775000 | sps   1468] ep_return  299.50  kl 0.0089  bt 0  ✓  ev 0.980
+[eval @ step   800000] mean return =   355.17
+[update   32 | steps   800000 | sps   1464] ep_return  310.16  kl 0.0090  bt 0  ✓  ev 0.970
+[eval @ step   825000] mean return =   360.85
+[update   33 | steps   825000 | sps   1464] ep_return  318.49  kl 0.0089  bt 0  ✓  ev 0.978
+[eval @ step   850000] mean return =   370.42
+[update   34 | steps   850000 | sps   1462] ep_return  318.06  kl 0.0092  bt 0  ✓  ev 0.977
+[eval @ step   875000] mean return =   372.02
+[update   35 | steps   875000 | sps   1461] ep_return  324.25  kl 0.0093  bt 0  ✓  ev 0.980
+[eval @ step   900000] mean return =   370.40
+[update   36 | steps   900000 | sps   1462] ep_return  325.51  kl 0.0094  bt 0  ✓  ev 0.976
+[eval @ step   925000] mean return =   372.34
+[update   37 | steps   925000 | sps   1459] ep_return  337.53  kl 0.0092  bt 0  ✓  ev 0.977
+[eval @ step   950000] mean return =   374.74
+[update   38 | steps   950000 | sps   1458] ep_return  342.30  kl 0.0094  bt 0  ✓  ev 0.977
+[eval @ step   975000] mean return =   373.67
+[update   39 | steps   975000 | sps   1457] ep_return  340.59  kl 0.0095  bt 0  ✓  ev 0.966
+[eval @ step  1000000] mean return =   374.47
+[update   40 | steps  1000000 | sps   1455] ep_return  351.78  kl 0.0094  bt 0  ✓  ev 0.980
+Saved final model to trpo\data\trpo_sweep_Walker2d-v4_2026-05-13_14-08-40\model_final.pt
+Saved 40 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\continuous\trpo\walker2d-v4\seed_2.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\continuous\trpo\walker2d-v4\seed_2.npy

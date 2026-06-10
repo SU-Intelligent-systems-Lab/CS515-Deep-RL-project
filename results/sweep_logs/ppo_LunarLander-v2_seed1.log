@@ -1,0 +1,302 @@
+C:\Users\mohamedosama\AppData\Local\anaconda3\envs\deep_rl\lib\site-packages\pygame\pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+GPU not detected. Defaulting to CPU.
+########################
+logging outputs to ppo\data\ppo_sweep_LunarLander-v2_2026-05-10_17-25-28
+########################
+[update    1 | steps     2048 | sps   1666] ep_return -226.38  kl 0.0060  clip 0.052  ev -0.000  epochs 10/10
+[update    2 | steps     4096 | sps   1672] ep_return -178.76  kl 0.0066  clip 0.064  ev -0.019  epochs 10/10
+[update    3 | steps     6144 | sps   1714] ep_return -164.79  kl 0.0056  clip 0.064  ev -0.022  epochs 10/10
+[update    4 | steps     8192 | sps   1702] ep_return -158.35  kl 0.0089  clip 0.112  ev -0.002  epochs 10/10
+[eval @ step    10240] mean return =  -932.21
+[update    5 | steps    10240 | sps   1523] ep_return -151.90  kl 0.0051  clip 0.033  ev -0.002  epochs 10/10
+[update    6 | steps    12288 | sps   1562] ep_return -142.72  kl 0.0078  clip 0.097  ev -0.001  epochs 10/10
+[update    7 | steps    14336 | sps   1589] ep_return -130.18  kl 0.0064  clip 0.064  ev -0.000  epochs 10/10
+[update    8 | steps    16384 | sps   1610] ep_return -123.70  kl 0.0099  clip 0.136  ev 0.027  epochs 10/10
+[update    9 | steps    18432 | sps   1630] ep_return -116.45  kl 0.0067  clip 0.086  ev -0.035  epochs 10/10
+[eval @ step    20480] mean return =  -413.01
+[update   10 | steps    20480 | sps   1600] ep_return -111.85  kl 0.0041  clip 0.042  ev 0.134  epochs 10/10
+[update   11 | steps    22528 | sps   1615] ep_return -110.27  kl 0.0057  clip 0.061  ev 0.207  epochs 10/10
+[update   12 | steps    24576 | sps   1627] ep_return -105.23  kl 0.0016  clip 0.008  ev 0.146  epochs 10/10
+[update   13 | steps    26624 | sps   1633] ep_return -101.00  kl 0.0041  clip 0.035  ev 0.228  epochs 10/10
+[update   14 | steps    28672 | sps   1642] ep_return -101.87  kl 0.0042  clip 0.044  ev 0.076  epochs 10/10
+[eval @ step    30720] mean return =  -331.39
+[update   15 | steps    30720 | sps   1623] ep_return  -95.57  kl 0.0063  clip 0.100  ev 0.318  epochs 10/10
+[update   16 | steps    32768 | sps   1634] ep_return  -93.35  kl 0.0067  clip 0.081  ev 0.344  epochs 10/10
+[update   17 | steps    34816 | sps   1630] ep_return  -91.04  kl 0.0054  clip 0.056  ev 0.530  epochs 10/10
+[update   18 | steps    36864 | sps   1614] ep_return  -95.22  kl 0.0030  clip 0.028  ev 0.134  epochs 10/10
+[update   19 | steps    38912 | sps   1623] ep_return  -92.78  kl 0.0060  clip 0.066  ev 0.448  epochs 10/10
+[eval @ step    40960] mean return =  -266.39
+[update   20 | steps    40960 | sps   1594] ep_return  -88.29  kl 0.0043  clip 0.060  ev 0.773  epochs 10/10
+[update   21 | steps    43008 | sps   1593] ep_return  -87.18  kl 0.0057  clip 0.068  ev 0.417  epochs 10/10
+[update   22 | steps    45056 | sps   1600] ep_return  -84.08  kl 0.0072  clip 0.114  ev 0.642  epochs 10/10
+[update   23 | steps    47104 | sps   1605] ep_return  -82.54  kl 0.0056  clip 0.060  ev 0.449  epochs 10/10
+[update   24 | steps    49152 | sps   1591] ep_return  -78.01  kl 0.0038  clip 0.028  ev 0.744  epochs 10/10
+[eval @ step    51200] mean return =  -166.09
+[update   25 | steps    51200 | sps   1540] ep_return  -74.34  kl 0.0064  clip 0.066  ev 0.784  epochs 10/10
+[update   26 | steps    53248 | sps   1518] ep_return  -72.92  kl 0.0108  clip 0.142  ev 0.569  epochs 10/10
+[update   27 | steps    55296 | sps   1505] ep_return  -67.87  kl 0.0055  clip 0.051  ev 0.859  epochs 10/10
+[update   28 | steps    57344 | sps   1495] ep_return  -65.25  kl 0.0051  clip 0.061  ev 0.894  epochs 10/10
+[update   29 | steps    59392 | sps   1488] ep_return  -60.53  kl 0.0053  clip 0.069  ev 0.515  epochs 10/10
+[eval @ step    61440] mean return =  -138.14
+[update   30 | steps    61440 | sps   1470] ep_return  -55.17  kl 0.0118  clip 0.117  ev 0.700  epochs 10/10
+[update   31 | steps    63488 | sps   1475] ep_return  -51.92  kl 0.0066  clip 0.075  ev 0.737  epochs 10/10
+[update   32 | steps    65536 | sps   1481] ep_return  -44.97  kl 0.0057  clip 0.060  ev 0.736  epochs 10/10
+[update   33 | steps    67584 | sps   1483] ep_return  -41.39  kl 0.0030  clip 0.026  ev 0.630  epochs 10/10
+[update   34 | steps    69632 | sps   1486] ep_return  -37.55  kl 0.0082  clip 0.079  ev 0.701  epochs 10/10
+[eval @ step    71680] mean return =   -16.20
+[update   35 | steps    71680 | sps   1463] ep_return  -33.64  kl 0.0111  clip 0.159  ev 0.877  epochs 10/10
+[update   36 | steps    73728 | sps   1469] ep_return  -30.17  kl 0.0065  clip 0.045  ev 0.931  epochs 10/10
+[update   37 | steps    75776 | sps   1475] ep_return  -27.81  kl 0.0146  clip 0.178  ev 0.883  epochs 10/10
+[update   38 | steps    77824 | sps   1474] ep_return  -25.31  kl 0.0235  clip 0.226  ev 0.932  epochs 10/10
+[update   39 | steps    79872 | sps   1476] ep_return  -17.42  kl 0.0065  clip 0.072  ev 0.946  epochs 10/10
+[eval @ step    81920] mean return =  -119.62
+[update   40 | steps    81920 | sps   1465] ep_return  -12.75  kl 0.0068  clip 0.081  ev 0.944  epochs 10/10
+[update   41 | steps    83968 | sps   1470] ep_return  -13.65  kl 0.0044  clip 0.027  ev 0.331  epochs 10/10
+[update   42 | steps    86016 | sps   1475] ep_return  -13.78  kl 0.0092  clip 0.118  ev 0.973  epochs 10/10
+[update   43 | steps    88064 | sps   1479] ep_return   -8.40  kl 0.0024  clip 0.021  ev 0.775  epochs 10/10
+[eval @ step    90112] mean return =   -20.27
+[update   44 | steps    90112 | sps   1469] ep_return   -8.22  kl 0.0059  clip 0.062  ev 0.911  epochs 10/10
+[update   45 | steps    92160 | sps   1471] ep_return   -8.17  kl 0.0055  clip 0.055  ev 0.775  epochs 10/10
+[update   46 | steps    94208 | sps   1475] ep_return   -6.76  kl 0.0052  clip 0.048  ev 0.839  epochs 10/10
+[update   47 | steps    96256 | sps   1478] ep_return   -6.15  kl 0.0044  clip 0.024  ev 0.710  epochs 10/10
+[update   48 | steps    98304 | sps   1476] ep_return   -3.04  kl 0.0086  clip 0.103  ev 0.876  epochs 10/10
+[eval @ step   100352] mean return =   -37.46
+[update   49 | steps   100352 | sps   1455] ep_return   -0.84  kl 0.0360  clip 0.228  ev 0.738  epochs 10/10
+[update   50 | steps   102400 | sps   1452] ep_return    6.56  kl 0.0105  clip 0.151  ev 0.923  epochs 10/10
+[update   51 | steps   104448 | sps   1443] ep_return   10.31  kl 0.0055  clip 0.077  ev 0.757  epochs 10/10
+[update   52 | steps   106496 | sps   1435] ep_return   16.33  kl 0.0040  clip 0.042  ev 0.771  epochs 10/10
+[update   53 | steps   108544 | sps   1427] ep_return   19.69  kl 0.0047  clip 0.058  ev 0.951  epochs 10/10
+[eval @ step   110592] mean return =    11.50
+[update   54 | steps   110592 | sps   1403] ep_return   22.20  kl 0.0039  clip 0.056  ev 0.620  epochs 10/10
+[update   55 | steps   112640 | sps   1401] ep_return   22.17  kl 0.0068  clip 0.088  ev 0.924  epochs 10/10
+[update   56 | steps   114688 | sps   1400] ep_return   24.04  kl 0.0058  clip 0.070  ev 0.741  epochs 10/10
+[update   57 | steps   116736 | sps   1396] ep_return   28.35  kl 0.0041  clip 0.029  ev 0.783  epochs 10/10
+[update   58 | steps   118784 | sps   1392] ep_return   26.95  kl 0.0077  clip 0.105  ev 0.973  epochs 10/10
+[eval @ step   120832] mean return =    22.95
+[update   59 | steps   120832 | sps   1367] ep_return   30.48  kl 0.0032  clip 0.031  ev 0.781  epochs 10/10
+[update   60 | steps   122880 | sps   1363] ep_return   35.51  kl 0.0058  clip 0.076  ev 0.698  epochs 10/10
+[update   61 | steps   124928 | sps   1360] ep_return   37.37  kl 0.0078  clip 0.091  ev 0.684  epochs 10/10
+[update   62 | steps   126976 | sps   1357] ep_return   40.37  kl 0.0084  clip 0.121  ev 0.835  epochs 10/10
+[update   63 | steps   129024 | sps   1352] ep_return   45.17  kl 0.0065  clip 0.064  ev 0.608  epochs 10/10
+[eval @ step   131072] mean return =     3.85
+[update   64 | steps   131072 | sps   1334] ep_return   47.02  kl 0.0057  clip 0.057  ev 0.670  epochs 10/10
+[update   65 | steps   133120 | sps   1331] ep_return   49.42  kl 0.0079  clip 0.096  ev 0.953  epochs 10/10
+[update   66 | steps   135168 | sps   1331] ep_return   51.47  kl 0.0082  clip 0.111  ev 0.786  epochs 10/10
+[update   67 | steps   137216 | sps   1327] ep_return   56.77  kl 0.0052  clip 0.072  ev 0.687  epochs 10/10
+[update   68 | steps   139264 | sps   1324] ep_return   56.86  kl 0.0170  clip 0.312  ev 0.629  epochs 10/10
+[eval @ step   141312] mean return =   109.88
+[update   69 | steps   141312 | sps   1303] ep_return   59.23  kl 0.0069  clip 0.097  ev 0.952  epochs 10/10
+[update   70 | steps   143360 | sps   1307] ep_return   59.81  kl 0.0117  clip 0.121  ev 0.765  epochs 10/10
+[update   71 | steps   145408 | sps   1311] ep_return   61.71  kl 0.0066  clip 0.089  ev 0.964  epochs 10/10
+[update   72 | steps   147456 | sps   1315] ep_return   64.86  kl 0.0057  clip 0.083  ev 0.875  epochs 10/10
+[update   73 | steps   149504 | sps   1316] ep_return   65.47  kl 0.0081  clip 0.086  ev 0.596  epochs 10/10
+[eval @ step   151552] mean return =   101.67
+[update   74 | steps   151552 | sps   1310] ep_return   72.50  kl 0.0047  clip 0.048  ev 0.685  epochs 10/10
+[update   75 | steps   153600 | sps   1314] ep_return   72.52  kl 0.0017  clip 0.003  ev 0.731  epochs 10/10
+[update   76 | steps   155648 | sps   1318] ep_return   73.43  kl 0.0064  clip 0.052  ev 0.668  epochs 10/10
+[update   77 | steps   157696 | sps   1317] ep_return   74.29  kl 0.0056  clip 0.052  ev 0.679  epochs 10/10
+[update   78 | steps   159744 | sps   1320] ep_return   75.78  kl 0.0103  clip 0.175  ev 0.758  epochs 10/10
+[eval @ step   161792] mean return =   116.81
+[update   79 | steps   161792 | sps   1314] ep_return   83.69  kl 0.0088  clip 0.126  ev 0.983  epochs 10/10
+[update   80 | steps   163840 | sps   1311] ep_return   86.19  kl 0.0051  clip 0.042  ev 0.896  epochs 10/10
+[update   81 | steps   165888 | sps   1309] ep_return   84.90  kl 0.0082  clip 0.091  ev 0.983  epochs 10/10
+[update   82 | steps   167936 | sps   1311] ep_return   86.70  kl 0.0075  clip 0.086  ev 0.962  epochs 10/10
+[update   83 | steps   169984 | sps   1311] ep_return   88.71  kl 0.0071  clip 0.095  ev 0.979  epochs 10/10
+[eval @ step   172032] mean return =    89.71
+[update   84 | steps   172032 | sps   1296] ep_return   92.56  kl 0.0035  clip 0.021  ev 0.785  epochs 10/10
+[update   85 | steps   174080 | sps   1294] ep_return   94.24  kl 0.0032  clip 0.024  ev 0.973  epochs 10/10
+[update   86 | steps   176128 | sps   1293] ep_return   96.84  kl 0.0083  clip 0.083  ev 0.978  epochs 10/10
+[update   87 | steps   178176 | sps   1290] ep_return   97.73  kl 0.0035  clip 0.020  ev 0.721  epochs 10/10
+[eval @ step   180224] mean return =   188.36
+[update   88 | steps   180224 | sps   1283] ep_return   98.66  kl 0.0058  clip 0.060  ev 0.987  epochs 10/10
+[update   89 | steps   182272 | sps   1287] ep_return   98.27  kl 0.0093  clip 0.133  ev 0.976  epochs 10/10
+[update   90 | steps   184320 | sps   1290] ep_return   98.17  kl 0.0024  clip 0.016  ev 0.814  epochs 10/10
+[update   91 | steps   186368 | sps   1293] ep_return  100.16  kl 0.0032  clip 0.034  ev 0.847  epochs 10/10
+[update   92 | steps   188416 | sps   1292] ep_return  101.67  kl 0.0056  clip 0.064  ev 0.959  epochs 10/10
+[eval @ step   190464] mean return =   119.10
+[update   93 | steps   190464 | sps   1281] ep_return  101.62  kl 0.0020  clip 0.008  ev 0.621  epochs 10/10
+[update   94 | steps   192512 | sps   1279] ep_return  102.08  kl 0.0076  clip 0.090  ev 0.738  epochs 10/10
+[update   95 | steps   194560 | sps   1279] ep_return  104.98  kl 0.0037  clip 0.052  ev 0.755  epochs 10/10
+[update   96 | steps   196608 | sps   1280] ep_return  100.19  kl 0.0014  clip 0.010  ev 0.579  epochs 10/10
+[update   97 | steps   198656 | sps   1280] ep_return  103.61  kl 0.0069  clip 0.093  ev 0.957  epochs 10/10
+[eval @ step   200704] mean return =   100.06
+[update   98 | steps   200704 | sps   1278] ep_return  106.58  kl 0.0075  clip 0.107  ev 0.886  epochs 10/10
+[update   99 | steps   202752 | sps   1282] ep_return  107.51  kl 0.0155  clip 0.304  ev 0.965  epochs 10/10
+[update  100 | steps   204800 | sps   1283] ep_return  109.08  kl 0.0088  clip 0.122  ev 0.821  epochs 10/10
+[update  101 | steps   206848 | sps   1286] ep_return  109.60  kl 0.0053  clip 0.044  ev 0.605  epochs 10/10
+[update  102 | steps   208896 | sps   1289] ep_return  111.07  kl 0.0090  clip 0.120  ev 0.858  epochs 10/10
+[eval @ step   210944] mean return =    78.96
+[update  103 | steps   210944 | sps   1287] ep_return  109.30  kl 0.0047  clip 0.068  ev 0.921  epochs 10/10
+[update  104 | steps   212992 | sps   1286] ep_return  109.99  kl 0.0040  clip 0.035  ev 0.885  epochs 10/10
+[update  105 | steps   215040 | sps   1284] ep_return  108.43  kl 0.0112  clip 0.177  ev 0.964  epochs 10/10
+[update  106 | steps   217088 | sps   1288] ep_return  107.24  kl 0.0054  clip 0.055  ev 0.871  epochs 10/10
+[update  107 | steps   219136 | sps   1288] ep_return  107.54  kl 0.0033  clip 0.048  ev 0.818  epochs 10/10
+[eval @ step   221184] mean return =    68.12
+[update  108 | steps   221184 | sps   1284] ep_return  109.65  kl 0.0049  clip 0.063  ev 0.873  epochs 10/10
+[update  109 | steps   223232 | sps   1286] ep_return  105.06  kl 0.0070  clip 0.091  ev 0.961  epochs 10/10
+[update  110 | steps   225280 | sps   1289] ep_return  101.91  kl 0.0084  clip 0.083  ev 0.722  epochs 10/10
+[update  111 | steps   227328 | sps   1291] ep_return  102.21  kl 0.0048  clip 0.057  ev 0.650  epochs 10/10
+[update  112 | steps   229376 | sps   1293] ep_return  105.01  kl 0.0045  clip 0.046  ev 0.820  epochs 10/10
+[eval @ step   231424] mean return =    88.83
+[update  113 | steps   231424 | sps   1292] ep_return  106.68  kl 0.0045  clip 0.060  ev 0.797  epochs 10/10
+[update  114 | steps   233472 | sps   1294] ep_return   99.93  kl 0.0060  clip 0.056  ev 0.799  epochs 10/10
+[update  115 | steps   235520 | sps   1297] ep_return   97.15  kl 0.0060  clip 0.087  ev 0.713  epochs 10/10
+[update  116 | steps   237568 | sps   1300] ep_return   97.98  kl 0.0028  clip 0.026  ev 0.745  epochs 10/10
+[update  117 | steps   239616 | sps   1301] ep_return   98.04  kl 0.0220  clip 0.175  ev 0.909  epochs 10/10
+[eval @ step   241664] mean return =    84.23
+[update  118 | steps   241664 | sps   1299] ep_return   96.67  kl 0.0048  clip 0.047  ev 0.811  epochs 10/10
+[update  119 | steps   243712 | sps   1296] ep_return   96.94  kl 0.0065  clip 0.087  ev 0.932  epochs 10/10
+[update  120 | steps   245760 | sps   1299] ep_return   97.98  kl 0.0023  clip 0.017  ev 0.634  epochs 10/10
+[update  121 | steps   247808 | sps   1300] ep_return   98.32  kl 0.0079  clip 0.115  ev 0.603  epochs 10/10
+[update  122 | steps   249856 | sps   1299] ep_return   96.10  kl 0.0055  clip 0.062  ev 0.679  epochs 10/10
+[eval @ step   251904] mean return =    47.60
+[update  123 | steps   251904 | sps   1291] ep_return   90.88  kl 0.0055  clip 0.073  ev 0.827  epochs 10/10
+[update  124 | steps   253952 | sps   1290] ep_return   91.71  kl 0.0059  clip 0.058  ev 0.713  epochs 10/10
+[update  125 | steps   256000 | sps   1288] ep_return   92.22  kl 0.0148  clip 0.188  ev 0.915  epochs 10/10
+[update  126 | steps   258048 | sps   1288] ep_return   91.13  kl 0.0047  clip 0.049  ev 0.630  epochs 10/10
+[eval @ step   260096] mean return =    86.92
+[update  127 | steps   260096 | sps   1282] ep_return   93.01  kl 0.0067  clip 0.087  ev 0.923  epochs 10/10
+[update  128 | steps   262144 | sps   1281] ep_return   92.53  kl 0.0065  clip 0.079  ev 0.798  epochs 10/10
+[update  129 | steps   264192 | sps   1280] ep_return   88.17  kl 0.0051  clip 0.062  ev 0.773  epochs 10/10
+[update  130 | steps   266240 | sps   1280] ep_return   85.66  kl 0.0054  clip 0.061  ev 0.867  epochs 10/10
+[update  131 | steps   268288 | sps   1280] ep_return   84.39  kl 0.0077  clip 0.106  ev 0.948  epochs 10/10
+[eval @ step   270336] mean return =   130.04
+[update  132 | steps   270336 | sps   1273] ep_return   82.57  kl 0.0069  clip 0.094  ev 0.975  epochs 10/10
+[update  133 | steps   272384 | sps   1273] ep_return   82.95  kl 0.0057  clip 0.066  ev 0.829  epochs 10/10
+[update  134 | steps   274432 | sps   1273] ep_return   81.16  kl 0.0081  clip 0.087  ev 0.844  epochs 10/10
+[update  135 | steps   276480 | sps   1273] ep_return   83.34  kl 0.0077  clip 0.105  ev 0.903  epochs 10/10
+[update  136 | steps   278528 | sps   1272] ep_return   83.47  kl 0.0032  clip 0.010  ev 0.698  epochs 10/10
+[eval @ step   280576] mean return =    85.56
+[update  137 | steps   280576 | sps   1266] ep_return   81.68  kl 0.0030  clip 0.019  ev 0.780  epochs 10/10
+[update  138 | steps   282624 | sps   1263] ep_return   82.69  kl 0.0028  clip 0.023  ev 0.612  epochs 10/10
+[update  139 | steps   284672 | sps   1261] ep_return   81.45  kl 0.0049  clip 0.060  ev 0.729  epochs 10/10
+[update  140 | steps   286720 | sps   1259] ep_return   87.45  kl 0.0046  clip 0.042  ev 0.723  epochs 10/10
+[update  141 | steps   288768 | sps   1257] ep_return   90.07  kl 0.0056  clip 0.067  ev 0.817  epochs 10/10
+[eval @ step   290816] mean return =   143.18
+[update  142 | steps   290816 | sps   1250] ep_return   87.01  kl 0.0106  clip 0.121  ev 0.651  epochs 10/10
+[update  143 | steps   292864 | sps   1248] ep_return   85.34  kl 0.0054  clip 0.072  ev 0.811  epochs 10/10
+[update  144 | steps   294912 | sps   1246] ep_return   89.55  kl 0.0046  clip 0.062  ev 0.858  epochs 10/10
+[update  145 | steps   296960 | sps   1244] ep_return   91.49  kl 0.0037  clip 0.039  ev 0.818  epochs 10/10
+[update  146 | steps   299008 | sps   1243] ep_return   95.47  kl 0.0059  clip 0.066  ev 0.748  epochs 10/10
+[eval @ step   301056] mean return =   104.99
+[update  147 | steps   301056 | sps   1236] ep_return   93.89  kl 0.0060  clip 0.079  ev 0.880  epochs 10/10
+[update  148 | steps   303104 | sps   1235] ep_return   93.10  kl 0.0055  clip 0.076  ev 0.686  epochs 10/10
+[update  149 | steps   305152 | sps   1234] ep_return   93.35  kl 0.0058  clip 0.085  ev 0.876  epochs 10/10
+[update  150 | steps   307200 | sps   1232] ep_return   93.01  kl 0.0058  clip 0.051  ev 0.859  epochs 10/10
+[update  151 | steps   309248 | sps   1231] ep_return   94.39  kl 0.0029  clip 0.018  ev 0.485  epochs 10/10
+[eval @ step   311296] mean return =   107.63
+[update  152 | steps   311296 | sps   1225] ep_return   95.75  kl 0.0076  clip 0.100  ev 0.983  epochs 10/10
+[update  153 | steps   313344 | sps   1224] ep_return   99.72  kl 0.0061  clip 0.089  ev 0.880  epochs 10/10
+[update  154 | steps   315392 | sps   1223] ep_return   98.07  kl 0.0029  clip 0.037  ev 0.656  epochs 10/10
+[update  155 | steps   317440 | sps   1222] ep_return  100.81  kl 0.0020  clip 0.015  ev 0.659  epochs 10/10
+[update  156 | steps   319488 | sps   1220] ep_return  102.14  kl 0.0100  clip 0.155  ev 0.788  epochs 10/10
+[eval @ step   321536] mean return =   151.24
+[update  157 | steps   321536 | sps   1216] ep_return  104.39  kl 0.0044  clip 0.050  ev 0.799  epochs 10/10
+[update  158 | steps   323584 | sps   1215] ep_return  109.13  kl 0.0035  clip 0.033  ev 0.810  epochs 10/10
+[update  159 | steps   325632 | sps   1214] ep_return  116.96  kl 0.0037  clip 0.042  ev 0.777  epochs 10/10
+[update  160 | steps   327680 | sps   1213] ep_return  118.28  kl 0.0063  clip 0.066  ev 0.843  epochs 10/10
+[update  161 | steps   329728 | sps   1212] ep_return  115.58  kl 0.0028  clip 0.021  ev 0.516  epochs 10/10
+[eval @ step   331776] mean return =   146.61
+[update  162 | steps   331776 | sps   1207] ep_return  116.53  kl 0.0027  clip 0.032  ev 0.657  epochs 10/10
+[update  163 | steps   333824 | sps   1205] ep_return  116.94  kl 0.0068  clip 0.076  ev 0.834  epochs 10/10
+[update  164 | steps   335872 | sps   1204] ep_return  116.69  kl 0.0025  clip 0.025  ev 0.774  epochs 10/10
+[update  165 | steps   337920 | sps   1202] ep_return  117.55  kl 0.0031  clip 0.017  ev 0.749  epochs 10/10
+[update  166 | steps   339968 | sps   1201] ep_return  116.01  kl 0.0086  clip 0.100  ev 0.767  epochs 10/10
+[eval @ step   342016] mean return =   171.86
+[update  167 | steps   342016 | sps   1193] ep_return  110.61  kl 0.0022  clip 0.023  ev 0.617  epochs 10/10
+[update  168 | steps   344064 | sps   1192] ep_return  109.70  kl 0.0154  clip 0.171  ev 0.883  epochs 10/10
+[update  169 | steps   346112 | sps   1192] ep_return  110.80  kl 0.0105  clip 0.120  ev 0.966  epochs 10/10
+[update  170 | steps   348160 | sps   1188] ep_return  116.34  kl 0.0059  clip 0.060  ev 0.721  epochs 10/10
+[eval @ step   350208] mean return =   192.00
+[update  171 | steps   350208 | sps   1187] ep_return  116.73  kl 0.0026  clip 0.016  ev 0.828  epochs 10/10
+[update  172 | steps   352256 | sps   1182] ep_return  115.29  kl 0.0109  clip 0.165  ev 0.911  epochs 10/10
+[update  173 | steps   354304 | sps   1179] ep_return  114.89  kl 0.0074  clip 0.088  ev 0.976  epochs 10/10
+[update  174 | steps   356352 | sps   1178] ep_return  115.19  kl 0.0018  clip 0.008  ev 0.908  epochs 10/10
+[update  175 | steps   358400 | sps   1177] ep_return  117.51  kl 0.0030  clip 0.026  ev 0.956  epochs 10/10
+[eval @ step   360448] mean return =   163.24
+[update  176 | steps   360448 | sps   1174] ep_return  117.12  kl 0.0071  clip 0.098  ev 0.949  epochs 10/10
+[update  177 | steps   362496 | sps   1173] ep_return  116.68  kl 0.0046  clip 0.041  ev 0.790  epochs 10/10
+[update  178 | steps   364544 | sps   1172] ep_return  115.35  kl 0.0023  clip 0.012  ev 0.711  epochs 10/10
+[update  179 | steps   366592 | sps   1171] ep_return  111.22  kl 0.0056  clip 0.045  ev 0.822  epochs 10/10
+[update  180 | steps   368640 | sps   1169] ep_return  112.86  kl 0.0447  clip 0.112  ev 0.803  epochs 10/10
+[eval @ step   370688] mean return =   177.61
+[update  181 | steps   370688 | sps   1164] ep_return  114.69  kl 0.0033  clip 0.043  ev 0.761  epochs 10/10
+[update  182 | steps   372736 | sps   1163] ep_return  113.25  kl 0.0032  clip 0.018  ev 0.722  epochs 10/10
+[update  183 | steps   374784 | sps   1164] ep_return  112.13  kl 0.0047  clip 0.054  ev 0.741  epochs 10/10
+[update  184 | steps   376832 | sps   1166] ep_return  113.67  kl 0.0080  clip 0.119  ev 0.810  epochs 10/10
+[update  185 | steps   378880 | sps   1166] ep_return  112.03  kl 0.0163  clip 0.117  ev 0.915  epochs 10/10
+[eval @ step   380928] mean return =   111.43
+[update  186 | steps   380928 | sps   1164] ep_return  111.84  kl 0.0045  clip 0.051  ev 0.803  epochs 10/10
+[update  187 | steps   382976 | sps   1164] ep_return  111.21  kl 0.0035  clip 0.048  ev 0.732  epochs 10/10
+[update  188 | steps   385024 | sps   1165] ep_return  112.19  kl 0.0151  clip 0.132  ev 0.899  epochs 10/10
+[update  189 | steps   387072 | sps   1166] ep_return  114.95  kl 0.0057  clip 0.057  ev 0.713  epochs 10/10
+[update  190 | steps   389120 | sps   1165] ep_return  120.40  kl 0.0034  clip 0.043  ev 0.752  epochs 10/10
+[eval @ step   391168] mean return =   154.84
+[update  191 | steps   391168 | sps   1159] ep_return  119.25  kl 0.0083  clip 0.107  ev 0.950  epochs 10/10
+[update  192 | steps   393216 | sps   1160] ep_return  118.21  kl 0.0108  clip 0.167  ev 0.831  epochs 10/10
+[update  193 | steps   395264 | sps   1161] ep_return  117.60  kl 0.0033  clip 0.028  ev 0.734  epochs 10/10
+[update  194 | steps   397312 | sps   1157] ep_return  115.59  kl 0.0014  clip 0.013  ev 0.531  epochs 10/10
+[update  195 | steps   399360 | sps   1156] ep_return  114.82  kl 0.0036  clip 0.019  ev 0.848  epochs 10/10
+[eval @ step   401408] mean return =   148.10
+[update  196 | steps   401408 | sps   1152] ep_return  111.01  kl 0.0019  clip 0.012  ev 0.666  epochs 10/10
+[update  197 | steps   403456 | sps   1151] ep_return  114.26  kl 0.0059  clip 0.047  ev 0.982  epochs 10/10
+[update  198 | steps   405504 | sps   1150] ep_return  114.11  kl 0.0065  clip 0.056  ev 0.977  epochs 10/10
+[update  199 | steps   407552 | sps   1149] ep_return  116.56  kl 0.0027  clip 0.028  ev 0.720  epochs 10/10
+[update  200 | steps   409600 | sps   1148] ep_return  115.88  kl 0.0040  clip 0.041  ev 0.909  epochs 10/10
+[eval @ step   411648] mean return =   121.13
+[update  201 | steps   411648 | sps   1142] ep_return  114.84  kl 0.0028  clip 0.036  ev 0.797  epochs 10/10
+[update  202 | steps   413696 | sps   1143] ep_return  113.99  kl 0.0033  clip 0.011  ev 0.808  epochs 10/10
+[update  203 | steps   415744 | sps   1144] ep_return  114.09  kl 0.0112  clip 0.120  ev 0.825  epochs 10/10
+[update  204 | steps   417792 | sps   1145] ep_return  116.02  kl 0.0100  clip 0.138  ev 0.780  epochs 10/10
+[update  205 | steps   419840 | sps   1144] ep_return  115.73  kl 0.0078  clip 0.094  ev 0.988  epochs 10/10
+[eval @ step   421888] mean return =   170.75
+[update  206 | steps   421888 | sps   1143] ep_return  115.73  kl 0.0061  clip 0.056  ev 0.888  epochs 10/10
+[update  207 | steps   423936 | sps   1144] ep_return  117.01  kl 0.0053  clip 0.064  ev 0.798  epochs 10/10
+[update  208 | steps   425984 | sps   1145] ep_return  118.18  kl 0.0071  clip 0.089  ev 0.954  epochs 10/10
+[update  209 | steps   428032 | sps   1145] ep_return  120.79  kl 0.0021  clip 0.044  ev 0.807  epochs 10/10
+[eval @ step   430080] mean return =   230.17
+[update  210 | steps   430080 | sps   1144] ep_return  120.91  kl 0.0071  clip 0.094  ev 0.924  epochs 10/10
+[update  211 | steps   432128 | sps   1140] ep_return  117.98  kl 0.0040  clip 0.026  ev 0.427  epochs 10/10
+[update  212 | steps   434176 | sps   1139] ep_return  120.17  kl 0.0021  clip 0.009  ev 0.642  epochs 10/10
+[update  213 | steps   436224 | sps   1139] ep_return  118.54  kl 0.0070  clip 0.089  ev 0.645  epochs 10/10
+[update  214 | steps   438272 | sps   1138] ep_return  120.04  kl 0.0204  clip 0.106  ev 0.944  epochs 10/10
+[eval @ step   440320] mean return =   174.97
+[update  215 | steps   440320 | sps   1135] ep_return  121.73  kl 0.0126  clip 0.139  ev 0.977  epochs 10/10
+[update  216 | steps   442368 | sps   1133] ep_return  123.07  kl 0.0102  clip 0.098  ev 0.988  epochs 10/10
+[update  217 | steps   444416 | sps   1132] ep_return  122.65  kl 0.0112  clip 0.098  ev 0.842  epochs 10/10
+[update  218 | steps   446464 | sps   1131] ep_return  121.91  kl 0.0055  clip 0.084  ev 0.922  epochs 10/10
+[update  219 | steps   448512 | sps   1132] ep_return  120.20  kl 0.0014  clip 0.009  ev 0.722  epochs 10/10
+[eval @ step   450560] mean return =   200.41
+[update  220 | steps   450560 | sps   1131] ep_return  118.38  kl 0.0118  clip 0.129  ev 0.948  epochs 10/10
+[update  221 | steps   452608 | sps   1131] ep_return  117.77  kl 0.0084  clip 0.112  ev 0.981  epochs 10/10
+[update  222 | steps   454656 | sps   1132] ep_return  115.99  kl 0.0108  clip 0.138  ev 0.983  epochs 10/10
+[update  223 | steps   456704 | sps   1133] ep_return  114.19  kl 0.0041  clip 0.023  ev 0.745  epochs 10/10
+[update  224 | steps   458752 | sps   1133] ep_return  113.90  kl 0.0041  clip 0.015  ev 0.851  epochs 10/10
+[eval @ step   460800] mean return =    92.80
+[update  225 | steps   460800 | sps   1125] ep_return  111.29  kl 0.0035  clip 0.023  ev 0.971  epochs 10/10
+[update  226 | steps   462848 | sps   1123] ep_return  111.64  kl 0.0091  clip 0.110  ev 0.990  epochs 10/10
+[update  227 | steps   464896 | sps   1122] ep_return  105.86  kl 0.0017  clip 0.017  ev 0.818  epochs 10/10
+[update  228 | steps   466944 | sps   1121] ep_return  106.40  kl 0.0128  clip 0.180  ev 0.987  epochs 10/10
+[update  229 | steps   468992 | sps   1121] ep_return  107.04  kl 0.0084  clip 0.111  ev 0.991  epochs 10/10
+[eval @ step   471040] mean return =   173.07
+[update  230 | steps   471040 | sps   1117] ep_return  108.48  kl 0.0050  clip 0.050  ev 0.917  epochs 10/10
+[update  231 | steps   473088 | sps   1116] ep_return  110.82  kl 0.0041  clip 0.039  ev 0.872  epochs 10/10
+[update  232 | steps   475136 | sps   1116] ep_return  112.37  kl 0.0115  clip 0.163  ev 0.988  epochs 10/10
+[update  233 | steps   477184 | sps   1117] ep_return  107.22  kl 0.0063  clip 0.037  ev 0.716  epochs 10/10
+[update  234 | steps   479232 | sps   1117] ep_return  113.65  kl 0.0123  clip 0.097  ev 0.738  epochs 10/10
+[eval @ step   481280] mean return =   115.62
+[update  235 | steps   481280 | sps   1113] ep_return  112.50  kl 0.0069  clip 0.117  ev 0.820  epochs 10/10
+[update  236 | steps   483328 | sps   1112] ep_return  111.72  kl 0.0094  clip 0.128  ev 0.920  epochs 10/10
+[update  237 | steps   485376 | sps   1111] ep_return  109.71  kl 0.0064  clip 0.078  ev 0.907  epochs 10/10
+[update  238 | steps   487424 | sps   1111] ep_return  109.76  kl 0.0073  clip 0.091  ev 0.947  epochs 10/10
+[update  239 | steps   489472 | sps   1110] ep_return  111.09  kl 0.0102  clip 0.129  ev 0.795  epochs 10/10
+[eval @ step   491520] mean return =    30.04
+[update  240 | steps   491520 | sps   1108] ep_return  110.90  kl 0.0049  clip 0.048  ev 0.915  epochs 10/10
+[update  241 | steps   493568 | sps   1109] ep_return  103.74  kl 0.0045  clip 0.053  ev 0.717  epochs 10/10
+[update  242 | steps   495616 | sps   1101] ep_return  101.82  kl 0.0012  clip 0.012  ev 0.766  epochs 10/10
+[update  243 | steps   497664 | sps   1100] ep_return  101.59  kl 0.0082  clip 0.098  ev 0.785  epochs 10/10
+[update  244 | steps   499712 | sps   1097] ep_return   98.87  kl 0.0024  clip 0.014  ev 0.694  epochs 10/10
+Saved final model to ppo\data\ppo_sweep_LunarLander-v2_2026-05-10_17-25-28\model_final.pt
+Saved 49 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\discrete\ppo\lunarlander-v2\seed_1.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\discrete\ppo\lunarlander-v2\seed_1.npy

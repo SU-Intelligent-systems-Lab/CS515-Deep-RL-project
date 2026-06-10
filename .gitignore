@@ -12,9 +12,7 @@ data/
 # TensorBoard event files
 ppo/data/*/events.out.*
 
-# Everything outside PPO scope
-reinforce/
-trpo/
+# Scratch / external dirs not part of the project
 report/
 td3_result/
 Deep-RL-intro-main/

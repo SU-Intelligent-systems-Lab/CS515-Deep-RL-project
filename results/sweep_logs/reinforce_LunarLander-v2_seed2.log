@@ -1,0 +1,461 @@
+C:\Users\mohamedosama\AppData\Local\anaconda3\envs\deep_rl\lib\site-packages\pygame\pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+GPU not detected. Defaulting to CPU.
+########################
+logging outputs to reinforce\data\reinforce_sweep_LunarLander-v2_2026-05-10_17-19-55
+########################
+[update    1 | ep     10 | steps      994 | sps    994] ep_return -218.39  pol_loss  0.0002  val_loss 15159.4121  ev -0.000
+[update    2 | ep     20 | steps     1912 | sps   1912] ep_return -233.86  pol_loss  0.0059  val_loss 22912.7617  ev -0.000
+[update    3 | ep     30 | steps     2714 | sps   2714] ep_return -208.51  pol_loss -0.0020  val_loss 12211.7607  ev 0.000
+[update    4 | ep     40 | steps     3594 | sps   3562] ep_return -203.90  pol_loss  0.0003  val_loss 13906.6475  ev -0.001
+[update    5 | ep     50 | steps     4450 | sps   3568] ep_return -192.16  pol_loss  0.0061  val_loss 8588.9023  ev -0.000
+[update    6 | ep     60 | steps     5365 | sps   3569] ep_return -193.06  pol_loss  0.0013  val_loss 14589.5117  ev -0.000
+[update    7 | ep     70 | steps     6323 | sps   3560] ep_return -195.69  pol_loss -0.0014  val_loss 17650.3516  ev -0.000
+[update    8 | ep     80 | steps     7198 | sps   3567] ep_return -199.63  pol_loss -0.0024  val_loss 17871.9629  ev -0.000
+[update    9 | ep     90 | steps     8029 | sps   3571] ep_return -199.34  pol_loss  0.0032  val_loss 16196.9053  ev -0.000
+[update   10 | ep    100 | steps     9010 | sps   3580] ep_return -194.87  pol_loss  0.0024  val_loss 8818.2285  ev -0.001
+[update   11 | ep    110 | steps     9925 | sps   3565] ep_return -188.33  pol_loss -0.0010  val_loss 8919.7803  ev 0.000
+[eval @ step    10779] mean return =  -195.06
+[update   12 | ep    120 | steps    10779 | sps   3483] ep_return -182.67  pol_loss -0.0020  val_loss 15181.2061  ev -0.000
+[update   13 | ep    130 | steps    11676 | sps   3485] ep_return -190.63  pol_loss -0.0004  val_loss 20445.4941  ev -0.000
+[update   14 | ep    140 | steps    12667 | sps   3494] ep_return -188.84  pol_loss -0.0094  val_loss 12269.9014  ev 0.000
+[update   15 | ep    150 | steps    13577 | sps   3497] ep_return -194.04  pol_loss -0.0036  val_loss 15225.6670  ev -0.001
+[update   16 | ep    160 | steps    14436 | sps   3504] ep_return -188.35  pol_loss -0.0019  val_loss 7679.2759  ev -0.001
+[update   17 | ep    170 | steps    15363 | sps   3508] ep_return -183.91  pol_loss -0.0039  val_loss 9059.4170  ev 0.000
+[update   18 | ep    180 | steps    16285 | sps   3518] ep_return -180.41  pol_loss -0.0036  val_loss 14723.4531  ev -0.000
+[update   19 | ep    190 | steps    17310 | sps   3521] ep_return -174.71  pol_loss -0.0018  val_loss 6602.6558  ev -0.001
+[update   20 | ep    200 | steps    18161 | sps   3523] ep_return -174.76  pol_loss -0.0031  val_loss 8198.1377  ev -0.001
+[update   21 | ep    210 | steps    19059 | sps   3525] ep_return -173.84  pol_loss -0.0037  val_loss 10873.0312  ev 0.000
+[eval @ step    20025] mean return =  -244.60
+[update   22 | ep    220 | steps    20025 | sps   3485] ep_return -171.87  pol_loss -0.0007  val_loss 9843.6270  ev 0.000
+[update   23 | ep    230 | steps    21004 | sps   3492] ep_return -165.49  pol_loss -0.0018  val_loss 11876.5430  ev 0.000
+[update   24 | ep    240 | steps    21978 | sps   3495] ep_return -164.33  pol_loss  0.0007  val_loss 10081.7412  ev -0.002
+[update   25 | ep    250 | steps    22891 | sps   3497] ep_return -161.09  pol_loss  0.0064  val_loss 10559.2344  ev 0.000
+[update   26 | ep    260 | steps    23716 | sps   3498] ep_return -158.25  pol_loss -0.0008  val_loss 4706.1528  ev -0.003
+[update   27 | ep    270 | steps    24750 | sps   3500] ep_return -160.03  pol_loss -0.0071  val_loss 12549.3857  ev -0.001
+[update   28 | ep    280 | steps    25702 | sps   3499] ep_return -153.53  pol_loss  0.0002  val_loss 5950.1660  ev -0.001
+[update   29 | ep    290 | steps    26633 | sps   3491] ep_return -153.43  pol_loss -0.0037  val_loss 6467.2759  ev -0.000
+[update   30 | ep    300 | steps    27585 | sps   3493] ep_return -153.83  pol_loss -0.0017  val_loss 7614.7251  ev -0.000
+[update   31 | ep    310 | steps    28512 | sps   3496] ep_return -155.37  pol_loss -0.0047  val_loss 9625.4775  ev -0.000
+[update   32 | ep    320 | steps    29423 | sps   3492] ep_return -150.63  pol_loss  0.0085  val_loss 7805.8540  ev -0.001
+[eval @ step    30350] mean return =  -219.20
+[update   33 | ep    330 | steps    30350 | sps   3468] ep_return -147.16  pol_loss  0.0028  val_loss 6593.3872  ev -0.000
+[update   34 | ep    340 | steps    31198 | sps   3469] ep_return -146.82  pol_loss -0.0130  val_loss 9293.0205  ev 0.000
+[update   35 | ep    350 | steps    32063 | sps   3471] ep_return -140.49  pol_loss  0.0008  val_loss 4035.4768  ev -0.002
+[update   36 | ep    360 | steps    33040 | sps   3473] ep_return -143.69  pol_loss -0.0074  val_loss 6390.9727  ev -0.004
+[update   37 | ep    370 | steps    34059 | sps   3474] ep_return -140.10  pol_loss  0.0023  val_loss 7243.4302  ev -0.001
+[update   38 | ep    380 | steps    34878 | sps   3475] ep_return -139.71  pol_loss -0.0044  val_loss 7869.9580  ev -0.001
+[update   39 | ep    390 | steps    35757 | sps   3480] ep_return -138.50  pol_loss  0.0009  val_loss 7171.7563  ev -0.001
+[update   40 | ep    400 | steps    36638 | sps   3482] ep_return -137.75  pol_loss -0.0046  val_loss 9323.8340  ev 0.000
+[update   41 | ep    410 | steps    37540 | sps   3482] ep_return -134.30  pol_loss  0.0023  val_loss 5863.6406  ev -0.002
+[update   42 | ep    420 | steps    38535 | sps   3483] ep_return -133.69  pol_loss -0.0040  val_loss 4918.5034  ev -0.003
+[update   43 | ep    430 | steps    39555 | sps   3487] ep_return -135.21  pol_loss -0.0044  val_loss 9364.1523  ev -0.001
+[eval @ step    40562] mean return =  -209.70
+[update   44 | ep    440 | steps    40562 | sps   3467] ep_return -129.97  pol_loss  0.0016  val_loss 4293.4565  ev -0.001
+[update   45 | ep    450 | steps    41373 | sps   3465] ep_return -134.06  pol_loss -0.0051  val_loss 7880.3623  ev -0.002
+[update   46 | ep    460 | steps    42319 | sps   3457] ep_return -132.76  pol_loss  0.0010  val_loss 8144.0049  ev -0.001
+[update   47 | ep    470 | steps    43233 | sps   3444] ep_return -131.56  pol_loss -0.0062  val_loss 6627.4580  ev 0.001
+[update   48 | ep    480 | steps    44116 | sps   3424] ep_return -137.29  pol_loss -0.0103  val_loss 11286.3916  ev 0.001
+[update   49 | ep    490 | steps    44904 | sps   3406] ep_return -137.73  pol_loss  0.0015  val_loss 7986.4805  ev -0.004
+[update   50 | ep    500 | steps    45817 | sps   3376] ep_return -135.67  pol_loss -0.0017  val_loss 6636.8994  ev -0.001
+[update   51 | ep    510 | steps    46764 | sps   3345] ep_return -137.00  pol_loss -0.0074  val_loss 7372.5200  ev -0.000
+[update   52 | ep    520 | steps    47687 | sps   3320] ep_return -139.27  pol_loss  0.0016  val_loss 9206.9678  ev -0.002
+[update   53 | ep    530 | steps    48561 | sps   3304] ep_return -140.22  pol_loss -0.0016  val_loss 10165.4551  ev -0.001
+[update   54 | ep    540 | steps    49594 | sps   3279] ep_return -147.54  pol_loss -0.0013  val_loss 14094.1973  ev -0.002
+[eval @ step    50514] mean return =  -200.13
+[update   55 | ep    550 | steps    50514 | sps   3235] ep_return -149.12  pol_loss -0.0033  val_loss 9268.7891  ev -0.003
+[update   56 | ep    560 | steps    51423 | sps   3218] ep_return -150.62  pol_loss -0.0067  val_loss 7692.2437  ev -0.001
+[update   57 | ep    570 | steps    52346 | sps   3199] ep_return -149.06  pol_loss  0.0083  val_loss 6692.0278  ev 0.000
+[update   58 | ep    580 | steps    53328 | sps   3188] ep_return -150.38  pol_loss -0.0081  val_loss 16182.9951  ev -0.002
+[update   59 | ep    590 | steps    54171 | sps   3170] ep_return -149.98  pol_loss -0.0077  val_loss 6409.7559  ev 0.000
+[update   60 | ep    600 | steps    55000 | sps   3153] ep_return -152.49  pol_loss  0.0004  val_loss 9047.8340  ev -0.004
+[update   61 | ep    610 | steps    56041 | sps   3140] ep_return -152.39  pol_loss -0.0030  val_loss 5522.7051  ev -0.005
+[update   62 | ep    620 | steps    56902 | sps   3125] ep_return -152.50  pol_loss -0.0107  val_loss 8160.8774  ev -0.001
+[update   63 | ep    630 | steps    57870 | sps   3112] ep_return -148.59  pol_loss -0.0020  val_loss 4761.4580  ev -0.002
+[update   64 | ep    640 | steps    58850 | sps   3100] ep_return -146.88  pol_loss -0.0059  val_loss 9433.6543  ev -0.000
+[update   65 | ep    650 | steps    59674 | sps   3086] ep_return -144.56  pol_loss  0.0001  val_loss 7648.8682  ev -0.003
+[eval @ step    60562] mean return =  -170.12
+[update   66 | ep    660 | steps    60562 | sps   3065] ep_return -142.29  pol_loss  0.0033  val_loss 6667.0757  ev -0.006
+[update   67 | ep    670 | steps    61377 | sps   3065] ep_return -140.93  pol_loss -0.0015  val_loss 4284.3140  ev -0.007
+[update   68 | ep    680 | steps    62405 | sps   3058] ep_return -129.93  pol_loss -0.0031  val_loss 3181.2886  ev -0.003
+[update   69 | ep    690 | steps    63308 | sps   3051] ep_return -133.17  pol_loss  0.0082  val_loss 10327.5615  ev -0.010
+[update   70 | ep    700 | steps    64211 | sps   3052] ep_return -129.58  pol_loss  0.0047  val_loss 4936.0581  ev -0.001
+[update   71 | ep    710 | steps    65119 | sps   3045] ep_return -128.48  pol_loss -0.0016  val_loss 6392.1611  ev -0.002
+[update   72 | ep    720 | steps    66069 | sps   3044] ep_return -130.31  pol_loss -0.0104  val_loss 8505.8320  ev -0.001
+[update   73 | ep    730 | steps    66928 | sps   3044] ep_return -131.94  pol_loss -0.0086  val_loss 8005.7666  ev -0.001
+[update   74 | ep    740 | steps    67806 | sps   3037] ep_return -136.20  pol_loss -0.0063  val_loss 18317.9355  ev -0.003
+[update   75 | ep    750 | steps    68691 | sps   3032] ep_return -133.59  pol_loss  0.0003  val_loss 4742.2915  ev -0.004
+[update   76 | ep    760 | steps    69564 | sps   3021] ep_return -134.48  pol_loss  0.0050  val_loss 9430.3271  ev -0.002
+[eval @ step    70540] mean return =  -132.09
+[update   77 | ep    770 | steps    70540 | sps   3004] ep_return -140.24  pol_loss -0.0008  val_loss 10048.7822  ev -0.007
+[update   78 | ep    780 | steps    71455 | sps   2994] ep_return -146.28  pol_loss  0.0032  val_loss 9730.3008  ev -0.001
+[update   79 | ep    790 | steps    72406 | sps   2995] ep_return -144.84  pol_loss -0.0021  val_loss 7265.7578  ev -0.004
+[update   80 | ep    800 | steps    73227 | sps   2991] ep_return -145.60  pol_loss -0.0069  val_loss 5525.8447  ev -0.004
+[update   81 | ep    810 | steps    74217 | sps   2987] ep_return -147.28  pol_loss -0.0025  val_loss 9566.9180  ev -0.002
+[update   82 | ep    820 | steps    75188 | sps   2977] ep_return -147.46  pol_loss  0.0043  val_loss 9098.5586  ev -0.005
+[update   83 | ep    830 | steps    75943 | sps   2976] ep_return -145.06  pol_loss -0.0138  val_loss 5489.3193  ev -0.006
+[update   84 | ep    840 | steps    76935 | sps   2973] ep_return -140.46  pol_loss -0.0093  val_loss 10709.7715  ev -0.005
+[update   85 | ep    850 | steps    77879 | sps   2963] ep_return -139.68  pol_loss -0.0008  val_loss 4456.3921  ev -0.003
+[update   86 | ep    860 | steps    78835 | sps   2962] ep_return -138.73  pol_loss -0.0019  val_loss 7738.8623  ev -0.007
+[update   87 | ep    870 | steps    79680 | sps   2952] ep_return -133.79  pol_loss -0.0045  val_loss 5144.2617  ev -0.003
+[eval @ step    80523] mean return =  -117.55
+[update   88 | ep    880 | steps    80523 | sps   2934] ep_return -130.97  pol_loss -0.0017  val_loss 6802.2144  ev -0.001
+[update   89 | ep    890 | steps    81407 | sps   2938] ep_return -128.17  pol_loss -0.0014  val_loss 7582.8472  ev -0.002
+[update   90 | ep    900 | steps    82209 | sps   2943] ep_return -125.72  pol_loss  0.0018  val_loss 4225.0825  ev -0.008
+[update   91 | ep    910 | steps    83106 | sps   2948] ep_return -130.63  pol_loss -0.0067  val_loss 13180.2959  ev 0.001
+[update   92 | ep    920 | steps    83980 | sps   2952] ep_return -126.31  pol_loss -0.0080  val_loss 4958.1392  ev -0.009
+[update   93 | ep    930 | steps    84887 | sps   2957] ep_return -123.32  pol_loss -0.0024  val_loss 3884.7200  ev -0.004
+[update   94 | ep    940 | steps    85697 | sps   2961] ep_return -118.46  pol_loss -0.0013  val_loss 4576.5190  ev -0.009
+[update   95 | ep    950 | steps    86617 | sps   2967] ep_return -121.05  pol_loss -0.0058  val_loss 5321.0156  ev -0.000
+[update   96 | ep    960 | steps    87589 | sps   2972] ep_return -122.85  pol_loss -0.0044  val_loss 8188.7490  ev 0.001
+[update   97 | ep    970 | steps    88392 | sps   2975] ep_return -122.98  pol_loss -0.0122  val_loss 7307.2349  ev -0.005
+[update   98 | ep    980 | steps    89375 | sps   2981] ep_return -123.09  pol_loss -0.0007  val_loss 4052.1213  ev -0.006
+[eval @ step    90374] mean return =  -147.43
+[update   99 | ep    990 | steps    90374 | sps   2951] ep_return -125.79  pol_loss  0.0017  val_loss 7318.4038  ev -0.004
+[update  100 | ep   1000 | steps    91281 | sps   2956] ep_return -127.68  pol_loss -0.0036  val_loss 5095.4146  ev -0.006
+[update  101 | ep   1010 | steps    92228 | sps   2962] ep_return -121.71  pol_loss -0.0053  val_loss 5506.6821  ev -0.007
+[update  102 | ep   1020 | steps    93076 | sps   2965] ep_return -118.34  pol_loss  0.0054  val_loss 3858.6106  ev -0.002
+[update  103 | ep   1030 | steps    94023 | sps   2970] ep_return -125.22  pol_loss  0.0017  val_loss 8488.0488  ev -0.013
+[update  104 | ep   1040 | steps    94902 | sps   2974] ep_return -129.12  pol_loss -0.0008  val_loss 8630.7627  ev -0.002
+[update  105 | ep   1050 | steps    95809 | sps   2978] ep_return -128.16  pol_loss -0.0071  val_loss 4951.7495  ev -0.005
+[update  106 | ep   1060 | steps    96821 | sps   2983] ep_return -128.16  pol_loss -0.0073  val_loss 6222.1855  ev -0.007
+[update  107 | ep   1070 | steps    98619 | sps   2990] ep_return -127.93  pol_loss  0.0012  val_loss 3330.8909  ev 0.018
+[update  108 | ep   1080 | steps    99599 | sps   2994] ep_return -126.05  pol_loss  0.0122  val_loss 3808.8533  ev -0.001
+[eval @ step   100547] mean return =  -100.98
+[update  109 | ep   1090 | steps   100547 | sps   2948] ep_return -127.85  pol_loss -0.0044  val_loss 10022.0488  ev -0.003
+[update  110 | ep   1100 | steps   101451 | sps   2951] ep_return -129.63  pol_loss -0.0018  val_loss 8916.6689  ev -0.014
+[update  111 | ep   1110 | steps   102423 | sps   2955] ep_return -126.31  pol_loss  0.0011  val_loss 3747.5181  ev -0.002
+[update  112 | ep   1120 | steps   103352 | sps   2959] ep_return -132.50  pol_loss -0.0070  val_loss 9588.6836  ev -0.009
+[update  113 | ep   1130 | steps   104267 | sps   2962] ep_return -131.34  pol_loss  0.0007  val_loss 6990.8809  ev -0.003
+[update  114 | ep   1140 | steps   105369 | sps   2967] ep_return -134.17  pol_loss  0.0117  val_loss 14027.2520  ev -0.001
+[update  115 | ep   1150 | steps   106255 | sps   2970] ep_return -130.46  pol_loss  0.0038  val_loss 3080.0984  ev -0.011
+[update  116 | ep   1160 | steps   107157 | sps   2973] ep_return -129.32  pol_loss -0.0094  val_loss 7729.5479  ev -0.004
+[update  117 | ep   1170 | steps   108103 | sps   2976] ep_return -129.48  pol_loss -0.0035  val_loss 4159.2119  ev -0.005
+[update  118 | ep   1180 | steps   109154 | sps   2980] ep_return -134.53  pol_loss -0.0068  val_loss 5887.6587  ev -0.005
+[eval @ step   110082] mean return =   -96.16
+[update  119 | ep   1190 | steps   110082 | sps   2924] ep_return -129.92  pol_loss -0.0032  val_loss 3905.6526  ev -0.004
+[update  120 | ep   1200 | steps   111036 | sps   2927] ep_return -129.84  pol_loss  0.0105  val_loss 7099.3511  ev -0.020
+[update  121 | ep   1210 | steps   111936 | sps   2928] ep_return -131.11  pol_loss  0.0066  val_loss 8397.1162  ev -0.005
+[update  122 | ep   1220 | steps   112950 | sps   2931] ep_return -129.82  pol_loss -0.0019  val_loss 6059.1431  ev -0.002
+[update  123 | ep   1230 | steps   113855 | sps   2934] ep_return -126.99  pol_loss -0.0047  val_loss 4374.3101  ev -0.010
+[update  124 | ep   1240 | steps   114887 | sps   2938] ep_return -122.83  pol_loss -0.0094  val_loss 5836.5762  ev -0.000
+[update  125 | ep   1250 | steps   115919 | sps   2942] ep_return -128.22  pol_loss -0.0130  val_loss 5832.6475  ev -0.005
+[update  126 | ep   1260 | steps   116851 | sps   2946] ep_return -129.81  pol_loss  0.0091  val_loss 9050.7100  ev -0.005
+[update  127 | ep   1270 | steps   117886 | sps   2950] ep_return -128.59  pol_loss -0.0203  val_loss 4460.7061  ev -0.002
+[update  128 | ep   1280 | steps   118943 | sps   2954] ep_return -129.15  pol_loss  0.0008  val_loss 8131.0312  ev -0.008
+[update  129 | ep   1290 | steps   119903 | sps   2957] ep_return -128.44  pol_loss  0.0080  val_loss 4377.5996  ev -0.007
+[eval @ step   120979] mean return =  -135.90
+[update  130 | ep   1300 | steps   120979 | sps   2905] ep_return -124.65  pol_loss -0.0034  val_loss 4151.8066  ev -0.007
+[update  131 | ep   1310 | steps   121995 | sps   2909] ep_return -128.21  pol_loss -0.0174  val_loss 6891.3940  ev 0.002
+[update  132 | ep   1320 | steps   122915 | sps   2912] ep_return -123.92  pol_loss -0.0047  val_loss 3276.1450  ev -0.001
+[update  133 | ep   1330 | steps   123892 | sps   2915] ep_return -125.44  pol_loss  0.0075  val_loss 7637.9517  ev -0.004
+[update  134 | ep   1340 | steps   124960 | sps   2919] ep_return -130.08  pol_loss  0.0118  val_loss 12587.9277  ev -0.006
+[update  135 | ep   1350 | steps   125881 | sps   2922] ep_return -125.99  pol_loss  0.0120  val_loss 3105.9578  ev -0.010
+[update  136 | ep   1360 | steps   126978 | sps   2926] ep_return -127.91  pol_loss  0.0008  val_loss 7547.2935  ev -0.011
+[update  137 | ep   1370 | steps   127850 | sps   2929] ep_return -133.73  pol_loss -0.0137  val_loss 10446.7129  ev -0.002
+[update  138 | ep   1380 | steps   128768 | sps   2932] ep_return -129.23  pol_loss  0.0002  val_loss 4315.1353  ev -0.003
+[update  139 | ep   1390 | steps   129849 | sps   2936] ep_return -129.15  pol_loss -0.0115  val_loss 3399.7292  ev -0.008
+[eval @ step   130864] mean return =  -278.13
+[update  140 | ep   1400 | steps   130864 | sps   2923] ep_return -130.60  pol_loss -0.0015  val_loss 4194.3374  ev -0.008
+[update  141 | ep   1410 | steps   131829 | sps   2927] ep_return -126.78  pol_loss -0.0005  val_loss 4563.0347  ev 0.000
+[update  142 | ep   1420 | steps   132808 | sps   2929] ep_return -127.92  pol_loss -0.0031  val_loss 3570.2041  ev -0.005
+[update  143 | ep   1430 | steps   133710 | sps   2932] ep_return -126.69  pol_loss -0.0050  val_loss 4542.1099  ev -0.013
+[update  144 | ep   1440 | steps   134653 | sps   2936] ep_return -120.73  pol_loss -0.0081  val_loss 4920.7979  ev -0.008
+[update  145 | ep   1450 | steps   135566 | sps   2938] ep_return -124.01  pol_loss -0.0062  val_loss 5951.8936  ev -0.004
+[update  146 | ep   1460 | steps   136495 | sps   2941] ep_return -118.85  pol_loss -0.0094  val_loss 3749.3467  ev -0.023
+[update  147 | ep   1470 | steps   137615 | sps   2945] ep_return -116.64  pol_loss -0.0079  val_loss 5049.1377  ev -0.010
+[update  148 | ep   1480 | steps   138586 | sps   2947] ep_return -118.18  pol_loss -0.0023  val_loss 5137.4614  ev -0.006
+[update  149 | ep   1490 | steps   139539 | sps   2950] ep_return -115.73  pol_loss -0.0141  val_loss 2552.9966  ev -0.018
+[eval @ step   140582] mean return =  -362.07
+[update  150 | ep   1500 | steps   140582 | sps   2938] ep_return -117.83  pol_loss -0.0091  val_loss 6607.3555  ev -0.012
+[update  151 | ep   1510 | steps   141545 | sps   2941] ep_return -120.85  pol_loss -0.0017  val_loss 7738.3140  ev -0.009
+[update  152 | ep   1520 | steps   142375 | sps   2943] ep_return -118.74  pol_loss  0.0053  val_loss 4137.1445  ev -0.005
+[update  153 | ep   1530 | steps   143362 | sps   2947] ep_return -120.10  pol_loss -0.0001  val_loss 5987.5820  ev -0.006
+[update  154 | ep   1540 | steps   144521 | sps   2950] ep_return -117.71  pol_loss -0.0067  val_loss 2500.7458  ev -0.008
+[update  155 | ep   1550 | steps   145729 | sps   2953] ep_return -119.52  pol_loss -0.0007  val_loss 8381.8398  ev -0.001
+[update  156 | ep   1560 | steps   146621 | sps   2954] ep_return -119.00  pol_loss -0.0091  val_loss 3940.3352  ev -0.017
+[update  157 | ep   1570 | steps   147628 | sps   2957] ep_return -113.02  pol_loss -0.0132  val_loss 2637.5903  ev -0.003
+[update  158 | ep   1580 | steps   148545 | sps   2960] ep_return -110.43  pol_loss -0.0125  val_loss 3320.1958  ev -0.004
+[update  159 | ep   1590 | steps   149527 | sps   2963] ep_return -111.91  pol_loss -0.0044  val_loss 3251.6641  ev -0.017
+[eval @ step   150521] mean return =  -334.20
+[update  160 | ep   1600 | steps   150521 | sps   2948] ep_return -107.12  pol_loss -0.0107  val_loss 2418.4802  ev -0.003
+[update  161 | ep   1610 | steps   151573 | sps   2951] ep_return -104.32  pol_loss -0.0047  val_loss 3080.9810  ev -0.019
+[update  162 | ep   1620 | steps   152609 | sps   2954] ep_return -107.25  pol_loss  0.0001  val_loss 4293.4380  ev -0.004
+[update  163 | ep   1630 | steps   153589 | sps   2957] ep_return -103.98  pol_loss -0.0167  val_loss 3412.8145  ev -0.002
+[update  164 | ep   1640 | steps   154687 | sps   2961] ep_return -108.55  pol_loss  0.0070  val_loss 8218.5420  ev -0.006
+[update  165 | ep   1650 | steps   155834 | sps   2963] ep_return -108.52  pol_loss  0.0001  val_loss 6132.9897  ev -0.003
+[update  166 | ep   1660 | steps   156911 | sps   2966] ep_return -111.23  pol_loss -0.0090  val_loss 5884.6641  ev -0.013
+[update  167 | ep   1670 | steps   157958 | sps   2969] ep_return -115.73  pol_loss  0.0108  val_loss 6379.7373  ev -0.015
+[update  168 | ep   1680 | steps   158981 | sps   2972] ep_return -116.91  pol_loss -0.0079  val_loss 4159.2100  ev -0.006
+[eval @ step   160018] mean return =  -260.54
+[update  169 | ep   1690 | steps   160018 | sps   2951] ep_return -120.45  pol_loss  0.0029  val_loss 5929.8926  ev -0.011
+[update  170 | ep   1700 | steps   161228 | sps   2955] ep_return -125.38  pol_loss -0.0066  val_loss 7130.9536  ev -0.006
+[update  171 | ep   1710 | steps   162220 | sps   2957] ep_return -124.31  pol_loss -0.0040  val_loss 4247.6597  ev -0.004
+[update  172 | ep   1720 | steps   163305 | sps   2960] ep_return -124.28  pol_loss -0.0057  val_loss 3688.9951  ev -0.009
+[update  173 | ep   1730 | steps   164126 | sps   2963] ep_return -124.27  pol_loss  0.0168  val_loss 5047.0474  ev -0.022
+[update  174 | ep   1740 | steps   165147 | sps   2965] ep_return -122.49  pol_loss -0.0145  val_loss 4815.7246  ev -0.010
+[update  175 | ep   1750 | steps   166252 | sps   2968] ep_return -117.32  pol_loss -0.0302  val_loss 2204.1772  ev -0.009
+[update  176 | ep   1760 | steps   167314 | sps   2971] ep_return -117.00  pol_loss -0.0031  val_loss 5268.6177  ev -0.007
+[update  177 | ep   1770 | steps   168343 | sps   2973] ep_return -114.42  pol_loss -0.0206  val_loss 3116.6582  ev 0.002
+[update  178 | ep   1780 | steps   169435 | sps   2976] ep_return -114.53  pol_loss -0.0037  val_loss 4756.5835  ev -0.007
+[eval @ step   170522] mean return =  -333.60
+[update  179 | ep   1790 | steps   170522 | sps   2961] ep_return -111.92  pol_loss  0.0045  val_loss 4072.2319  ev -0.018
+[update  180 | ep   1800 | steps   171434 | sps   2963] ep_return -105.41  pol_loss -0.0125  val_loss 3401.2563  ev -0.004
+[update  181 | ep   1810 | steps   172551 | sps   2966] ep_return -112.95  pol_loss  0.0166  val_loss 9694.2188  ev -0.015
+[update  182 | ep   1820 | steps   173602 | sps   2968] ep_return -114.75  pol_loss -0.0039  val_loss 5023.6558  ev -0.003
+[update  183 | ep   1830 | steps   174767 | sps   2971] ep_return -117.92  pol_loss -0.0139  val_loss 4914.8926  ev -0.006
+[update  184 | ep   1840 | steps   175959 | sps   2974] ep_return -117.05  pol_loss -0.0096  val_loss 2860.0901  ev -0.014
+[update  185 | ep   1850 | steps   177009 | sps   2977] ep_return -119.86  pol_loss -0.0036  val_loss 3985.9104  ev -0.011
+[update  186 | ep   1860 | steps   178022 | sps   2979] ep_return -117.84  pol_loss  0.0095  val_loss 4425.5576  ev -0.008
+[update  187 | ep   1870 | steps   179091 | sps   2982] ep_return -120.12  pol_loss  0.0164  val_loss 4736.8750  ev -0.006
+[eval @ step   180103] mean return =  -446.83
+[update  188 | ep   1880 | steps   180103 | sps   2964] ep_return -119.86  pol_loss -0.0165  val_loss 4026.8508  ev -0.007
+[update  189 | ep   1890 | steps   181015 | sps   2964] ep_return -118.62  pol_loss -0.0031  val_loss 3573.9607  ev -0.018
+[update  190 | ep   1900 | steps   182018 | sps   2962] ep_return -124.95  pol_loss -0.0007  val_loss 6643.0020  ev -0.009
+[update  191 | ep   1910 | steps   183048 | sps   2958] ep_return -116.02  pol_loss -0.0053  val_loss 2143.1807  ev -0.017
+[update  192 | ep   1920 | steps   184260 | sps   2953] ep_return -114.00  pol_loss -0.0026  val_loss 3750.5259  ev -0.005
+[update  193 | ep   1930 | steps   185311 | sps   2949] ep_return -116.87  pol_loss  0.0233  val_loss 10318.1201  ev -0.008
+[update  194 | ep   1940 | steps   186353 | sps   2944] ep_return -114.17  pol_loss -0.0014  val_loss 2457.5618  ev -0.016
+[update  195 | ep   1950 | steps   187472 | sps   2939] ep_return -115.86  pol_loss  0.0125  val_loss 7123.4053  ev -0.008
+[update  196 | ep   1960 | steps   188477 | sps   2934] ep_return -114.63  pol_loss  0.0112  val_loss 3627.7141  ev -0.010
+[update  197 | ep   1970 | steps   189555 | sps   2931] ep_return -114.11  pol_loss -0.0184  val_loss 4020.5293  ev -0.009
+[eval @ step   190773] mean return =  -528.91
+[update  198 | ep   1980 | steps   190773 | sps   2914] ep_return -112.53  pol_loss -0.0002  val_loss 2354.1267  ev -0.009
+[update  199 | ep   1990 | steps   191906 | sps   2911] ep_return -114.34  pol_loss -0.0072  val_loss 3650.7764  ev -0.003
+[update  200 | ep   2000 | steps   192957 | sps   2908] ep_return -110.87  pol_loss  0.0057  val_loss 3246.9133  ev -0.019
+[update  201 | ep   2010 | steps   194195 | sps   2910] ep_return -111.82  pol_loss -0.0102  val_loss 2925.2336  ev -0.003
+[update  202 | ep   2020 | steps   195264 | sps   2913] ep_return -111.45  pol_loss -0.0036  val_loss 3248.0378  ev -0.007
+[update  203 | ep   2030 | steps   196301 | sps   2915] ep_return -107.48  pol_loss  0.0023  val_loss 6407.4404  ev -0.007
+[update  204 | ep   2040 | steps   197304 | sps   2917] ep_return -108.99  pol_loss -0.0104  val_loss 3366.5396  ev -0.010
+[update  205 | ep   2050 | steps   198444 | sps   2917] ep_return -107.80  pol_loss  0.0047  val_loss 4446.7178  ev -0.018
+[update  206 | ep   2060 | steps   199862 | sps   2912] ep_return -112.71  pol_loss  0.0058  val_loss 6491.4321  ev -0.018
+[eval @ step   200878] mean return =  -578.81
+[update  207 | ep   2070 | steps   200878 | sps   2896] ep_return -115.06  pol_loss -0.0028  val_loss 7131.1899  ev -0.012
+[update  208 | ep   2080 | steps   202049 | sps   2893] ep_return -115.20  pol_loss  0.0047  val_loss 3548.0593  ev -0.006
+[update  209 | ep   2090 | steps   203276 | sps   2891] ep_return -112.85  pol_loss -0.0194  val_loss 2483.0317  ev -0.021
+[update  210 | ep   2100 | steps   204574 | sps   2889] ep_return -111.14  pol_loss  0.0092  val_loss 1669.0709  ev -0.013
+[update  211 | ep   2110 | steps   205703 | sps   2886] ep_return -113.60  pol_loss -0.0035  val_loss 4324.2681  ev -0.012
+[update  212 | ep   2120 | steps   206815 | sps   2884] ep_return -112.85  pol_loss -0.0044  val_loss 2772.1663  ev -0.011
+[update  213 | ep   2130 | steps   207970 | sps   2882] ep_return -112.57  pol_loss  0.0190  val_loss 3881.5974  ev -0.018
+[eval @ step   210140] mean return =  -553.64
+[update  214 | ep   2140 | steps   210140 | sps   2869] ep_return -111.56  pol_loss  0.0154  val_loss 2473.6199  ev 0.016
+[update  215 | ep   2150 | steps   211274 | sps   2868] ep_return -112.49  pol_loss -0.0001  val_loss 6787.0825  ev -0.020
+[update  216 | ep   2160 | steps   212425 | sps   2868] ep_return -107.67  pol_loss -0.0019  val_loss 3358.6926  ev -0.007
+[update  217 | ep   2170 | steps   213354 | sps   2866] ep_return -104.20  pol_loss -0.0078  val_loss 4465.6880  ev -0.008
+[update  218 | ep   2180 | steps   214505 | sps   2865] ep_return -105.79  pol_loss -0.0050  val_loss 3363.9487  ev -0.008
+[update  219 | ep   2190 | steps   215579 | sps   2866] ep_return -109.17  pol_loss  0.0073  val_loss 6650.9009  ev -0.007
+[update  220 | ep   2200 | steps   216754 | sps   2863] ep_return -109.85  pol_loss  0.0072  val_loss 2717.3596  ev -0.008
+[update  221 | ep   2210 | steps   217818 | sps   2861] ep_return -109.11  pol_loss -0.0045  val_loss 4708.5532  ev -0.010
+[update  222 | ep   2220 | steps   218875 | sps   2859] ep_return -108.24  pol_loss -0.0198  val_loss 2296.1125  ev -0.013
+[eval @ step   220030] mean return =  -558.86
+[update  223 | ep   2230 | steps   220030 | sps   2844] ep_return -106.17  pol_loss  0.0064  val_loss 3178.7056  ev -0.010
+[update  224 | ep   2240 | steps   220971 | sps   2842] ep_return -105.29  pol_loss  0.0151  val_loss 3695.8184  ev -0.006
+[update  225 | ep   2250 | steps   222921 | sps   2842] ep_return -101.36  pol_loss -0.0056  val_loss 2200.7104  ev 0.026
+[update  226 | ep   2260 | steps   224072 | sps   2844] ep_return -100.79  pol_loss -0.0200  val_loss 2582.8652  ev -0.013
+[update  227 | ep   2270 | steps   225075 | sps   2845] ep_return  -99.09  pol_loss -0.0056  val_loss 4297.6294  ev -0.017
+[update  228 | ep   2280 | steps   226083 | sps   2846] ep_return  -97.63  pol_loss -0.0117  val_loss 2970.2449  ev -0.011
+[update  229 | ep   2290 | steps   227260 | sps   2849] ep_return  -95.39  pol_loss  0.0218  val_loss 2916.6978  ev -0.021
+[update  230 | ep   2300 | steps   228314 | sps   2851] ep_return  -96.69  pol_loss -0.0160  val_loss 3614.2964  ev -0.008
+[update  231 | ep   2310 | steps   229539 | sps   2854] ep_return  -96.16  pol_loss  0.0077  val_loss 2564.8228  ev -0.010
+[eval @ step   230752] mean return =  -559.40
+[update  232 | ep   2320 | steps   230752 | sps   2849] ep_return  -95.94  pol_loss  0.0084  val_loss 2729.2568  ev -0.006
+[update  233 | ep   2330 | steps   231928 | sps   2851] ep_return  -95.22  pol_loss -0.0084  val_loss 2506.0713  ev -0.007
+[update  234 | ep   2340 | steps   233078 | sps   2853] ep_return  -99.76  pol_loss  0.0111  val_loss 5361.8335  ev -0.010
+[update  235 | ep   2350 | steps   234103 | sps   2855] ep_return  -98.51  pol_loss  0.0091  val_loss 3108.3000  ev -0.012
+[update  236 | ep   2360 | steps   235449 | sps   2858] ep_return -102.97  pol_loss  0.0029  val_loss 7252.2305  ev -0.006
+[update  237 | ep   2370 | steps   236543 | sps   2861] ep_return -102.91  pol_loss -0.0110  val_loss 2210.3594  ev -0.012
+[update  238 | ep   2380 | steps   238423 | sps   2865] ep_return -101.41  pol_loss  0.0117  val_loss 2066.3462  ev 0.025
+[update  239 | ep   2390 | steps   239754 | sps   2867] ep_return -102.68  pol_loss -0.0035  val_loss 5073.5640  ev -0.008
+[eval @ step   240857] mean return =  -550.79
+[update  240 | ep   2400 | steps   240857 | sps   2862] ep_return  -98.69  pol_loss  0.0049  val_loss 1500.4552  ev -0.020
+[update  241 | ep   2410 | steps   241931 | sps   2864] ep_return  -97.81  pol_loss -0.0211  val_loss 3634.8457  ev -0.004
+[update  242 | ep   2420 | steps   243147 | sps   2866] ep_return  -98.36  pol_loss  0.0413  val_loss 4187.4624  ev -0.006
+[update  243 | ep   2430 | steps   244158 | sps   2869] ep_return -101.33  pol_loss  0.0124  val_loss 5868.6030  ev -0.004
+[update  244 | ep   2440 | steps   246242 | sps   2872] ep_return  -94.58  pol_loss  0.0030  val_loss 1548.0922  ev 0.013
+[update  245 | ep   2450 | steps   247271 | sps   2874] ep_return  -95.82  pol_loss  0.0020  val_loss 3212.0039  ev -0.019
+[update  246 | ep   2460 | steps   248371 | sps   2877] ep_return  -92.34  pol_loss -0.0158  val_loss 3037.6323  ev -0.005
+[update  247 | ep   2470 | steps   249692 | sps   2879] ep_return  -90.33  pol_loss -0.0193  val_loss 1517.1385  ev -0.011
+[eval @ step   250738] mean return =  -549.53
+[update  248 | ep   2480 | steps   250738 | sps   2874] ep_return  -91.14  pol_loss  0.0009  val_loss 2301.6802  ev -0.014
+[update  249 | ep   2490 | steps   251841 | sps   2876] ep_return  -90.35  pol_loss  0.0342  val_loss 4609.1270  ev -0.015
+[update  250 | ep   2500 | steps   252997 | sps   2878] ep_return  -91.30  pol_loss -0.0270  val_loss 1781.4596  ev -0.005
+[update  251 | ep   2510 | steps   254946 | sps   2882] ep_return  -88.83  pol_loss  0.0013  val_loss 2015.3286  ev 0.025
+[update  252 | ep   2520 | steps   256051 | sps   2884] ep_return  -86.41  pol_loss  0.0182  val_loss 1680.9675  ev -0.008
+[update  253 | ep   2530 | steps   257130 | sps   2886] ep_return  -83.32  pol_loss -0.0028  val_loss 3174.5608  ev -0.006
+[update  254 | ep   2540 | steps   258453 | sps   2889] ep_return  -85.96  pol_loss -0.0126  val_loss 1939.4290  ev -0.008
+[update  255 | ep   2550 | steps   259624 | sps   2889] ep_return  -85.98  pol_loss -0.0070  val_loss 2732.7073  ev -0.008
+[eval @ step   260786] mean return =  -540.95
+[update  256 | ep   2560 | steps   260786 | sps   2873] ep_return  -87.60  pol_loss  0.0126  val_loss 5722.1099  ev -0.024
+[update  257 | ep   2570 | steps   261937 | sps   2870] ep_return  -90.15  pol_loss -0.0236  val_loss 2350.5994  ev -0.014
+[update  258 | ep   2580 | steps   263034 | sps   2867] ep_return  -91.48  pol_loss -0.0131  val_loss 3526.5862  ev -0.023
+[update  259 | ep   2590 | steps   264301 | sps   2864] ep_return  -89.18  pol_loss  0.0150  val_loss 1950.5128  ev -0.011
+[update  260 | ep   2600 | steps   265359 | sps   2862] ep_return  -88.58  pol_loss -0.0070  val_loss 1684.8896  ev -0.013
+[update  261 | ep   2610 | steps   266532 | sps   2860] ep_return  -88.94  pol_loss -0.0024  val_loss 1994.1046  ev -0.015
+[update  262 | ep   2620 | steps   267648 | sps   2857] ep_return  -89.32  pol_loss  0.0121  val_loss 1501.9401  ev -0.018
+[update  263 | ep   2630 | steps   269542 | sps   2852] ep_return  -85.34  pol_loss  0.0145  val_loss 1236.6458  ev 0.026
+[eval @ step   270603] mean return =  -546.45
+[update  264 | ep   2640 | steps   270603 | sps   2842] ep_return  -84.54  pol_loss -0.0147  val_loss 1945.6323  ev -0.014
+[update  265 | ep   2650 | steps   271783 | sps   2841] ep_return  -81.19  pol_loss -0.0009  val_loss 1413.4042  ev -0.012
+[update  266 | ep   2660 | steps   272992 | sps   2840] ep_return  -82.67  pol_loss  0.0335  val_loss 5887.4258  ev -0.005
+[update  267 | ep   2670 | steps   274313 | sps   2842] ep_return  -84.94  pol_loss  0.0303  val_loss 5086.6436  ev -0.012
+[update  268 | ep   2680 | steps   275660 | sps   2842] ep_return  -83.46  pol_loss -0.0165  val_loss 2670.9089  ev -0.009
+[update  269 | ep   2690 | steps   276800 | sps   2840] ep_return  -81.11  pol_loss -0.0131  val_loss 1457.5382  ev -0.012
+[update  270 | ep   2700 | steps   278012 | sps   2839] ep_return  -82.76  pol_loss -0.0095  val_loss 1652.3082  ev -0.017
+[update  271 | ep   2710 | steps   279345 | sps   2838] ep_return  -82.45  pol_loss  0.0024  val_loss 1395.3773  ev -0.009
+[eval @ step   280490] mean return =  -557.44
+[update  272 | ep   2720 | steps   280490 | sps   2828] ep_return  -86.35  pol_loss  0.0233  val_loss 4759.7153  ev -0.018
+[update  273 | ep   2730 | steps   281792 | sps   2827] ep_return  -89.69  pol_loss -0.0016  val_loss 3202.8967  ev -0.040
+[update  274 | ep   2740 | steps   282976 | sps   2829] ep_return  -88.05  pol_loss  0.0360  val_loss 2600.0085  ev -0.011
+[update  275 | ep   2750 | steps   284132 | sps   2827] ep_return  -89.24  pol_loss -0.0103  val_loss 1640.6519  ev -0.015
+[update  276 | ep   2760 | steps   285336 | sps   2826] ep_return  -83.62  pol_loss -0.0217  val_loss 1391.4370  ev -0.009
+[update  277 | ep   2770 | steps   286532 | sps   2824] ep_return  -80.90  pol_loss  0.0168  val_loss 2074.0066  ev -0.009
+[update  278 | ep   2780 | steps   287799 | sps   2823] ep_return  -89.27  pol_loss  0.0274  val_loss 8481.6836  ev -0.011
+[update  279 | ep   2790 | steps   288987 | sps   2824] ep_return  -90.05  pol_loss -0.0286  val_loss 1723.0106  ev -0.010
+[eval @ step   290200] mean return =  -585.49
+[update  280 | ep   2800 | steps   290200 | sps   2819] ep_return  -88.56  pol_loss -0.0134  val_loss 2582.2092  ev -0.017
+[update  281 | ep   2810 | steps   291546 | sps   2823] ep_return  -85.61  pol_loss -0.0191  val_loss 1159.1989  ev -0.014
+[update  282 | ep   2820 | steps   292829 | sps   2825] ep_return  -86.21  pol_loss  0.0065  val_loss 3075.7361  ev -0.012
+[update  283 | ep   2830 | steps   294245 | sps   2828] ep_return  -89.18  pol_loss  0.0095  val_loss 3265.5007  ev -0.012
+[update  284 | ep   2840 | steps   295507 | sps   2830] ep_return  -90.74  pol_loss  0.0090  val_loss 1629.6128  ev -0.010
+[update  285 | ep   2850 | steps   296824 | sps   2832] ep_return  -90.13  pol_loss  0.0039  val_loss 2536.0410  ev -0.010
+[update  286 | ep   2860 | steps   298141 | sps   2833] ep_return  -91.31  pol_loss -0.0080  val_loss 2714.7915  ev -0.011
+[update  287 | ep   2870 | steps   299548 | sps   2835] ep_return  -88.93  pol_loss  0.0035  val_loss 922.1722  ev -0.015
+[eval @ step   300872] mean return =  -624.63
+[update  288 | ep   2880 | steps   300872 | sps   2831] ep_return  -83.13  pol_loss  0.0136  val_loss 3358.1250  ev -0.013
+[update  289 | ep   2890 | steps   302195 | sps   2833] ep_return  -86.04  pol_loss  0.0170  val_loss 2807.3950  ev -0.008
+[update  290 | ep   2900 | steps   303493 | sps   2835] ep_return  -90.62  pol_loss -0.0008  val_loss 3539.3274  ev -0.008
+[update  291 | ep   2910 | steps   304822 | sps   2837] ep_return  -93.64  pol_loss -0.0197  val_loss 1913.2072  ev -0.015
+[update  292 | ep   2920 | steps   306200 | sps   2840] ep_return  -86.71  pol_loss  0.0091  val_loss 1347.6111  ev -0.022
+[update  293 | ep   2930 | steps   307538 | sps   2842] ep_return  -83.00  pol_loss -0.0031  val_loss 2453.8467  ev -0.020
+[update  294 | ep   2940 | steps   308893 | sps   2844] ep_return  -85.92  pol_loss -0.0003  val_loss 3643.9641  ev -0.010
+[eval @ step   310534] mean return =  -673.56
+[update  295 | ep   2950 | steps   310534 | sps   2841] ep_return  -86.32  pol_loss  0.0112  val_loss 1420.3181  ev -0.010
+[update  296 | ep   2960 | steps   312041 | sps   2843] ep_return  -82.61  pol_loss  0.0070  val_loss 1164.6427  ev -0.018
+[update  297 | ep   2970 | steps   313328 | sps   2845] ep_return  -85.99  pol_loss  0.0179  val_loss 2401.9810  ev -0.013
+[update  298 | ep   2980 | steps   314664 | sps   2848] ep_return  -82.27  pol_loss  0.0057  val_loss 2293.0903  ev -0.013
+[update  299 | ep   2990 | steps   315881 | sps   2850] ep_return  -80.02  pol_loss -0.0013  val_loss 2901.5789  ev -0.015
+[update  300 | ep   3000 | steps   317408 | sps   2853] ep_return  -74.48  pol_loss -0.0000  val_loss 2830.6970  ev -0.028
+[update  301 | ep   3010 | steps   318680 | sps   2855] ep_return  -74.97  pol_loss  0.0025  val_loss 1960.1802  ev -0.013
+[eval @ step   320003] mean return =  -671.75
+[update  302 | ep   3020 | steps   320003 | sps   2850] ep_return  -76.34  pol_loss -0.0156  val_loss 1541.2334  ev -0.009
+[update  303 | ep   3030 | steps   321360 | sps   2852] ep_return  -81.38  pol_loss  0.0553  val_loss 8332.6768  ev -0.007
+[update  304 | ep   3040 | steps   322810 | sps   2855] ep_return  -77.48  pol_loss -0.0084  val_loss 1385.9617  ev -0.010
+[update  305 | ep   3050 | steps   324179 | sps   2857] ep_return  -78.73  pol_loss -0.0046  val_loss 2106.6304  ev -0.026
+[update  306 | ep   3060 | steps   325639 | sps   2859] ep_return  -81.05  pol_loss  0.0012  val_loss 1741.0178  ev -0.011
+[update  307 | ep   3070 | steps   326964 | sps   2862] ep_return  -77.63  pol_loss  0.0046  val_loss 1791.4811  ev -0.009
+[update  308 | ep   3080 | steps   328464 | sps   2864] ep_return  -78.58  pol_loss  0.0211  val_loss 1912.3053  ev -0.023
+[update  309 | ep   3090 | steps   329935 | sps   2867] ep_return  -80.16  pol_loss -0.0350  val_loss 2599.4795  ev -0.044
+[eval @ step   331171] mean return =  -642.40
+[update  310 | ep   3100 | steps   331171 | sps   2861] ep_return  -79.62  pol_loss -0.0130  val_loss 1396.0912  ev -0.014
+[update  311 | ep   3110 | steps   333338 | sps   2865] ep_return  -80.68  pol_loss -0.0260  val_loss 2472.4744  ev -0.014
+[update  312 | ep   3120 | steps   334784 | sps   2868] ep_return  -80.87  pol_loss  0.0063  val_loss 1118.4575  ev -0.012
+[update  313 | ep   3130 | steps   336219 | sps   2869] ep_return  -78.07  pol_loss  0.0294  val_loss 3420.0259  ev -0.014
+[update  314 | ep   3140 | steps   337826 | sps   2872] ep_return  -78.81  pol_loss  0.0257  val_loss 2988.3877  ev -0.018
+[update  315 | ep   3150 | steps   339210 | sps   2874] ep_return  -80.62  pol_loss  0.0172  val_loss 3379.2136  ev -0.011
+[eval @ step   340422] mean return =  -643.48
+[update  316 | ep   3160 | steps   340422 | sps   2869] ep_return  -81.66  pol_loss -0.0001  val_loss 2675.7649  ev -0.006
+[update  317 | ep   3170 | steps   341817 | sps   2872] ep_return  -79.06  pol_loss -0.0121  val_loss 1288.9158  ev -0.010
+[update  318 | ep   3180 | steps   344109 | sps   2875] ep_return  -75.36  pol_loss  0.0045  val_loss 1204.5026  ev 0.004
+[update  319 | ep   3190 | steps   345678 | sps   2878] ep_return  -74.26  pol_loss  0.0172  val_loss 2918.6309  ev -0.009
+[update  320 | ep   3200 | steps   347299 | sps   2880] ep_return  -77.40  pol_loss  0.0119  val_loss 3245.7244  ev -0.029
+[update  321 | ep   3210 | steps   348814 | sps   2882] ep_return  -76.79  pol_loss  0.0294  val_loss 2490.4448  ev -0.011
+[eval @ step   350178] mean return =  -680.56
+[update  322 | ep   3220 | steps   350178 | sps   2878] ep_return  -74.78  pol_loss -0.0128  val_loss 1117.7759  ev -0.013
+[update  323 | ep   3230 | steps   351659 | sps   2880] ep_return  -72.27  pol_loss  0.0005  val_loss 1563.9573  ev -0.009
+[update  324 | ep   3240 | steps   354421 | sps   2884] ep_return  -70.77  pol_loss -0.0122  val_loss 1780.4513  ev -0.016
+[update  325 | ep   3250 | steps   356612 | sps   2887] ep_return  -65.07  pol_loss -0.0064  val_loss 1053.3733  ev 0.008
+[update  326 | ep   3260 | steps   358931 | sps   2891] ep_return  -62.96  pol_loss  0.0127  val_loss 1353.3008  ev 0.008
+[eval @ step   361388] mean return =  -689.58
+[update  327 | ep   3270 | steps   361388 | sps   2888] ep_return  -63.06  pol_loss -0.0039  val_loss 908.7692  ev 0.002
+[update  328 | ep   3280 | steps   362733 | sps   2890] ep_return  -65.52  pol_loss -0.0142  val_loss 1827.7396  ev -0.009
+[update  329 | ep   3290 | steps   364654 | sps   2892] ep_return  -61.70  pol_loss -0.0196  val_loss 2130.3667  ev -0.023
+[update  330 | ep   3300 | steps   367006 | sps   2895] ep_return  -59.40  pol_loss  0.0072  val_loss 1483.3035  ev 0.012
+[update  331 | ep   3310 | steps   369577 | sps   2898] ep_return  -57.82  pol_loss  0.0211  val_loss 2215.1436  ev -0.011
+[eval @ step   372657] mean return =  -706.12
+[update  332 | ep   3320 | steps   372657 | sps   2895] ep_return  -58.96  pol_loss -0.0062  val_loss 827.3327  ev 0.019
+[update  333 | ep   3330 | steps   374191 | sps   2896] ep_return  -58.56  pol_loss  0.0150  val_loss 1583.0726  ev -0.011
+[update  334 | ep   3340 | steps   376514 | sps   2894] ep_return  -56.58  pol_loss  0.0072  val_loss 778.2264  ev 0.006
+[update  335 | ep   3350 | steps   378010 | sps   2892] ep_return  -58.91  pol_loss -0.0206  val_loss 1428.4707  ev -0.005
+[update  336 | ep   3360 | steps   379467 | sps   2889] ep_return  -58.06  pol_loss  0.0035  val_loss 2132.0291  ev -0.016
+[eval @ step   380931] mean return =  -692.85
+[update  337 | ep   3370 | steps   380931 | sps   2877] ep_return  -58.61  pol_loss  0.0190  val_loss 1742.6808  ev -0.011
+[update  338 | ep   3380 | steps   382537 | sps   2873] ep_return  -56.73  pol_loss  0.0179  val_loss 953.5516  ev -0.012
+[update  339 | ep   3390 | steps   384479 | sps   2871] ep_return  -59.98  pol_loss -0.0147  val_loss 2364.8242  ev -0.037
+[update  340 | ep   3400 | steps   386446 | sps   2868] ep_return  -61.24  pol_loss -0.0162  val_loss 1821.9070  ev -0.022
+[update  341 | ep   3410 | steps   387968 | sps   2866] ep_return  -61.53  pol_loss  0.0076  val_loss 2075.8699  ev -0.014
+[update  342 | ep   3420 | steps   389637 | sps   2864] ep_return  -65.93  pol_loss -0.0086  val_loss 3973.8535  ev -0.008
+[eval @ step   391149] mean return =  -679.43
+[update  343 | ep   3430 | steps   391149 | sps   2852] ep_return  -65.99  pol_loss  0.0131  val_loss 1707.5228  ev -0.010
+[update  344 | ep   3440 | steps   392658 | sps   2850] ep_return  -68.01  pol_loss  0.0336  val_loss 1900.7949  ev -0.017
+[update  345 | ep   3450 | steps   395027 | sps   2847] ep_return  -66.31  pol_loss -0.0111  val_loss 1024.5975  ev 0.000
+[update  346 | ep   3460 | steps   397114 | sps   2846] ep_return  -67.33  pol_loss  0.0059  val_loss 1823.7787  ev -0.026
+[update  347 | ep   3470 | steps   398657 | sps   2844] ep_return  -67.72  pol_loss  0.0029  val_loss 2282.0811  ev -0.028
+[eval @ step   400238] mean return =  -657.66
+[update  348 | ep   3480 | steps   400238 | sps   2833] ep_return  -70.32  pol_loss  0.0315  val_loss 3000.6631  ev -0.027
+[update  349 | ep   3490 | steps   402994 | sps   2831] ep_return  -74.63  pol_loss  0.0134  val_loss 2928.6082  ev -0.014
+[update  350 | ep   3500 | steps   405276 | sps   2829] ep_return  -74.05  pol_loss  0.0075  val_loss 1969.1411  ev -0.025
+[update  351 | ep   3510 | steps   407775 | sps   2828] ep_return  -72.20  pol_loss  0.0008  val_loss 1718.7729  ev -0.003
+[update  352 | ep   3520 | steps   409250 | sps   2829] ep_return  -70.03  pol_loss  0.0187  val_loss 2690.8389  ev -0.012
+[eval @ step   411620] mean return =  -666.92
+[update  353 | ep   3530 | steps   411620 | sps   2826] ep_return  -67.49  pol_loss  0.0244  val_loss 1369.5221  ev 0.007
+[update  354 | ep   3540 | steps   413470 | sps   2828] ep_return  -68.24  pol_loss  0.0051  val_loss 2668.5559  ev -0.022
+[update  355 | ep   3550 | steps   415036 | sps   2830] ep_return  -71.76  pol_loss  0.0434  val_loss 4448.3481  ev -0.005
+[update  356 | ep   3560 | steps   416504 | sps   2832] ep_return  -70.93  pol_loss  0.0168  val_loss 2177.5405  ev -0.014
+[update  357 | ep   3570 | steps   418186 | sps   2834] ep_return  -70.62  pol_loss  0.0226  val_loss 1046.4158  ev -0.016
+[eval @ step   422275] mean return =  -654.31
+[update  358 | ep   3580 | steps   422275 | sps   2834] ep_return  -68.50  pol_loss  0.0241  val_loss 1530.1896  ev 0.009
+[update  359 | ep   3590 | steps   424683 | sps   2837] ep_return  -60.06  pol_loss  0.0031  val_loss 799.2922  ev 0.002
+[update  360 | ep   3600 | steps   427309 | sps   2839] ep_return  -62.14  pol_loss  0.0047  val_loss 2894.3679  ev -0.021
+[update  361 | ep   3610 | steps   429084 | sps   2841] ep_return  -64.62  pol_loss  0.0337  val_loss 4091.1296  ev -0.028
+[eval @ step   430760] mean return =  -641.03
+[update  362 | ep   3620 | steps   430760 | sps   2838] ep_return  -63.95  pol_loss  0.0409  val_loss 2549.5488  ev -0.009
+[update  363 | ep   3630 | steps   432256 | sps   2836] ep_return  -69.93  pol_loss  0.0365  val_loss 3225.6003  ev -0.006
+[update  364 | ep   3640 | steps   433760 | sps   2837] ep_return  -72.80  pol_loss  0.0020  val_loss 3187.1858  ev -0.019
+[update  365 | ep   3650 | steps   436396 | sps   2840] ep_return  -68.86  pol_loss -0.0114  val_loss 1233.0840  ev -0.004
+[update  366 | ep   3660 | steps   437800 | sps   2840] ep_return  -66.20  pol_loss -0.0050  val_loss 1078.7866  ev -0.007
+[eval @ step   440172] mean return =  -609.91
+[update  367 | ep   3670 | steps   440172 | sps   2829] ep_return  -67.66  pol_loss  0.0132  val_loss 1547.2919  ev 0.010
+[update  368 | ep   3680 | steps   442548 | sps   2827] ep_return  -67.32  pol_loss  0.0005  val_loss 1488.7008  ev -0.001
+[update  369 | ep   3690 | steps   444266 | sps   2826] ep_return  -71.11  pol_loss  0.0123  val_loss 3046.3650  ev -0.021
+[update  370 | ep   3700 | steps   445738 | sps   2826] ep_return  -65.79  pol_loss  0.0232  val_loss 1227.3783  ev -0.009
+[update  371 | ep   3710 | steps   447335 | sps   2824] ep_return  -63.97  pol_loss  0.0056  val_loss 1341.1232  ev -0.010
+[update  372 | ep   3720 | steps   448716 | sps   2823] ep_return  -63.59  pol_loss  0.0082  val_loss 2420.1082  ev -0.027
+[eval @ step   451131] mean return =  -588.60
+[update  373 | ep   3730 | steps   451131 | sps   2814] ep_return  -57.99  pol_loss -0.0115  val_loss 1790.0031  ev -0.000
+[update  374 | ep   3740 | steps   452828 | sps   2814] ep_return  -56.31  pol_loss  0.0489  val_loss 3325.0417  ev -0.009
+[update  375 | ep   3750 | steps   454277 | sps   2813] ep_return  -59.01  pol_loss  0.0032  val_loss 1932.1604  ev -0.007
+[update  376 | ep   3760 | steps   455582 | sps   2814] ep_return  -59.81  pol_loss -0.0090  val_loss 1228.2195  ev -0.013
+[update  377 | ep   3770 | steps   457856 | sps   2812] ep_return  -57.94  pol_loss  0.0063  val_loss 1373.8702  ev -0.019
+[update  378 | ep   3780 | steps   459342 | sps   2811] ep_return  -58.14  pol_loss  0.0416  val_loss 2178.9553  ev -0.015
+[eval @ step   460831] mean return =  -561.13
+[update  379 | ep   3790 | steps   460831 | sps   2801] ep_return  -54.83  pol_loss  0.0043  val_loss 941.4843  ev -0.012
+[update  380 | ep   3800 | steps   463212 | sps   2800] ep_return  -55.30  pol_loss -0.0137  val_loss 1136.4221  ev -0.010
+[update  381 | ep   3810 | steps   465529 | sps   2798] ep_return  -53.32  pol_loss  0.0261  val_loss 999.2921  ev 0.006
+[update  382 | ep   3820 | steps   466894 | sps   2798] ep_return  -51.84  pol_loss  0.0018  val_loss 1300.7408  ev -0.009
+[update  383 | ep   3830 | steps   469138 | sps   2797] ep_return  -48.13  pol_loss  0.0169  val_loss 777.1133  ev -0.009
+[eval @ step   471263] mean return =  -541.06
+[update  384 | ep   3840 | steps   471263 | sps   2787] ep_return  -46.14  pol_loss  0.0160  val_loss 2371.7705  ev -0.035
+[update  385 | ep   3850 | steps   472583 | sps   2788] ep_return  -42.86  pol_loss -0.0036  val_loss 1241.6344  ev -0.009
+[update  386 | ep   3860 | steps   474252 | sps   2787] ep_return  -43.50  pol_loss -0.0115  val_loss 1336.6116  ev -0.020
+[update  387 | ep   3870 | steps   476071 | sps   2785] ep_return  -42.06  pol_loss -0.0189  val_loss 1858.2935  ev -0.027
+[update  388 | ep   3880 | steps   477628 | sps   2786] ep_return  -38.58  pol_loss -0.0107  val_loss 884.3954  ev -0.013
+[update  389 | ep   3890 | steps   479044 | sps   2785] ep_return  -38.36  pol_loss  0.0042  val_loss 1199.0889  ev -0.004
+[eval @ step   480621] mean return =  -535.07
+[update  390 | ep   3900 | steps   480621 | sps   2774] ep_return  -39.54  pol_loss -0.0071  val_loss 2313.9165  ev -0.006
+[update  391 | ep   3910 | steps   482339 | sps   2773] ep_return  -42.24  pol_loss  0.0316  val_loss 1824.6968  ev -0.009
+[update  392 | ep   3920 | steps   483687 | sps   2772] ep_return  -41.26  pol_loss  0.0356  val_loss 1694.4115  ev -0.011
+[update  393 | ep   3930 | steps   485192 | sps   2773] ep_return  -46.71  pol_loss  0.0726  val_loss 2814.2236  ev -0.008
+[update  394 | ep   3940 | steps   486650 | sps   2772] ep_return  -43.30  pol_loss  0.0081  val_loss 1123.4958  ev -0.012
+[update  395 | ep   3950 | steps   488157 | sps   2771] ep_return  -45.11  pol_loss  0.0651  val_loss 3059.2698  ev -0.005
+[update  396 | ep   3960 | steps   489592 | sps   2769] ep_return  -43.49  pol_loss -0.0101  val_loss 966.6984  ev -0.013
+[eval @ step   491147] mean return =  -533.31
+[update  397 | ep   3970 | steps   491147 | sps   2764] ep_return  -45.44  pol_loss -0.0081  val_loss 1133.8645  ev -0.007
+[update  398 | ep   3980 | steps   492838 | sps   2766] ep_return  -50.87  pol_loss  0.0317  val_loss 2277.4646  ev -0.013
+[update  399 | ep   3990 | steps   496286 | sps   2765] ep_return  -55.25  pol_loss  0.0004  val_loss 1625.9746  ev -0.001
+[update  400 | ep   4000 | steps   497662 | sps   2764] ep_return  -52.34  pol_loss  0.0336  val_loss 1072.6232  ev -0.014
+[update  401 | ep   4010 | steps   499227 | sps   2763] ep_return  -49.17  pol_loss  0.0446  val_loss 1504.5736  ev -0.007
+[eval @ step   500396] mean return =  -536.15
+[update  402 | ep   4015 | steps   500396 | sps   2754] ep_return  -48.91  pol_loss -0.0254  val_loss 1265.0294  ev -0.016
+Saved final model to reinforce\data\reinforce_sweep_LunarLander-v2_2026-05-10_17-19-55\model_final.pt
+Saved 50 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\discrete\reinforce\lunarlander-v2\seed_2.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\discrete\reinforce\lunarlander-v2\seed_2.npy

@@ -1,0 +1,181 @@
+C:\Users\mohamedosama\AppData\Local\anaconda3\envs\deep_rl\lib\site-packages\pygame\pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+Starting Training on LunarLander-v2 | DDQN Enabled: True | seed=0
+[eval @ step    10000] mean return =   -20.81
+Episode 100	Average Score: -108.42	Epsilon: 0.61
+[eval @ step    20000] mean return =  -155.88
+[eval @ step    30000] mean return =    41.78
+[eval @ step    40000] mean return =   -58.64
+Episode 200	Average Score: -22.62	Epsilon: 0.37
+[eval @ step    50000] mean return =   120.63
+[eval @ step    60000] mean return =    22.95
+[eval @ step    70000] mean return =     8.41
+[eval @ step    80000] mean return =   189.14
+[eval @ step    90000] mean return =    -0.75
+[eval @ step   100000] mean return =     8.63
+[eval @ step   110000] mean return =   178.54
+[eval @ step   120000] mean return =   -22.05
+Episode 300	Average Score: 35.37	Epsilon: 0.22
+[eval @ step   130000] mean return =   238.78
+[eval @ step   140000] mean return =   187.75
+[eval @ step   150000] mean return =  -188.34
+[eval @ step   160000] mean return =   108.25
+[eval @ step   170000] mean return =   175.30
+[eval @ step   180000] mean return =   251.98
+Episode 400	Average Score: 142.81	Epsilon: 0.13
+[eval @ step   190000] mean return =   230.86
+[eval @ step   200000] mean return =   192.04
+[eval @ step   210000] mean return =   173.80
+[eval @ step   220000] mean return =   250.31
+Episode 500	Average Score: 212.80	Epsilon: 0.08
+[eval @ step   230000] mean return =   193.08
+[eval @ step   240000] mean return =   216.12
+[eval @ step   250000] mean return =   167.89
+Episode 600	Average Score: 212.42	Epsilon: 0.05
+[eval @ step   260000] mean return =   244.88
+[eval @ step   270000] mean return =   187.27
+[eval @ step   280000] mean return =   262.64
+Episode 700	Average Score: 203.33	Epsilon: 0.03
+[eval @ step   290000] mean return =   193.92
+[eval @ step   300000] mean return =   256.92
+[eval @ step   310000] mean return =   267.65
+Episode 800	Average Score: 243.75	Epsilon: 0.02
+[eval @ step   320000] mean return =   195.95
+[eval @ step   330000] mean return =   261.62
+Episode 900	Average Score: 231.77	Epsilon: 0.01
+[eval @ step   340000] mean return =   243.29
+[eval @ step   350000] mean return =   257.27
+[eval @ step   360000] mean return =   245.19
+Episode 1000	Average Score: 254.96	Epsilon: 0.01
+[eval @ step   370000] mean return =   270.74
+[eval @ step   380000] mean return =   215.94
+Episode 1100	Average Score: 243.34	Epsilon: 0.01
+[eval @ step   390000] mean return =   215.58
+[eval @ step   400000] mean return =   244.05
+[eval @ step   410000] mean return =   272.69
+Episode 1200	Average Score: 216.54	Epsilon: 0.01
+[eval @ step   420000] mean return =   264.12
+[eval @ step   430000] mean return =   278.15
+Episode 1300	Average Score: 256.60	Epsilon: 0.01
+[eval @ step   440000] mean return =   273.55
+[eval @ step   450000] mean return =   210.84
+Episode 1400	Average Score: 215.18	Epsilon: 0.01
+[eval @ step   460000] mean return =   173.58
+[eval @ step   470000] mean return =   266.49
+[eval @ step   480000] mean return =   276.40
+Episode 1500	Average Score: 242.33	Epsilon: 0.01
+[eval @ step   490000] mean return =   213.96
+[eval @ step   500000] mean return =   216.45
+Episode 1600	Average Score: 258.53	Epsilon: 0.01
+[eval @ step   510000] mean return =   275.50
+[eval @ step   520000] mean return =   277.45
+Episode 1700	Average Score: 271.50	Epsilon: 0.01
+[eval @ step   530000] mean return =   282.67
+[eval @ step   540000] mean return =   165.96
+Episode 1800	Average Score: 256.54	Epsilon: 0.01
+[eval @ step   550000] mean return =   283.28
+[eval @ step   560000] mean return =   280.57
+[eval @ step   570000] mean return =   283.81
+Episode 1900	Average Score: 277.00	Epsilon: 0.01
+[eval @ step   580000] mean return =   272.93
+[eval @ step   590000] mean return =   265.70
+Episode 2000	Average Score: 244.54	Epsilon: 0.01
+[eval @ step   600000] mean return =   224.71
+[eval @ step   610000] mean return =   281.94
+Episode 2100	Average Score: 244.11	Epsilon: 0.01
+[eval @ step   620000] mean return =   254.75
+[eval @ step   630000] mean return =   244.78
+Episode 2200	Average Score: 268.57	Epsilon: 0.01
+[eval @ step   640000] mean return =   227.78
+[eval @ step   650000] mean return =   205.41
+Episode 2300	Average Score: 260.55	Epsilon: 0.01
+[eval @ step   660000] mean return =   251.48
+[eval @ step   670000] mean return =   252.33
+Episode 2400	Average Score: 263.78	Epsilon: 0.01
+[eval @ step   680000] mean return =   257.65
+[eval @ step   690000] mean return =   281.83
+[eval @ step   700000] mean return =   218.27
+Episode 2500	Average Score: 268.05	Epsilon: 0.01
+[eval @ step   710000] mean return =   267.32
+[eval @ step   720000] mean return =   279.51
+Episode 2600	Average Score: 261.05	Epsilon: 0.01
+[eval @ step   730000] mean return =   239.32
+[eval @ step   740000] mean return =   268.88
+Episode 2700	Average Score: 259.38	Epsilon: 0.01
+[eval @ step   750000] mean return =   228.55
+[eval @ step   760000] mean return =   211.18
+Episode 2800	Average Score: 224.75	Epsilon: 0.01
+[eval @ step   770000] mean return =   280.99
+[eval @ step   780000] mean return =   280.89
+Episode 2900	Average Score: 254.45	Epsilon: 0.01
+[eval @ step   790000] mean return =   253.17
+[eval @ step   800000] mean return =   270.20
+[eval @ step   810000] mean return =   273.04
+Episode 3000	Average Score: 262.06	Epsilon: 0.01
+[eval @ step   820000] mean return =   275.57
+[eval @ step   830000] mean return =   277.65
+Episode 3100	Average Score: 270.13	Epsilon: 0.01
+[eval @ step   840000] mean return =   279.56
+[eval @ step   850000] mean return =   252.15
+Episode 3200	Average Score: 275.51	Epsilon: 0.01
+[eval @ step   860000] mean return =   231.43
+[eval @ step   870000] mean return =   134.97
+Episode 3300	Average Score: 256.56	Epsilon: 0.01
+[eval @ step   880000] mean return =   246.04
+[eval @ step   890000] mean return =   282.50
+Episode 3400	Average Score: 242.56	Epsilon: 0.01
+[eval @ step   900000] mean return =   181.01
+[eval @ step   910000] mean return =   267.91
+[eval @ step   920000] mean return =   278.58
+Episode 3500	Average Score: 248.37	Epsilon: 0.01
+[eval @ step   930000] mean return =   211.22
+[eval @ step   940000] mean return =   242.58
+Episode 3600	Average Score: 250.45	Epsilon: 0.01
+[eval @ step   950000] mean return =   265.70
+[eval @ step   960000] mean return =   235.92
+Episode 3700	Average Score: 254.40	Epsilon: 0.01
+[eval @ step   970000] mean return =   228.62
+[eval @ step   980000] mean return =   242.44
+[eval @ step   990000] mean return =   279.07
+Episode 3800	Average Score: 238.18	Epsilon: 0.01
+[eval @ step  1000000] mean return =   276.16
+[eval @ step  1010000] mean return =   282.42
+Episode 3900	Average Score: 251.19	Epsilon: 0.01
+[eval @ step  1020000] mean return =   278.80
+[eval @ step  1030000] mean return =   276.03
+Episode 4000	Average Score: 279.18	Epsilon: 0.01
+[eval @ step  1040000] mean return =   198.94
+[eval @ step  1050000] mean return =   277.61
+Episode 4100	Average Score: 247.00	Epsilon: 0.01
+[eval @ step  1060000] mean return =   272.39
+[eval @ step  1070000] mean return =   231.90
+Episode 4200	Average Score: 222.08	Epsilon: 0.01
+[eval @ step  1080000] mean return =   208.76
+[eval @ step  1090000] mean return =   223.30
+[eval @ step  1100000] mean return =   270.69
+Episode 4300	Average Score: 249.59	Epsilon: 0.01
+[eval @ step  1110000] mean return =   266.31
+[eval @ step  1120000] mean return =   271.55
+Episode 4400	Average Score: 250.71	Epsilon: 0.01
+[eval @ step  1130000] mean return =   269.83
+[eval @ step  1140000] mean return =   223.96
+Episode 4500	Average Score: 244.00	Epsilon: 0.01
+[eval @ step  1150000] mean return =   227.77
+[eval @ step  1160000] mean return =   265.72
+[eval @ step  1170000] mean return =   245.54
+Episode 4600	Average Score: 246.80	Epsilon: 0.01
+[eval @ step  1180000] mean return =   232.09
+[eval @ step  1190000] mean return =   241.62
+Episode 4700	Average Score: 249.26	Epsilon: 0.01
+[eval @ step  1200000] mean return =   238.13
+[eval @ step  1210000] mean return =   181.87
+Episode 4800	Average Score: 222.73	Epsilon: 0.01
+[eval @ step  1220000] mean return =   208.42
+[eval @ step  1230000] mean return =   274.99
+Episode 4900	Average Score: 245.72	Epsilon: 0.01
+[eval @ step  1240000] mean return =   140.77
+[eval @ step  1250000] mean return =   276.07
+[eval @ step  1260000] mean return =   272.24
+Episode 5000	Average Score: 211.76	Epsilon: 0.01
+Saved 126 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\discrete\ddqn\lunarlander-v2\seed_0.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\discrete\ddqn\lunarlander-v2\seed_0.npy

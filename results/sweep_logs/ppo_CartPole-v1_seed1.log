@@ -1,0 +1,26 @@
+GPU not detected. Defaulting to CPU.
+########################
+logging outputs to ppo\data\ppo_sweep_CartPole-v1_2026-05-10_17-23-52
+########################
+[update    1 | steps     2048 | sps   2048] ep_return   21.91  kl 0.0081  clip 0.109  ev 0.003  epochs 10/10
+[update    2 | steps     4096 | sps   2187] ep_return   29.13  kl 0.0064  clip 0.053  ev 0.041  epochs 10/10
+[eval @ step     6144] mean return =   438.30
+[update    3 | steps     6144 | sps   2051] ep_return   41.51  kl 0.0055  clip 0.066  ev 0.169  epochs 10/10
+[update    4 | steps     8192 | sps   2083] ep_return   53.68  kl 0.0052  clip 0.055  ev 0.220  epochs 10/10
+[eval @ step    10240] mean return =   444.90
+[update    5 | steps    10240 | sps   2017] ep_return   68.91  kl 0.0043  clip 0.047  ev 0.465  epochs 10/10
+[update    6 | steps    12288 | sps   1950] ep_return   84.39  kl 0.0040  clip 0.047  ev 0.684  epochs 10/10
+[update    7 | steps    14336 | sps   1824] ep_return  102.20  kl 0.0021  clip 0.011  ev 0.847  epochs 10/10
+[eval @ step    16384] mean return =   458.90
+[update    8 | steps    16384 | sps   1707] ep_return  117.45  kl 0.0030  clip 0.026  ev 0.868  epochs 10/10
+[update    9 | steps    18432 | sps   1651] ep_return  132.03  kl 0.0035  clip 0.042  ev 0.952  epochs 10/10
+[eval @ step    20480] mean return =   497.00
+[update   10 | steps    20480 | sps   1557] ep_return  147.05  kl 0.0029  clip 0.032  ev 0.972  epochs 10/10
+[update   11 | steps    22528 | sps   1521] ep_return  164.81  kl 0.0026  clip 0.029  ev 0.967  epochs 10/10
+[update   12 | steps    24576 | sps   1500] ep_return  180.61  kl 0.0031  clip 0.027  ev 0.897  epochs 10/10
+[eval @ step    26624] mean return =   500.00
+[update   13 | steps    26624 | sps   1462] ep_return  198.89  kl 0.0022  clip 0.019  ev 0.899  epochs 10/10
+[update   14 | steps    28672 | sps   1447] ep_return  216.92  kl 0.0041  clip 0.056  ev 0.985  epochs 10/10
+Saved final model to ppo\data\ppo_sweep_CartPole-v1_2026-05-10_17-23-52\model_final.pt
+Saved 5 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\discrete\ppo\cartpole-v1\seed_1.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\discrete\ppo\cartpole-v1\seed_1.npy

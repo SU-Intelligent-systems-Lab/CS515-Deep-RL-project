@@ -1,0 +1,29 @@
+{
+  "exp_name": "trpo",
+  "total_timesteps": 100000,
+  "n_steps": 2048,
+  "max_kl": 0.01,
+  "cg_steps": 10,
+  "cg_damping": 0.1,
+  "backtrack_steps": 10,
+  "backtrack_coef": 0.5,
+  "lr_value": 0.001,
+  "value_epochs": 5,
+  "gamma": 0.99,
+  "n_layers": 2,
+  "size": 64,
+  "env_overrides": {
+    "Pendulum-v1": {
+      "total_timesteps": 1000000
+    },
+    "Hopper-v4": {
+      "total_timesteps": 1000000
+    },
+    "HalfCheetah-v4": {
+      "total_timesteps": 1000000
+    },
+    "Walker2d-v4": {
+      "total_timesteps": 1000000
+    }
+  }
+}

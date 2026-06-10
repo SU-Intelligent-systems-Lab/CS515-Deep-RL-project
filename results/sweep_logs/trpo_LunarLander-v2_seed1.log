@@ -1,0 +1,119 @@
+GPU not detected. Defaulting to CPU.
+C:\Users\mohamedosama\AppData\Local\anaconda3\envs\deep_rl\lib\site-packages\pygame\pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+########################
+logging outputs to trpo\data\trpo_sweep_LunarLander-v2_2026-05-13_13-39-53
+########################
+[update    1 | steps     8192 | sps   1650] ep_return -185.52  kl 0.0061  bt 0  ✓  ev 0.001
+[eval @ step    16384] mean return =  -144.59
+[update    2 | steps    16384 | sps   1638] ep_return -155.59  kl 0.0072  bt 0  ✓  ev 0.089
+[eval @ step    24576] mean return =   -92.76
+[update    3 | steps    24576 | sps   1586] ep_return -142.16  kl 0.0081  bt 0  ✓  ev 0.271
+[eval @ step    32768] mean return =  -172.59
+[update    4 | steps    32768 | sps   1601] ep_return -125.50  kl 0.0067  bt 0  ✓  ev 0.400
+[eval @ step    40960] mean return =  -206.04
+[update    5 | steps    40960 | sps   1617] ep_return -107.79  kl 0.0070  bt 0  ✓  ev 0.458
+[update    6 | steps    49152 | sps   1654] ep_return  -90.14  kl 0.0068  bt 0  ✓  ev 0.594
+[eval @ step    57344] mean return =  -247.59
+[update    7 | steps    57344 | sps   1654] ep_return  -76.25  kl 0.0076  bt 0  ✓  ev 0.744
+[eval @ step    65536] mean return =  -231.88
+[update    8 | steps    65536 | sps   1645] ep_return  -56.47  kl 0.0081  bt 0  ✓  ev 0.793
+[eval @ step    73728] mean return =  -214.98
+[update    9 | steps    73728 | sps   1626] ep_return  -38.67  kl 0.0074  bt 0  ✓  ev 0.837
+[eval @ step    81920] mean return =  -204.36
+[update   10 | steps    81920 | sps   1594] ep_return  -35.29  kl 0.0062  bt 0  ✓  ev 0.831
+[eval @ step    90112] mean return =  -183.16
+[update   11 | steps    90112 | sps   1590] ep_return  -22.44  kl 0.0074  bt 0  ✓  ev 0.874
+[update   12 | steps    98304 | sps   1590] ep_return  -19.90  kl 0.0074  bt 0  ✓  ev 0.864
+[eval @ step   106496] mean return =   -97.04
+[update   13 | steps   106496 | sps   1584] ep_return  -22.37  kl 0.0083  bt 0  ✓  ev 0.785
+[eval @ step   114688] mean return =   -33.47
+[update   14 | steps   114688 | sps   1564] ep_return   -9.59  kl 0.0053  bt 0  ✓  ev 0.802
+[eval @ step   122880] mean return =  -101.26
+[update   15 | steps   122880 | sps   1555] ep_return   -2.91  kl 0.0083  bt 0  ✓  ev 0.910
+[eval @ step   131072] mean return =    20.70
+[update   16 | steps   131072 | sps   1540] ep_return    1.47  kl 0.0068  bt 0  ✓  ev 0.878
+[update   17 | steps   139264 | sps   1549] ep_return    6.59  kl 0.0070  bt 0  ✓  ev 0.881
+[eval @ step   147456] mean return =   100.31
+[update   18 | steps   147456 | sps   1543] ep_return   13.95  kl 0.0051  bt 0  ✓  ev 0.829
+[eval @ step   155648] mean return =   162.52
+[update   19 | steps   155648 | sps   1533] ep_return   24.28  kl 0.0057  bt 0  ✓  ev 0.873
+[eval @ step   163840] mean return =   154.37
+[update   20 | steps   163840 | sps   1525] ep_return   32.10  kl 0.0068  bt 0  ✓  ev 0.841
+[eval @ step   172032] mean return =   111.48
+[update   21 | steps   172032 | sps   1518] ep_return   41.58  kl 0.0067  bt 0  ✓  ev 0.846
+[eval @ step   180224] mean return =   176.25
+[update   22 | steps   180224 | sps   1520] ep_return   46.30  kl 0.0055  bt 0  ✓  ev 0.876
+[update   23 | steps   188416 | sps   1529] ep_return   53.41  kl 0.0078  bt 0  ✓  ev 0.845
+[eval @ step   196608] mean return =   114.31
+[update   24 | steps   196608 | sps   1530] ep_return   57.01  kl 0.0062  bt 0  ✓  ev 0.823
+[eval @ step   204800] mean return =   140.19
+[update   25 | steps   204800 | sps   1522] ep_return   63.38  kl 0.0070  bt 0  ✓  ev 0.936
+[eval @ step   212992] mean return =   133.30
+[update   26 | steps   212992 | sps   1513] ep_return   67.57  kl 0.0055  bt 0  ✓  ev 0.721
+[eval @ step   221184] mean return =    33.52
+[update   27 | steps   221184 | sps   1511] ep_return   71.34  kl 0.0066  bt 0  ✓  ev 0.862
+[update   28 | steps   229376 | sps   1518] ep_return   74.58  kl 0.0057  bt 0  ✓  ev 0.874
+[eval @ step   237568] mean return =    37.11
+[update   29 | steps   237568 | sps   1514] ep_return   81.45  kl 0.0059  bt 0  ✓  ev 0.850
+[eval @ step   245760] mean return =   155.47
+[update   30 | steps   245760 | sps   1512] ep_return   85.13  kl 0.0085  bt 0  ✓  ev 0.948
+[eval @ step   253952] mean return =   186.03
+[update   31 | steps   253952 | sps   1508] ep_return   87.81  kl 0.0062  bt 0  ✓  ev 0.889
+[eval @ step   262144] mean return =   131.15
+[update   32 | steps   262144 | sps   1503] ep_return   87.42  kl 0.0053  bt 0  ✓  ev 0.818
+[eval @ step   270336] mean return =    57.71
+[update   33 | steps   270336 | sps   1494] ep_return   91.21  kl 0.0064  bt 0  ✓  ev 0.863
+[update   34 | steps   278528 | sps   1500] ep_return   94.37  kl 0.0065  bt 0  ✓  ev 0.890
+[eval @ step   286720] mean return =   139.54
+[update   35 | steps   286720 | sps   1497] ep_return   98.75  kl 0.0065  bt 0  ✓  ev 0.910
+[eval @ step   294912] mean return =   168.93
+[update   36 | steps   294912 | sps   1493] ep_return  104.58  kl 0.0059  bt 0  ✓  ev 0.866
+[eval @ step   303104] mean return =   198.61
+[update   37 | steps   303104 | sps   1489] ep_return  110.08  kl 0.0078  bt 0  ✓  ev 0.965
+[eval @ step   311296] mean return =   186.86
+[update   38 | steps   311296 | sps   1486] ep_return  111.76  kl 0.0049  bt 0  ✓  ev 0.845
+[update   39 | steps   319488 | sps   1494] ep_return  109.19  kl 0.0057  bt 0  ✓  ev 0.900
+[eval @ step   327680] mean return =   220.66
+[update   40 | steps   327680 | sps   1495] ep_return  110.63  kl 0.0072  bt 0  ✓  ev 0.977
+[eval @ step   335872] mean return =   197.72
+[update   41 | steps   335872 | sps   1495] ep_return  113.11  kl 0.0044  bt 0  ✓  ev 0.906
+[eval @ step   344064] mean return =   206.82
+[update   42 | steps   344064 | sps   1491] ep_return  118.70  kl 0.0048  bt 0  ✓  ev 0.930
+[eval @ step   352256] mean return =   184.35
+[update   43 | steps   352256 | sps   1489] ep_return  122.73  kl 0.0063  bt 0  ✓  ev 0.977
+[eval @ step   360448] mean return =   239.65
+[update   44 | steps   360448 | sps   1491] ep_return  124.13  kl 0.0044  bt 0  ✓  ev 0.944
+[update   45 | steps   368640 | sps   1494] ep_return  126.95  kl 0.0068  bt 0  ✓  ev 0.985
+[eval @ step   376832] mean return =   250.94
+[update   46 | steps   376832 | sps   1492] ep_return  125.89  kl 0.0051  bt 0  ✓  ev 0.986
+[eval @ step   385024] mean return =   236.29
+[update   47 | steps   385024 | sps   1489] ep_return  129.97  kl 0.0066  bt 0  ✓  ev 0.990
+[eval @ step   393216] mean return =   195.43
+[update   48 | steps   393216 | sps   1488] ep_return  131.01  kl 0.0061  bt 0  ✓  ev 0.933
+[eval @ step   401408] mean return =   212.13
+[update   49 | steps   401408 | sps   1484] ep_return  137.51  kl 0.0032  bt 0  ✓  ev 0.817
+[update   50 | steps   409600 | sps   1487] ep_return  141.87  kl 0.0060  bt 0  ✓  ev 0.977
+[eval @ step   417792] mean return =   227.18
+[update   51 | steps   417792 | sps   1487] ep_return  141.36  kl 0.0054  bt 0  ✓  ev 0.947
+[eval @ step   425984] mean return =   211.84
+[update   52 | steps   425984 | sps   1488] ep_return  141.81  kl 0.0069  bt 0  ✓  ev 0.931
+[eval @ step   434176] mean return =   215.58
+[update   53 | steps   434176 | sps   1487] ep_return  142.58  kl 0.0067  bt 0  ✓  ev 0.957
+[eval @ step   442368] mean return =   242.70
+[update   54 | steps   442368 | sps   1486] ep_return  144.63  kl 0.0067  bt 0  ✓  ev 0.990
+[eval @ step   450560] mean return =   231.21
+[update   55 | steps   450560 | sps   1486] ep_return  147.46  kl 0.0047  bt 0  ✓  ev 0.994
+[update   56 | steps   458752 | sps   1491] ep_return  147.48  kl 0.0074  bt 0  ✓  ev 0.956
+[eval @ step   466944] mean return =   244.05
+[update   57 | steps   466944 | sps   1489] ep_return  146.62  kl 0.0054  bt 0  ✓  ev 0.964
+[eval @ step   475136] mean return =   257.55
+[update   58 | steps   475136 | sps   1490] ep_return  145.83  kl 0.0071  bt 0  ✓  ev 0.963
+[eval @ step   483328] mean return =   257.48
+[update   59 | steps   483328 | sps   1492] ep_return  146.83  kl 0.0060  bt 0  ✓  ev 0.942
+[eval @ step   491520] mean return =   207.71
+[update   60 | steps   491520 | sps   1498] ep_return  146.08  kl 0.0069  bt 0  ✓  ev 0.966
+[update   61 | steps   499712 | sps   1507] ep_return  145.72  kl 0.0068  bt 0  ✓  ev 0.930
+Saved final model to trpo\data\trpo_sweep_LunarLander-v2_2026-05-13_13-39-53\model_final.pt
+Saved 49 eval points -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\discrete\trpo\lunarlander-v2\seed_1.npy
+Saved wallclock              -> C:\Users\mohamedosama\Downloads\CS515-Deep-RL\results\wallclock\discrete\trpo\lunarlander-v2\seed_1.npy

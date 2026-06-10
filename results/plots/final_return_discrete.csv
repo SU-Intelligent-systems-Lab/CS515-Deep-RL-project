@@ -1,0 +1,6 @@
+env,algo,final_mean,final_std,n_seeds
+CartPole-v1,ddqn,193.3333282470703,0.0,1
+LunarLander-v2,reinforce,-394.10162353515625,145.21682739257812,5
+LunarLander-v2,trpo,235.83731079101562,28.978849411010742,5
+LunarLander-v2,ppo,205.7509307861328,65.03369903564453,5
+LunarLander-v2,ddqn,236,27,5

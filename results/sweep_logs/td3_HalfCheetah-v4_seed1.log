@@ -1,0 +1,1330 @@
+/home/naida/anaconda3/envs/deep_rl/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.seed` for environment variables or `env.get_wrapper_attr('seed')` that will search the reminding wrappers.[0m
+  logger.warn(
+--------------------------------------------------
+Env:        HalfCheetah-v4
+  ob_dim    = 17
+  ac_dim    = 6
+  max_action= 1.0
+Logdir:     /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10
+Rendering:  off
+--------------------------------------------------
+/home/naida/anaconda3/envs/deep_rl/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.seed` for environment variables or `env.get_wrapper_attr('seed')` that will search the reminding wrappers.[0m
+  logger.warn(
+---------------------------------------
+Evaluation over 10 episodes: -1.918
+---------------------------------------
+Total T:    1000 | Ep:    1 | Steps: 1000 | Reward:  -295.32
+Total T:    2000 | Ep:    2 | Steps: 1000 | Reward:  -337.11
+Total T:    3000 | Ep:    3 | Steps: 1000 | Reward:  -214.02
+Total T:    4000 | Ep:    4 | Steps: 1000 | Reward:  -120.72
+Total T:    5000 | Ep:    5 | Steps: 1000 | Reward:  -391.19
+Total T:    6000 | Ep:    6 | Steps: 1000 | Reward:  -385.36
+Total T:    7000 | Ep:    7 | Steps: 1000 | Reward:  -347.35
+Total T:    8000 | Ep:    8 | Steps: 1000 | Reward:  -222.98
+Total T:    9000 | Ep:    9 | Steps: 1000 | Reward:  -282.52
+Total T:   10000 | Ep:   10 | Steps: 1000 | Reward:  -289.41
+---------------------------------------
+Evaluation over 10 episodes: -1.426
+---------------------------------------
+Total T:   11000 | Ep:   11 | Steps: 1000 | Reward:  -384.15
+Total T:   12000 | Ep:   12 | Steps: 1000 | Reward:  -285.97
+Total T:   13000 | Ep:   13 | Steps: 1000 | Reward:  -425.20
+Total T:   14000 | Ep:   14 | Steps: 1000 | Reward:  -325.71
+Total T:   15000 | Ep:   15 | Steps: 1000 | Reward:  -239.31
+Total T:   16000 | Ep:   16 | Steps: 1000 | Reward:  -262.49
+Total T:   17000 | Ep:   17 | Steps: 1000 | Reward:  -352.17
+Total T:   18000 | Ep:   18 | Steps: 1000 | Reward:  -292.51
+Total T:   19000 | Ep:   19 | Steps: 1000 | Reward:  -340.79
+Total T:   20000 | Ep:   20 | Steps: 1000 | Reward:  -221.84
+---------------------------------------
+Evaluation over 10 episodes: -1.888
+---------------------------------------
+Total T:   21000 | Ep:   21 | Steps: 1000 | Reward:  -266.99
+Total T:   22000 | Ep:   22 | Steps: 1000 | Reward:  -243.62
+Total T:   23000 | Ep:   23 | Steps: 1000 | Reward:  -394.02
+Total T:   24000 | Ep:   24 | Steps: 1000 | Reward:  -416.64
+Total T:   25000 | Ep:   25 | Steps: 1000 | Reward:  -292.71
+Total T:   26000 | Ep:   26 | Steps: 1000 | Reward:  -466.29
+Total T:   27000 | Ep:   27 | Steps: 1000 | Reward:  -469.20
+Total T:   28000 | Ep:   28 | Steps: 1000 | Reward:  -712.40
+Total T:   29000 | Ep:   29 | Steps: 1000 | Reward:  -417.49
+Total T:   30000 | Ep:   30 | Steps: 1000 | Reward:  -483.09
+---------------------------------------
+Evaluation over 10 episodes: -491.682
+---------------------------------------
+Total T:   31000 | Ep:   31 | Steps: 1000 | Reward:  -403.16
+Total T:   32000 | Ep:   32 | Steps: 1000 | Reward:  -394.76
+Total T:   33000 | Ep:   33 | Steps: 1000 | Reward:  -230.98
+Total T:   34000 | Ep:   34 | Steps: 1000 | Reward:  -267.94
+Total T:   35000 | Ep:   35 | Steps: 1000 | Reward:  -291.94
+Total T:   36000 | Ep:   36 | Steps: 1000 | Reward:  -429.18
+Total T:   37000 | Ep:   37 | Steps: 1000 | Reward:   230.24
+Total T:   38000 | Ep:   38 | Steps: 1000 | Reward:   860.50
+Total T:   39000 | Ep:   39 | Steps: 1000 | Reward:    95.82
+Total T:   40000 | Ep:   40 | Steps: 1000 | Reward:  1726.26
+---------------------------------------
+Evaluation over 10 episodes: 1473.613
+---------------------------------------
+Total T:   41000 | Ep:   41 | Steps: 1000 | Reward:  1560.32
+Total T:   42000 | Ep:   42 | Steps: 1000 | Reward:  1901.10
+Total T:   43000 | Ep:   43 | Steps: 1000 | Reward:  2141.69
+Total T:   44000 | Ep:   44 | Steps: 1000 | Reward:  2268.73
+Total T:   45000 | Ep:   45 | Steps: 1000 | Reward:  2089.42
+Total T:   46000 | Ep:   46 | Steps: 1000 | Reward:  1298.00
+Total T:   47000 | Ep:   47 | Steps: 1000 | Reward:  2185.13
+Total T:   48000 | Ep:   48 | Steps: 1000 | Reward:  2363.41
+Total T:   49000 | Ep:   49 | Steps: 1000 | Reward:  2622.58
+Total T:   50000 | Ep:   50 | Steps: 1000 | Reward:  2737.68
+---------------------------------------
+Evaluation over 10 episodes: 2405.671
+---------------------------------------
+Total T:   51000 | Ep:   51 | Steps: 1000 | Reward:  2756.41
+Total T:   52000 | Ep:   52 | Steps: 1000 | Reward:  2885.23
+Total T:   53000 | Ep:   53 | Steps: 1000 | Reward:  3466.00
+Total T:   54000 | Ep:   54 | Steps: 1000 | Reward:  3186.87
+Total T:   55000 | Ep:   55 | Steps: 1000 | Reward:  2796.22
+Total T:   56000 | Ep:   56 | Steps: 1000 | Reward:  2916.77
+Total T:   57000 | Ep:   57 | Steps: 1000 | Reward:  3239.24
+Total T:   58000 | Ep:   58 | Steps: 1000 | Reward:  3176.86
+Total T:   59000 | Ep:   59 | Steps: 1000 | Reward:  3500.33
+Total T:   60000 | Ep:   60 | Steps: 1000 | Reward:  3567.66
+---------------------------------------
+Evaluation over 10 episodes: 3618.342
+---------------------------------------
+Total T:   61000 | Ep:   61 | Steps: 1000 | Reward:  3482.04
+Total T:   62000 | Ep:   62 | Steps: 1000 | Reward:  3284.24
+Total T:   63000 | Ep:   63 | Steps: 1000 | Reward:  3268.51
+Total T:   64000 | Ep:   64 | Steps: 1000 | Reward:  3488.34
+Total T:   65000 | Ep:   65 | Steps: 1000 | Reward:  3399.75
+Total T:   66000 | Ep:   66 | Steps: 1000 | Reward:  3559.97
+Total T:   67000 | Ep:   67 | Steps: 1000 | Reward:  3553.33
+Total T:   68000 | Ep:   68 | Steps: 1000 | Reward:  3791.26
+Total T:   69000 | Ep:   69 | Steps: 1000 | Reward:  3641.78
+Total T:   70000 | Ep:   70 | Steps: 1000 | Reward:  3743.51
+---------------------------------------
+Evaluation over 10 episodes: 3448.123
+---------------------------------------
+Total T:   71000 | Ep:   71 | Steps: 1000 | Reward:  3610.10
+Total T:   72000 | Ep:   72 | Steps: 1000 | Reward:  3848.68
+Total T:   73000 | Ep:   73 | Steps: 1000 | Reward:  3870.47
+Total T:   74000 | Ep:   74 | Steps: 1000 | Reward:  3675.35
+Total T:   75000 | Ep:   75 | Steps: 1000 | Reward:  3591.92
+Total T:   76000 | Ep:   76 | Steps: 1000 | Reward:  3944.44
+Total T:   77000 | Ep:   77 | Steps: 1000 | Reward:  2952.54
+Total T:   78000 | Ep:   78 | Steps: 1000 | Reward:  3837.02
+Total T:   79000 | Ep:   79 | Steps: 1000 | Reward:  3931.05
+Total T:   80000 | Ep:   80 | Steps: 1000 | Reward:  4225.91
+---------------------------------------
+Evaluation over 10 episodes: 4131.526
+---------------------------------------
+Total T:   81000 | Ep:   81 | Steps: 1000 | Reward:  3939.42
+Total T:   82000 | Ep:   82 | Steps: 1000 | Reward:  4068.22
+Total T:   83000 | Ep:   83 | Steps: 1000 | Reward:  3892.22
+Total T:   84000 | Ep:   84 | Steps: 1000 | Reward:  3993.61
+Total T:   85000 | Ep:   85 | Steps: 1000 | Reward:  3902.36
+Total T:   86000 | Ep:   86 | Steps: 1000 | Reward:  4036.95
+Total T:   87000 | Ep:   87 | Steps: 1000 | Reward:  4050.11
+Total T:   88000 | Ep:   88 | Steps: 1000 | Reward:  4227.25
+Total T:   89000 | Ep:   89 | Steps: 1000 | Reward:  4295.87
+Total T:   90000 | Ep:   90 | Steps: 1000 | Reward:  3974.08
+---------------------------------------
+Evaluation over 10 episodes: 4276.698
+---------------------------------------
+Total T:   91000 | Ep:   91 | Steps: 1000 | Reward:  3999.93
+Total T:   92000 | Ep:   92 | Steps: 1000 | Reward:  4068.15
+Total T:   93000 | Ep:   93 | Steps: 1000 | Reward:  3974.28
+Total T:   94000 | Ep:   94 | Steps: 1000 | Reward:  4143.90
+Total T:   95000 | Ep:   95 | Steps: 1000 | Reward:  3852.86
+Total T:   96000 | Ep:   96 | Steps: 1000 | Reward:  4134.11
+Total T:   97000 | Ep:   97 | Steps: 1000 | Reward:  4022.68
+Total T:   98000 | Ep:   98 | Steps: 1000 | Reward:  4163.59
+Total T:   99000 | Ep:   99 | Steps: 1000 | Reward:  4110.01
+Total T:  100000 | Ep:  100 | Steps: 1000 | Reward:  4284.78
+---------------------------------------
+Evaluation over 10 episodes: 4341.258
+---------------------------------------
+Total T:  101000 | Ep:  101 | Steps: 1000 | Reward:  4009.88
+Total T:  102000 | Ep:  102 | Steps: 1000 | Reward:  4161.67
+Total T:  103000 | Ep:  103 | Steps: 1000 | Reward:  4269.74
+Total T:  104000 | Ep:  104 | Steps: 1000 | Reward:  4232.33
+Total T:  105000 | Ep:  105 | Steps: 1000 | Reward:  4200.42
+Total T:  106000 | Ep:  106 | Steps: 1000 | Reward:  4220.66
+Total T:  107000 | Ep:  107 | Steps: 1000 | Reward:  4225.79
+Total T:  108000 | Ep:  108 | Steps: 1000 | Reward:  4426.55
+Total T:  109000 | Ep:  109 | Steps: 1000 | Reward:  4401.77
+Total T:  110000 | Ep:  110 | Steps: 1000 | Reward:  4278.65
+---------------------------------------
+Evaluation over 10 episodes: 4642.694
+---------------------------------------
+Total T:  111000 | Ep:  111 | Steps: 1000 | Reward:  4505.35
+Total T:  112000 | Ep:  112 | Steps: 1000 | Reward:  4501.25
+Total T:  113000 | Ep:  113 | Steps: 1000 | Reward:  4461.87
+Total T:  114000 | Ep:  114 | Steps: 1000 | Reward:  4384.84
+Total T:  115000 | Ep:  115 | Steps: 1000 | Reward:  4395.90
+Total T:  116000 | Ep:  116 | Steps: 1000 | Reward:  4260.91
+Total T:  117000 | Ep:  117 | Steps: 1000 | Reward:  4300.61
+Total T:  118000 | Ep:  118 | Steps: 1000 | Reward:  4392.19
+Total T:  119000 | Ep:  119 | Steps: 1000 | Reward:  4406.55
+Total T:  120000 | Ep:  120 | Steps: 1000 | Reward:  4597.67
+---------------------------------------
+Evaluation over 10 episodes: 4807.362
+---------------------------------------
+Total T:  121000 | Ep:  121 | Steps: 1000 | Reward:  4307.31
+Total T:  122000 | Ep:  122 | Steps: 1000 | Reward:  4508.17
+Total T:  123000 | Ep:  123 | Steps: 1000 | Reward:  4445.73
+Total T:  124000 | Ep:  124 | Steps: 1000 | Reward:  4508.38
+Total T:  125000 | Ep:  125 | Steps: 1000 | Reward:  4222.80
+Total T:  126000 | Ep:  126 | Steps: 1000 | Reward:  4584.54
+Total T:  127000 | Ep:  127 | Steps: 1000 | Reward:  4386.16
+Total T:  128000 | Ep:  128 | Steps: 1000 | Reward:  4515.93
+Total T:  129000 | Ep:  129 | Steps: 1000 | Reward:  4608.12
+Total T:  130000 | Ep:  130 | Steps: 1000 | Reward:  4615.37
+---------------------------------------
+Evaluation over 10 episodes: 4835.776
+---------------------------------------
+Total T:  131000 | Ep:  131 | Steps: 1000 | Reward:  4409.15
+Total T:  132000 | Ep:  132 | Steps: 1000 | Reward:  4648.70
+Total T:  133000 | Ep:  133 | Steps: 1000 | Reward:  4745.37
+Total T:  134000 | Ep:  134 | Steps: 1000 | Reward:  4784.98
+Total T:  135000 | Ep:  135 | Steps: 1000 | Reward:  4632.26
+Total T:  136000 | Ep:  136 | Steps: 1000 | Reward:  4611.70
+Total T:  137000 | Ep:  137 | Steps: 1000 | Reward:  4990.03
+Total T:  138000 | Ep:  138 | Steps: 1000 | Reward:  4806.50
+Total T:  139000 | Ep:  139 | Steps: 1000 | Reward:  4844.69
+Total T:  140000 | Ep:  140 | Steps: 1000 | Reward:  4786.77
+---------------------------------------
+Evaluation over 10 episodes: 5003.600
+---------------------------------------
+Total T:  141000 | Ep:  141 | Steps: 1000 | Reward:  4538.52
+Total T:  142000 | Ep:  142 | Steps: 1000 | Reward:  4679.46
+Total T:  143000 | Ep:  143 | Steps: 1000 | Reward:  4693.21
+Total T:  144000 | Ep:  144 | Steps: 1000 | Reward:  4935.77
+Total T:  145000 | Ep:  145 | Steps: 1000 | Reward:  4764.80
+Total T:  146000 | Ep:  146 | Steps: 1000 | Reward:  4878.68
+Total T:  147000 | Ep:  147 | Steps: 1000 | Reward:  4642.36
+Total T:  148000 | Ep:  148 | Steps: 1000 | Reward:  4892.42
+Total T:  149000 | Ep:  149 | Steps: 1000 | Reward:  4746.30
+Total T:  150000 | Ep:  150 | Steps: 1000 | Reward:  4920.22
+---------------------------------------
+Evaluation over 10 episodes: 5056.975
+---------------------------------------
+Total T:  151000 | Ep:  151 | Steps: 1000 | Reward:  4859.38
+Total T:  152000 | Ep:  152 | Steps: 1000 | Reward:  5032.85
+Total T:  153000 | Ep:  153 | Steps: 1000 | Reward:  5009.68
+Total T:  154000 | Ep:  154 | Steps: 1000 | Reward:  4892.18
+Total T:  155000 | Ep:  155 | Steps: 1000 | Reward:  5013.43
+Total T:  156000 | Ep:  156 | Steps: 1000 | Reward:  5048.56
+Total T:  157000 | Ep:  157 | Steps: 1000 | Reward:  5056.32
+Total T:  158000 | Ep:  158 | Steps: 1000 | Reward:  5027.52
+Total T:  159000 | Ep:  159 | Steps: 1000 | Reward:  4914.01
+Total T:  160000 | Ep:  160 | Steps: 1000 | Reward:  5008.88
+---------------------------------------
+Evaluation over 10 episodes: 5386.207
+---------------------------------------
+Total T:  161000 | Ep:  161 | Steps: 1000 | Reward:  5041.70
+Total T:  162000 | Ep:  162 | Steps: 1000 | Reward:  5146.74
+Total T:  163000 | Ep:  163 | Steps: 1000 | Reward:  5044.75
+Total T:  164000 | Ep:  164 | Steps: 1000 | Reward:  5197.89
+Total T:  165000 | Ep:  165 | Steps: 1000 | Reward:  5243.56
+Total T:  166000 | Ep:  166 | Steps: 1000 | Reward:  5195.00
+Total T:  167000 | Ep:  167 | Steps: 1000 | Reward:  5094.85
+Total T:  168000 | Ep:  168 | Steps: 1000 | Reward:  5245.79
+Total T:  169000 | Ep:  169 | Steps: 1000 | Reward:  5180.27
+Total T:  170000 | Ep:  170 | Steps: 1000 | Reward:  5141.49
+---------------------------------------
+Evaluation over 10 episodes: 5580.591
+---------------------------------------
+Total T:  171000 | Ep:  171 | Steps: 1000 | Reward:  5268.81
+Total T:  172000 | Ep:  172 | Steps: 1000 | Reward:  5082.65
+Total T:  173000 | Ep:  173 | Steps: 1000 | Reward:  5212.96
+Total T:  174000 | Ep:  174 | Steps: 1000 | Reward:  5086.14
+Total T:  175000 | Ep:  175 | Steps: 1000 | Reward:  5175.37
+Total T:  176000 | Ep:  176 | Steps: 1000 | Reward:  5232.00
+Total T:  177000 | Ep:  177 | Steps: 1000 | Reward:  5352.94
+Total T:  178000 | Ep:  178 | Steps: 1000 | Reward:  5128.11
+Total T:  179000 | Ep:  179 | Steps: 1000 | Reward:  5326.40
+Total T:  180000 | Ep:  180 | Steps: 1000 | Reward:  5104.07
+---------------------------------------
+Evaluation over 10 episodes: 5567.843
+---------------------------------------
+Total T:  181000 | Ep:  181 | Steps: 1000 | Reward:  5349.43
+Total T:  182000 | Ep:  182 | Steps: 1000 | Reward:  5374.47
+Total T:  183000 | Ep:  183 | Steps: 1000 | Reward:  5169.85
+Total T:  184000 | Ep:  184 | Steps: 1000 | Reward:  5407.92
+Total T:  185000 | Ep:  185 | Steps: 1000 | Reward:  5071.33
+Total T:  186000 | Ep:  186 | Steps: 1000 | Reward:  5184.30
+Total T:  187000 | Ep:  187 | Steps: 1000 | Reward:  5140.91
+Total T:  188000 | Ep:  188 | Steps: 1000 | Reward:  5232.72
+Total T:  189000 | Ep:  189 | Steps: 1000 | Reward:  5463.47
+Total T:  190000 | Ep:  190 | Steps: 1000 | Reward:  5353.96
+---------------------------------------
+Evaluation over 10 episodes: 5725.675
+---------------------------------------
+Total T:  191000 | Ep:  191 | Steps: 1000 | Reward:  5294.53
+Total T:  192000 | Ep:  192 | Steps: 1000 | Reward:  5519.73
+Total T:  193000 | Ep:  193 | Steps: 1000 | Reward:  5317.74
+Total T:  194000 | Ep:  194 | Steps: 1000 | Reward:  5452.05
+Total T:  195000 | Ep:  195 | Steps: 1000 | Reward:  5464.88
+Total T:  196000 | Ep:  196 | Steps: 1000 | Reward:  5373.02
+Total T:  197000 | Ep:  197 | Steps: 1000 | Reward:  5447.54
+Total T:  198000 | Ep:  198 | Steps: 1000 | Reward:  5396.26
+Total T:  199000 | Ep:  199 | Steps: 1000 | Reward:  5615.54
+Total T:  200000 | Ep:  200 | Steps: 1000 | Reward:  5406.45
+---------------------------------------
+Evaluation over 10 episodes: 5833.917
+---------------------------------------
+Total T:  201000 | Ep:  201 | Steps: 1000 | Reward:  5301.41
+Total T:  202000 | Ep:  202 | Steps: 1000 | Reward:  5414.57
+Total T:  203000 | Ep:  203 | Steps: 1000 | Reward:  5341.17
+Total T:  204000 | Ep:  204 | Steps: 1000 | Reward:  5484.23
+Total T:  205000 | Ep:  205 | Steps: 1000 | Reward:  5361.71
+Total T:  206000 | Ep:  206 | Steps: 1000 | Reward:  5504.46
+Total T:  207000 | Ep:  207 | Steps: 1000 | Reward:  5640.36
+Total T:  208000 | Ep:  208 | Steps: 1000 | Reward:  5535.76
+Total T:  209000 | Ep:  209 | Steps: 1000 | Reward:  5581.78
+Total T:  210000 | Ep:  210 | Steps: 1000 | Reward:  5520.25
+---------------------------------------
+Evaluation over 10 episodes: 5769.128
+---------------------------------------
+Total T:  211000 | Ep:  211 | Steps: 1000 | Reward:  5475.19
+Total T:  212000 | Ep:  212 | Steps: 1000 | Reward:  5193.60
+Total T:  213000 | Ep:  213 | Steps: 1000 | Reward:  5537.32
+Total T:  214000 | Ep:  214 | Steps: 1000 | Reward:  5658.57
+Total T:  215000 | Ep:  215 | Steps: 1000 | Reward:  5481.23
+Total T:  216000 | Ep:  216 | Steps: 1000 | Reward:  5482.92
+Total T:  217000 | Ep:  217 | Steps: 1000 | Reward:  5670.63
+Total T:  218000 | Ep:  218 | Steps: 1000 | Reward:  5515.44
+Total T:  219000 | Ep:  219 | Steps: 1000 | Reward:  5574.29
+Total T:  220000 | Ep:  220 | Steps: 1000 | Reward:  5524.20
+---------------------------------------
+Evaluation over 10 episodes: 5322.056
+---------------------------------------
+Total T:  221000 | Ep:  221 | Steps: 1000 | Reward:  5776.74
+Total T:  222000 | Ep:  222 | Steps: 1000 | Reward:  5708.54
+Total T:  223000 | Ep:  223 | Steps: 1000 | Reward:  5606.11
+Total T:  224000 | Ep:  224 | Steps: 1000 | Reward:  5783.79
+Total T:  225000 | Ep:  225 | Steps: 1000 | Reward:  5658.76
+Total T:  226000 | Ep:  226 | Steps: 1000 | Reward:  5763.55
+Total T:  227000 | Ep:  227 | Steps: 1000 | Reward:  1085.05
+Total T:  228000 | Ep:  228 | Steps: 1000 | Reward:  5630.22
+Total T:  229000 | Ep:  229 | Steps: 1000 | Reward:  5685.06
+Total T:  230000 | Ep:  230 | Steps: 1000 | Reward:  5839.13
+---------------------------------------
+Evaluation over 10 episodes: 5712.730
+---------------------------------------
+Total T:  231000 | Ep:  231 | Steps: 1000 | Reward:  5729.24
+Total T:  232000 | Ep:  232 | Steps: 1000 | Reward:  5819.86
+Total T:  233000 | Ep:  233 | Steps: 1000 | Reward:  5752.30
+Total T:  234000 | Ep:  234 | Steps: 1000 | Reward:  5740.67
+Total T:  235000 | Ep:  235 | Steps: 1000 | Reward:  5677.80
+Total T:  236000 | Ep:  236 | Steps: 1000 | Reward:  5820.17
+Total T:  237000 | Ep:  237 | Steps: 1000 | Reward:  5769.58
+Total T:  238000 | Ep:  238 | Steps: 1000 | Reward:  5934.95
+Total T:  239000 | Ep:  239 | Steps: 1000 | Reward:  5832.49
+Total T:  240000 | Ep:  240 | Steps: 1000 | Reward:  5803.14
+---------------------------------------
+Evaluation over 10 episodes: 5850.826
+---------------------------------------
+Total T:  241000 | Ep:  241 | Steps: 1000 | Reward:  5697.52
+Total T:  242000 | Ep:  242 | Steps: 1000 | Reward:  5873.60
+Total T:  243000 | Ep:  243 | Steps: 1000 | Reward:  5948.03
+Total T:  244000 | Ep:  244 | Steps: 1000 | Reward:  6018.54
+Total T:  245000 | Ep:  245 | Steps: 1000 | Reward:  5815.31
+Total T:  246000 | Ep:  246 | Steps: 1000 | Reward:  5802.17
+Total T:  247000 | Ep:  247 | Steps: 1000 | Reward:  5689.78
+Total T:  248000 | Ep:  248 | Steps: 1000 | Reward:  5697.78
+Total T:  249000 | Ep:  249 | Steps: 1000 | Reward:  5899.14
+Total T:  250000 | Ep:  250 | Steps: 1000 | Reward:  5873.64
+---------------------------------------
+Evaluation over 10 episodes: 6299.629
+---------------------------------------
+Total T:  251000 | Ep:  251 | Steps: 1000 | Reward:  6008.38
+Total T:  252000 | Ep:  252 | Steps: 1000 | Reward:  5944.84
+Total T:  253000 | Ep:  253 | Steps: 1000 | Reward:  5746.16
+Total T:  254000 | Ep:  254 | Steps: 1000 | Reward:  5870.83
+Total T:  255000 | Ep:  255 | Steps: 1000 | Reward:  5923.63
+Total T:  256000 | Ep:  256 | Steps: 1000 | Reward:  5990.40
+Total T:  257000 | Ep:  257 | Steps: 1000 | Reward:  5898.58
+Total T:  258000 | Ep:  258 | Steps: 1000 | Reward:  3598.43
+Total T:  259000 | Ep:  259 | Steps: 1000 | Reward:  6046.12
+Total T:  260000 | Ep:  260 | Steps: 1000 | Reward:  6195.23
+---------------------------------------
+Evaluation over 10 episodes: 6607.375
+---------------------------------------
+Total T:  261000 | Ep:  261 | Steps: 1000 | Reward:  6243.92
+Total T:  262000 | Ep:  262 | Steps: 1000 | Reward:  5872.39
+Total T:  263000 | Ep:  263 | Steps: 1000 | Reward:  6095.14
+Total T:  264000 | Ep:  264 | Steps: 1000 | Reward:  5992.49
+Total T:  265000 | Ep:  265 | Steps: 1000 | Reward:  6107.00
+Total T:  266000 | Ep:  266 | Steps: 1000 | Reward:  5979.74
+Total T:  267000 | Ep:  267 | Steps: 1000 | Reward:  5986.91
+Total T:  268000 | Ep:  268 | Steps: 1000 | Reward:  5974.86
+Total T:  269000 | Ep:  269 | Steps: 1000 | Reward:  6078.44
+Total T:  270000 | Ep:  270 | Steps: 1000 | Reward:  6009.06
+---------------------------------------
+Evaluation over 10 episodes: 6397.457
+---------------------------------------
+Total T:  271000 | Ep:  271 | Steps: 1000 | Reward:  6146.08
+Total T:  272000 | Ep:  272 | Steps: 1000 | Reward:  6153.81
+Total T:  273000 | Ep:  273 | Steps: 1000 | Reward:  6054.66
+Total T:  274000 | Ep:  274 | Steps: 1000 | Reward:  6152.60
+Total T:  275000 | Ep:  275 | Steps: 1000 | Reward:  5920.86
+Total T:  276000 | Ep:  276 | Steps: 1000 | Reward:  6185.68
+Total T:  277000 | Ep:  277 | Steps: 1000 | Reward:  6336.06
+Total T:  278000 | Ep:  278 | Steps: 1000 | Reward:  6150.31
+Total T:  279000 | Ep:  279 | Steps: 1000 | Reward:  6107.86
+Total T:  280000 | Ep:  280 | Steps: 1000 | Reward:  6120.23
+---------------------------------------
+Evaluation over 10 episodes: 6505.664
+---------------------------------------
+Total T:  281000 | Ep:  281 | Steps: 1000 | Reward:  6175.29
+Total T:  282000 | Ep:  282 | Steps: 1000 | Reward:  6274.27
+Total T:  283000 | Ep:  283 | Steps: 1000 | Reward:  6145.68
+Total T:  284000 | Ep:  284 | Steps: 1000 | Reward:  6382.49
+Total T:  285000 | Ep:  285 | Steps: 1000 | Reward:  6183.67
+Total T:  286000 | Ep:  286 | Steps: 1000 | Reward:  6039.51
+Total T:  287000 | Ep:  287 | Steps: 1000 | Reward:  6260.59
+Total T:  288000 | Ep:  288 | Steps: 1000 | Reward:  6187.15
+Total T:  289000 | Ep:  289 | Steps: 1000 | Reward:  6328.06
+Total T:  290000 | Ep:  290 | Steps: 1000 | Reward:  6119.19
+---------------------------------------
+Evaluation over 10 episodes: 6415.259
+---------------------------------------
+Total T:  291000 | Ep:  291 | Steps: 1000 | Reward:  6330.58
+Total T:  292000 | Ep:  292 | Steps: 1000 | Reward:  6448.58
+Total T:  293000 | Ep:  293 | Steps: 1000 | Reward:  6258.65
+Total T:  294000 | Ep:  294 | Steps: 1000 | Reward:  6359.08
+Total T:  295000 | Ep:  295 | Steps: 1000 | Reward:  6424.41
+Total T:  296000 | Ep:  296 | Steps: 1000 | Reward:  6125.28
+Total T:  297000 | Ep:  297 | Steps: 1000 | Reward:  6338.73
+Total T:  298000 | Ep:  298 | Steps: 1000 | Reward:  6447.12
+Total T:  299000 | Ep:  299 | Steps: 1000 | Reward:  6420.44
+Total T:  300000 | Ep:  300 | Steps: 1000 | Reward:  6133.16
+---------------------------------------
+Evaluation over 10 episodes: 6578.058
+---------------------------------------
+Total T:  301000 | Ep:  301 | Steps: 1000 | Reward:  6446.09
+Total T:  302000 | Ep:  302 | Steps: 1000 | Reward:  6312.63
+Total T:  303000 | Ep:  303 | Steps: 1000 | Reward:  6345.16
+Total T:  304000 | Ep:  304 | Steps: 1000 | Reward:  6193.83
+Total T:  305000 | Ep:  305 | Steps: 1000 | Reward:  6284.29
+Total T:  306000 | Ep:  306 | Steps: 1000 | Reward:  6498.56
+Total T:  307000 | Ep:  307 | Steps: 1000 | Reward:  6296.82
+Total T:  308000 | Ep:  308 | Steps: 1000 | Reward:  6268.10
+Total T:  309000 | Ep:  309 | Steps: 1000 | Reward:  6154.54
+Total T:  310000 | Ep:  310 | Steps: 1000 | Reward:  6240.94
+---------------------------------------
+Evaluation over 10 episodes: 6890.042
+---------------------------------------
+Total T:  311000 | Ep:  311 | Steps: 1000 | Reward:  6207.40
+Total T:  312000 | Ep:  312 | Steps: 1000 | Reward:  6439.24
+Total T:  313000 | Ep:  313 | Steps: 1000 | Reward:  6316.69
+Total T:  314000 | Ep:  314 | Steps: 1000 | Reward:  6463.81
+Total T:  315000 | Ep:  315 | Steps: 1000 | Reward:  6366.60
+Total T:  316000 | Ep:  316 | Steps: 1000 | Reward:  6389.29
+Total T:  317000 | Ep:  317 | Steps: 1000 | Reward:  6235.72
+Total T:  318000 | Ep:  318 | Steps: 1000 | Reward:  6426.61
+Total T:  319000 | Ep:  319 | Steps: 1000 | Reward:  6406.70
+Total T:  320000 | Ep:  320 | Steps: 1000 | Reward:  6340.42
+---------------------------------------
+Evaluation over 10 episodes: 6641.842
+---------------------------------------
+Total T:  321000 | Ep:  321 | Steps: 1000 | Reward:  6189.40
+Total T:  322000 | Ep:  322 | Steps: 1000 | Reward:  6359.42
+Total T:  323000 | Ep:  323 | Steps: 1000 | Reward:  6346.87
+Total T:  324000 | Ep:  324 | Steps: 1000 | Reward:  6480.70
+Total T:  325000 | Ep:  325 | Steps: 1000 | Reward:  6461.50
+Total T:  326000 | Ep:  326 | Steps: 1000 | Reward:  6512.85
+Total T:  327000 | Ep:  327 | Steps: 1000 | Reward:  6448.47
+Total T:  328000 | Ep:  328 | Steps: 1000 | Reward:  6518.21
+Total T:  329000 | Ep:  329 | Steps: 1000 | Reward:  6585.47
+Total T:  330000 | Ep:  330 | Steps: 1000 | Reward:  6458.44
+---------------------------------------
+Evaluation over 10 episodes: 6982.274
+---------------------------------------
+Total T:  331000 | Ep:  331 | Steps: 1000 | Reward:  6466.55
+Total T:  332000 | Ep:  332 | Steps: 1000 | Reward:  6777.80
+Total T:  333000 | Ep:  333 | Steps: 1000 | Reward:  6400.16
+Total T:  334000 | Ep:  334 | Steps: 1000 | Reward:  6341.32
+Total T:  335000 | Ep:  335 | Steps: 1000 | Reward:  6853.87
+Total T:  336000 | Ep:  336 | Steps: 1000 | Reward:  6517.68
+Total T:  337000 | Ep:  337 | Steps: 1000 | Reward:  6510.41
+Total T:  338000 | Ep:  338 | Steps: 1000 | Reward:  6519.91
+Total T:  339000 | Ep:  339 | Steps: 1000 | Reward:  6607.12
+Total T:  340000 | Ep:  340 | Steps: 1000 | Reward:  6466.63
+---------------------------------------
+Evaluation over 10 episodes: 7097.955
+---------------------------------------
+Total T:  341000 | Ep:  341 | Steps: 1000 | Reward:  6700.51
+Total T:  342000 | Ep:  342 | Steps: 1000 | Reward:  6780.02
+Total T:  343000 | Ep:  343 | Steps: 1000 | Reward:  6624.15
+Total T:  344000 | Ep:  344 | Steps: 1000 | Reward:  6422.88
+Total T:  345000 | Ep:  345 | Steps: 1000 | Reward:  6488.86
+Total T:  346000 | Ep:  346 | Steps: 1000 | Reward:  6528.80
+Total T:  347000 | Ep:  347 | Steps: 1000 | Reward:  6587.32
+Total T:  348000 | Ep:  348 | Steps: 1000 | Reward:  6530.24
+Total T:  349000 | Ep:  349 | Steps: 1000 | Reward:  6647.79
+Total T:  350000 | Ep:  350 | Steps: 1000 | Reward:  6693.91
+---------------------------------------
+Evaluation over 10 episodes: 7054.567
+---------------------------------------
+Total T:  351000 | Ep:  351 | Steps: 1000 | Reward:  6617.13
+Total T:  352000 | Ep:  352 | Steps: 1000 | Reward:  6744.58
+Total T:  353000 | Ep:  353 | Steps: 1000 | Reward:  6618.61
+Total T:  354000 | Ep:  354 | Steps: 1000 | Reward:  6718.27
+Total T:  355000 | Ep:  355 | Steps: 1000 | Reward:  6770.63
+Total T:  356000 | Ep:  356 | Steps: 1000 | Reward:  6778.79
+Total T:  357000 | Ep:  357 | Steps: 1000 | Reward:  6720.71
+Total T:  358000 | Ep:  358 | Steps: 1000 | Reward:  6834.55
+Total T:  359000 | Ep:  359 | Steps: 1000 | Reward:  6851.40
+Total T:  360000 | Ep:  360 | Steps: 1000 | Reward:  6723.45
+---------------------------------------
+Evaluation over 10 episodes: 7190.182
+---------------------------------------
+Total T:  361000 | Ep:  361 | Steps: 1000 | Reward:  6699.38
+Total T:  362000 | Ep:  362 | Steps: 1000 | Reward:  6813.55
+Total T:  363000 | Ep:  363 | Steps: 1000 | Reward:  6818.06
+Total T:  364000 | Ep:  364 | Steps: 1000 | Reward:  6728.54
+Total T:  365000 | Ep:  365 | Steps: 1000 | Reward:  6643.48
+Total T:  366000 | Ep:  366 | Steps: 1000 | Reward:  6854.70
+Total T:  367000 | Ep:  367 | Steps: 1000 | Reward:  6986.49
+Total T:  368000 | Ep:  368 | Steps: 1000 | Reward:  6849.98
+Total T:  369000 | Ep:  369 | Steps: 1000 | Reward:  6918.75
+Total T:  370000 | Ep:  370 | Steps: 1000 | Reward:  6628.03
+---------------------------------------
+Evaluation over 10 episodes: 7354.630
+---------------------------------------
+Total T:  371000 | Ep:  371 | Steps: 1000 | Reward:  6821.49
+Total T:  372000 | Ep:  372 | Steps: 1000 | Reward:  6745.81
+Total T:  373000 | Ep:  373 | Steps: 1000 | Reward:  6741.10
+Total T:  374000 | Ep:  374 | Steps: 1000 | Reward:  6804.76
+Total T:  375000 | Ep:  375 | Steps: 1000 | Reward:  6828.07
+Total T:  376000 | Ep:  376 | Steps: 1000 | Reward:  6918.17
+Total T:  377000 | Ep:  377 | Steps: 1000 | Reward:  6942.10
+Total T:  378000 | Ep:  378 | Steps: 1000 | Reward:  7034.50
+Total T:  379000 | Ep:  379 | Steps: 1000 | Reward:  6970.97
+Total T:  380000 | Ep:  380 | Steps: 1000 | Reward:  6840.55
+---------------------------------------
+Evaluation over 10 episodes: 7417.748
+---------------------------------------
+Total T:  381000 | Ep:  381 | Steps: 1000 | Reward:  6941.37
+Total T:  382000 | Ep:  382 | Steps: 1000 | Reward:  6934.01
+Total T:  383000 | Ep:  383 | Steps: 1000 | Reward:  6757.06
+Total T:  384000 | Ep:  384 | Steps: 1000 | Reward:  6793.12
+Total T:  385000 | Ep:  385 | Steps: 1000 | Reward:  6918.74
+Total T:  386000 | Ep:  386 | Steps: 1000 | Reward:  6951.27
+Total T:  387000 | Ep:  387 | Steps: 1000 | Reward:  6971.90
+Total T:  388000 | Ep:  388 | Steps: 1000 | Reward:  6932.86
+Total T:  389000 | Ep:  389 | Steps: 1000 | Reward:  7059.58
+Total T:  390000 | Ep:  390 | Steps: 1000 | Reward:  6966.60
+---------------------------------------
+Evaluation over 10 episodes: 7426.352
+---------------------------------------
+Total T:  391000 | Ep:  391 | Steps: 1000 | Reward:  6938.10
+Total T:  392000 | Ep:  392 | Steps: 1000 | Reward:  7091.03
+Total T:  393000 | Ep:  393 | Steps: 1000 | Reward:  7014.44
+Total T:  394000 | Ep:  394 | Steps: 1000 | Reward:  7082.39
+Total T:  395000 | Ep:  395 | Steps: 1000 | Reward:  7001.03
+Total T:  396000 | Ep:  396 | Steps: 1000 | Reward:  6964.62
+Total T:  397000 | Ep:  397 | Steps: 1000 | Reward:  7100.74
+Total T:  398000 | Ep:  398 | Steps: 1000 | Reward:  6996.08
+Total T:  399000 | Ep:  399 | Steps: 1000 | Reward:  6961.11
+Total T:  400000 | Ep:  400 | Steps: 1000 | Reward:  7087.42
+---------------------------------------
+Evaluation over 10 episodes: 7539.731
+---------------------------------------
+Total T:  401000 | Ep:  401 | Steps: 1000 | Reward:  6987.16
+Total T:  402000 | Ep:  402 | Steps: 1000 | Reward:  6809.68
+Total T:  403000 | Ep:  403 | Steps: 1000 | Reward:  6951.28
+Total T:  404000 | Ep:  404 | Steps: 1000 | Reward:  7267.34
+Total T:  405000 | Ep:  405 | Steps: 1000 | Reward:  7137.61
+Total T:  406000 | Ep:  406 | Steps: 1000 | Reward:  7136.79
+Total T:  407000 | Ep:  407 | Steps: 1000 | Reward:  7125.96
+Total T:  408000 | Ep:  408 | Steps: 1000 | Reward:  7144.80
+Total T:  409000 | Ep:  409 | Steps: 1000 | Reward:  7162.11
+Total T:  410000 | Ep:  410 | Steps: 1000 | Reward:  7197.66
+---------------------------------------
+Evaluation over 10 episodes: 7563.806
+---------------------------------------
+Total T:  411000 | Ep:  411 | Steps: 1000 | Reward:  7150.58
+Total T:  412000 | Ep:  412 | Steps: 1000 | Reward:  6998.31
+Total T:  413000 | Ep:  413 | Steps: 1000 | Reward:  7091.75
+Total T:  414000 | Ep:  414 | Steps: 1000 | Reward:  7286.74
+Total T:  415000 | Ep:  415 | Steps: 1000 | Reward:  7119.23
+Total T:  416000 | Ep:  416 | Steps: 1000 | Reward:  7054.69
+Total T:  417000 | Ep:  417 | Steps: 1000 | Reward:  7139.07
+Total T:  418000 | Ep:  418 | Steps: 1000 | Reward:  7328.57
+Total T:  419000 | Ep:  419 | Steps: 1000 | Reward:  7236.46
+Total T:  420000 | Ep:  420 | Steps: 1000 | Reward:  7250.39
+---------------------------------------
+Evaluation over 10 episodes: 7727.594
+---------------------------------------
+Total T:  421000 | Ep:  421 | Steps: 1000 | Reward:  7230.76
+Total T:  422000 | Ep:  422 | Steps: 1000 | Reward:  7403.32
+Total T:  423000 | Ep:  423 | Steps: 1000 | Reward:  7326.47
+Total T:  424000 | Ep:  424 | Steps: 1000 | Reward:  7290.65
+Total T:  425000 | Ep:  425 | Steps: 1000 | Reward:  7296.92
+Total T:  426000 | Ep:  426 | Steps: 1000 | Reward:  7335.76
+Total T:  427000 | Ep:  427 | Steps: 1000 | Reward:  7275.16
+Total T:  428000 | Ep:  428 | Steps: 1000 | Reward:  7166.58
+Total T:  429000 | Ep:  429 | Steps: 1000 | Reward:  7008.46
+Total T:  430000 | Ep:  430 | Steps: 1000 | Reward:  6966.06
+---------------------------------------
+Evaluation over 10 episodes: 7961.557
+---------------------------------------
+Total T:  431000 | Ep:  431 | Steps: 1000 | Reward:  7223.45
+Total T:  432000 | Ep:  432 | Steps: 1000 | Reward:  7277.88
+Total T:  433000 | Ep:  433 | Steps: 1000 | Reward:  7364.98
+Total T:  434000 | Ep:  434 | Steps: 1000 | Reward:  7436.89
+Total T:  435000 | Ep:  435 | Steps: 1000 | Reward:  7368.49
+Total T:  436000 | Ep:  436 | Steps: 1000 | Reward:  7243.95
+Total T:  437000 | Ep:  437 | Steps: 1000 | Reward:  7269.26
+Total T:  438000 | Ep:  438 | Steps: 1000 | Reward:  7429.40
+Total T:  439000 | Ep:  439 | Steps: 1000 | Reward:  7354.28
+Total T:  440000 | Ep:  440 | Steps: 1000 | Reward:  7281.70
+---------------------------------------
+Evaluation over 10 episodes: 7918.764
+---------------------------------------
+Total T:  441000 | Ep:  441 | Steps: 1000 | Reward:  7320.08
+Total T:  442000 | Ep:  442 | Steps: 1000 | Reward:  7299.14
+Total T:  443000 | Ep:  443 | Steps: 1000 | Reward:  7444.84
+Total T:  444000 | Ep:  444 | Steps: 1000 | Reward:  7183.26
+Total T:  445000 | Ep:  445 | Steps: 1000 | Reward:  7470.88
+Total T:  446000 | Ep:  446 | Steps: 1000 | Reward:  7591.90
+Total T:  447000 | Ep:  447 | Steps: 1000 | Reward:  7427.17
+Total T:  448000 | Ep:  448 | Steps: 1000 | Reward:  7427.66
+Total T:  449000 | Ep:  449 | Steps: 1000 | Reward:  7374.28
+Total T:  450000 | Ep:  450 | Steps: 1000 | Reward:  7678.51
+---------------------------------------
+Evaluation over 10 episodes: 8025.520
+---------------------------------------
+Total T:  451000 | Ep:  451 | Steps: 1000 | Reward:  7272.36
+Total T:  452000 | Ep:  452 | Steps: 1000 | Reward:  7456.23
+Total T:  453000 | Ep:  453 | Steps: 1000 | Reward:  7385.45
+Total T:  454000 | Ep:  454 | Steps: 1000 | Reward:  7484.64
+Total T:  455000 | Ep:  455 | Steps: 1000 | Reward:  7663.55
+Total T:  456000 | Ep:  456 | Steps: 1000 | Reward:  7306.09
+Total T:  457000 | Ep:  457 | Steps: 1000 | Reward:  7498.39
+Total T:  458000 | Ep:  458 | Steps: 1000 | Reward:  7464.91
+Total T:  459000 | Ep:  459 | Steps: 1000 | Reward:  7651.01
+Total T:  460000 | Ep:  460 | Steps: 1000 | Reward:  7471.49
+---------------------------------------
+Evaluation over 10 episodes: 8031.382
+---------------------------------------
+Total T:  461000 | Ep:  461 | Steps: 1000 | Reward:  7496.71
+Total T:  462000 | Ep:  462 | Steps: 1000 | Reward:  7810.32
+Total T:  463000 | Ep:  463 | Steps: 1000 | Reward:  7492.85
+Total T:  464000 | Ep:  464 | Steps: 1000 | Reward:  7600.28
+Total T:  465000 | Ep:  465 | Steps: 1000 | Reward:  7614.56
+Total T:  466000 | Ep:  466 | Steps: 1000 | Reward:  7330.30
+Total T:  467000 | Ep:  467 | Steps: 1000 | Reward:  7304.12
+Total T:  468000 | Ep:  468 | Steps: 1000 | Reward:  7613.12
+Total T:  469000 | Ep:  469 | Steps: 1000 | Reward:  7753.59
+Total T:  470000 | Ep:  470 | Steps: 1000 | Reward:  7593.45
+---------------------------------------
+Evaluation over 10 episodes: 7970.375
+---------------------------------------
+Total T:  471000 | Ep:  471 | Steps: 1000 | Reward:  7757.13
+Total T:  472000 | Ep:  472 | Steps: 1000 | Reward:  7799.32
+Total T:  473000 | Ep:  473 | Steps: 1000 | Reward:  7642.76
+Total T:  474000 | Ep:  474 | Steps: 1000 | Reward:  7810.68
+Total T:  475000 | Ep:  475 | Steps: 1000 | Reward:  7809.28
+Total T:  476000 | Ep:  476 | Steps: 1000 | Reward:  7643.36
+Total T:  477000 | Ep:  477 | Steps: 1000 | Reward:  7726.23
+Total T:  478000 | Ep:  478 | Steps: 1000 | Reward:  7702.92
+Total T:  479000 | Ep:  479 | Steps: 1000 | Reward:  7736.16
+Total T:  480000 | Ep:  480 | Steps: 1000 | Reward:  5238.18
+---------------------------------------
+Evaluation over 10 episodes: 8317.120
+---------------------------------------
+Total T:  481000 | Ep:  481 | Steps: 1000 | Reward:  7618.43
+Total T:  482000 | Ep:  482 | Steps: 1000 | Reward:  7677.82
+Total T:  483000 | Ep:  483 | Steps: 1000 | Reward:  7738.74
+Total T:  484000 | Ep:  484 | Steps: 1000 | Reward:  7803.06
+Total T:  485000 | Ep:  485 | Steps: 1000 | Reward:  7554.12
+Total T:  486000 | Ep:  486 | Steps: 1000 | Reward:  7746.22
+Total T:  487000 | Ep:  487 | Steps: 1000 | Reward:  7684.33
+Total T:  488000 | Ep:  488 | Steps: 1000 | Reward:  7732.74
+Total T:  489000 | Ep:  489 | Steps: 1000 | Reward:  7682.90
+Total T:  490000 | Ep:  490 | Steps: 1000 | Reward:  7500.85
+---------------------------------------
+Evaluation over 10 episodes: 8360.374
+---------------------------------------
+Total T:  491000 | Ep:  491 | Steps: 1000 | Reward:  7684.18
+Total T:  492000 | Ep:  492 | Steps: 1000 | Reward:  7834.68
+Total T:  493000 | Ep:  493 | Steps: 1000 | Reward:  7947.20
+Total T:  494000 | Ep:  494 | Steps: 1000 | Reward:  7792.57
+Total T:  495000 | Ep:  495 | Steps: 1000 | Reward:  7941.97
+Total T:  496000 | Ep:  496 | Steps: 1000 | Reward:  7815.16
+Total T:  497000 | Ep:  497 | Steps: 1000 | Reward:  7790.86
+Total T:  498000 | Ep:  498 | Steps: 1000 | Reward:  7939.18
+Total T:  499000 | Ep:  499 | Steps: 1000 | Reward:  8071.23
+Total T:  500000 | Ep:  500 | Steps: 1000 | Reward:  7717.03
+---------------------------------------
+Evaluation over 10 episodes: 8295.341
+---------------------------------------
+Total T:  501000 | Ep:  501 | Steps: 1000 | Reward:  7829.57
+Total T:  502000 | Ep:  502 | Steps: 1000 | Reward:  7694.71
+Total T:  503000 | Ep:  503 | Steps: 1000 | Reward:  7843.23
+Total T:  504000 | Ep:  504 | Steps: 1000 | Reward:  7966.63
+Total T:  505000 | Ep:  505 | Steps: 1000 | Reward:  7929.18
+Total T:  506000 | Ep:  506 | Steps: 1000 | Reward:  7964.62
+Total T:  507000 | Ep:  507 | Steps: 1000 | Reward:  7748.03
+Total T:  508000 | Ep:  508 | Steps: 1000 | Reward:  7826.07
+Total T:  509000 | Ep:  509 | Steps: 1000 | Reward:  7841.85
+Total T:  510000 | Ep:  510 | Steps: 1000 | Reward:  8214.14
+---------------------------------------
+Evaluation over 10 episodes: 8510.780
+---------------------------------------
+Total T:  511000 | Ep:  511 | Steps: 1000 | Reward:  7961.30
+Total T:  512000 | Ep:  512 | Steps: 1000 | Reward:  7987.23
+Total T:  513000 | Ep:  513 | Steps: 1000 | Reward:  7723.81
+Total T:  514000 | Ep:  514 | Steps: 1000 | Reward:  8114.07
+Total T:  515000 | Ep:  515 | Steps: 1000 | Reward:  7971.93
+Total T:  516000 | Ep:  516 | Steps: 1000 | Reward:  8076.91
+Total T:  517000 | Ep:  517 | Steps: 1000 | Reward:  8115.94
+Total T:  518000 | Ep:  518 | Steps: 1000 | Reward:  8165.74
+Total T:  519000 | Ep:  519 | Steps: 1000 | Reward:  8090.59
+Total T:  520000 | Ep:  520 | Steps: 1000 | Reward:  8149.99
+---------------------------------------
+Evaluation over 10 episodes: 8542.960
+---------------------------------------
+Total T:  521000 | Ep:  521 | Steps: 1000 | Reward:  7928.05
+Total T:  522000 | Ep:  522 | Steps: 1000 | Reward:  8092.46
+Total T:  523000 | Ep:  523 | Steps: 1000 | Reward:  8006.91
+Total T:  524000 | Ep:  524 | Steps: 1000 | Reward:  7935.45
+Total T:  525000 | Ep:  525 | Steps: 1000 | Reward:  8032.97
+Total T:  526000 | Ep:  526 | Steps: 1000 | Reward:  7954.97
+Total T:  527000 | Ep:  527 | Steps: 1000 | Reward:  7820.26
+Total T:  528000 | Ep:  528 | Steps: 1000 | Reward:  7963.05
+Total T:  529000 | Ep:  529 | Steps: 1000 | Reward:  8278.43
+Total T:  530000 | Ep:  530 | Steps: 1000 | Reward:  8076.26
+---------------------------------------
+Evaluation over 10 episodes: 8499.182
+---------------------------------------
+Total T:  531000 | Ep:  531 | Steps: 1000 | Reward:  8064.42
+Total T:  532000 | Ep:  532 | Steps: 1000 | Reward:  8097.63
+Total T:  533000 | Ep:  533 | Steps: 1000 | Reward:  8102.80
+Total T:  534000 | Ep:  534 | Steps: 1000 | Reward:  7951.29
+Total T:  535000 | Ep:  535 | Steps: 1000 | Reward:  8249.59
+Total T:  536000 | Ep:  536 | Steps: 1000 | Reward:  8233.43
+Total T:  537000 | Ep:  537 | Steps: 1000 | Reward:  8117.65
+Total T:  538000 | Ep:  538 | Steps: 1000 | Reward:  7920.55
+Total T:  539000 | Ep:  539 | Steps: 1000 | Reward:  8190.55
+Total T:  540000 | Ep:  540 | Steps: 1000 | Reward:  8253.56
+---------------------------------------
+Evaluation over 10 episodes: 8716.067
+---------------------------------------
+Total T:  541000 | Ep:  541 | Steps: 1000 | Reward:  8425.97
+Total T:  542000 | Ep:  542 | Steps: 1000 | Reward:  8227.25
+Total T:  543000 | Ep:  543 | Steps: 1000 | Reward:  8000.04
+Total T:  544000 | Ep:  544 | Steps: 1000 | Reward:  8158.70
+Total T:  545000 | Ep:  545 | Steps: 1000 | Reward:  7788.38
+Total T:  546000 | Ep:  546 | Steps: 1000 | Reward:  8282.27
+Total T:  547000 | Ep:  547 | Steps: 1000 | Reward:  8102.01
+Total T:  548000 | Ep:  548 | Steps: 1000 | Reward:  8128.38
+Total T:  549000 | Ep:  549 | Steps: 1000 | Reward:  8192.85
+Total T:  550000 | Ep:  550 | Steps: 1000 | Reward:  8123.17
+---------------------------------------
+Evaluation over 10 episodes: 8859.393
+---------------------------------------
+Total T:  551000 | Ep:  551 | Steps: 1000 | Reward:  8014.86
+Total T:  552000 | Ep:  552 | Steps: 1000 | Reward:  8180.42
+Total T:  553000 | Ep:  553 | Steps: 1000 | Reward:  8281.88
+Total T:  554000 | Ep:  554 | Steps: 1000 | Reward:  8054.05
+Total T:  555000 | Ep:  555 | Steps: 1000 | Reward:  7995.16
+Total T:  556000 | Ep:  556 | Steps: 1000 | Reward:  8159.31
+Total T:  557000 | Ep:  557 | Steps: 1000 | Reward:  8142.28
+Total T:  558000 | Ep:  558 | Steps: 1000 | Reward:  8253.16
+Total T:  559000 | Ep:  559 | Steps: 1000 | Reward:  8048.76
+Total T:  560000 | Ep:  560 | Steps: 1000 | Reward:  8184.72
+---------------------------------------
+Evaluation over 10 episodes: 8660.392
+---------------------------------------
+Total T:  561000 | Ep:  561 | Steps: 1000 | Reward:  8145.24
+Total T:  562000 | Ep:  562 | Steps: 1000 | Reward:  8282.76
+Total T:  563000 | Ep:  563 | Steps: 1000 | Reward:  8318.24
+Total T:  564000 | Ep:  564 | Steps: 1000 | Reward:  8037.34
+Total T:  565000 | Ep:  565 | Steps: 1000 | Reward:  8196.54
+Total T:  566000 | Ep:  566 | Steps: 1000 | Reward:  8255.99
+Total T:  567000 | Ep:  567 | Steps: 1000 | Reward:  8433.84
+Total T:  568000 | Ep:  568 | Steps: 1000 | Reward:  8011.19
+Total T:  569000 | Ep:  569 | Steps: 1000 | Reward:  8371.47
+Total T:  570000 | Ep:  570 | Steps: 1000 | Reward:  8584.97
+---------------------------------------
+Evaluation over 10 episodes: 8858.846
+---------------------------------------
+Total T:  571000 | Ep:  571 | Steps: 1000 | Reward:  8164.10
+Total T:  572000 | Ep:  572 | Steps: 1000 | Reward:  8172.38
+Total T:  573000 | Ep:  573 | Steps: 1000 | Reward:  8231.39
+Total T:  574000 | Ep:  574 | Steps: 1000 | Reward:  8311.58
+Total T:  575000 | Ep:  575 | Steps: 1000 | Reward:  8365.57
+Total T:  576000 | Ep:  576 | Steps: 1000 | Reward:  8512.21
+Total T:  577000 | Ep:  577 | Steps: 1000 | Reward:  7970.08
+Total T:  578000 | Ep:  578 | Steps: 1000 | Reward:  8267.73
+Total T:  579000 | Ep:  579 | Steps: 1000 | Reward:  8336.01
+Total T:  580000 | Ep:  580 | Steps: 1000 | Reward:  8433.66
+---------------------------------------
+Evaluation over 10 episodes: 8522.477
+---------------------------------------
+Total T:  581000 | Ep:  581 | Steps: 1000 | Reward:  8237.48
+Total T:  582000 | Ep:  582 | Steps: 1000 | Reward:  8196.00
+Total T:  583000 | Ep:  583 | Steps: 1000 | Reward:  8308.76
+Total T:  584000 | Ep:  584 | Steps: 1000 | Reward:  8425.29
+Total T:  585000 | Ep:  585 | Steps: 1000 | Reward:  8293.62
+Total T:  586000 | Ep:  586 | Steps: 1000 | Reward:  8236.56
+Total T:  587000 | Ep:  587 | Steps: 1000 | Reward:  8406.01
+Total T:  588000 | Ep:  588 | Steps: 1000 | Reward:  8374.85
+Total T:  589000 | Ep:  589 | Steps: 1000 | Reward:  8336.98
+Total T:  590000 | Ep:  590 | Steps: 1000 | Reward:  8324.74
+---------------------------------------
+Evaluation over 10 episodes: 8691.752
+---------------------------------------
+Total T:  591000 | Ep:  591 | Steps: 1000 | Reward:  8290.44
+Total T:  592000 | Ep:  592 | Steps: 1000 | Reward:  8404.34
+Total T:  593000 | Ep:  593 | Steps: 1000 | Reward:  8380.15
+Total T:  594000 | Ep:  594 | Steps: 1000 | Reward:  8373.62
+Total T:  595000 | Ep:  595 | Steps: 1000 | Reward:  8455.65
+Total T:  596000 | Ep:  596 | Steps: 1000 | Reward:  8435.44
+Total T:  597000 | Ep:  597 | Steps: 1000 | Reward:  8445.28
+Total T:  598000 | Ep:  598 | Steps: 1000 | Reward:  8653.51
+Total T:  599000 | Ep:  599 | Steps: 1000 | Reward:  8102.30
+Total T:  600000 | Ep:  600 | Steps: 1000 | Reward:  8287.52
+---------------------------------------
+Evaluation over 10 episodes: 8961.833
+---------------------------------------
+Total T:  601000 | Ep:  601 | Steps: 1000 | Reward:  8675.40
+Total T:  602000 | Ep:  602 | Steps: 1000 | Reward:  3152.07
+Total T:  603000 | Ep:  603 | Steps: 1000 | Reward:  8365.11
+Total T:  604000 | Ep:  604 | Steps: 1000 | Reward:  8540.24
+Total T:  605000 | Ep:  605 | Steps: 1000 | Reward:  8360.35
+Total T:  606000 | Ep:  606 | Steps: 1000 | Reward:  8273.36
+Total T:  607000 | Ep:  607 | Steps: 1000 | Reward:  8487.46
+Total T:  608000 | Ep:  608 | Steps: 1000 | Reward:  8419.20
+Total T:  609000 | Ep:  609 | Steps: 1000 | Reward:  8336.91
+Total T:  610000 | Ep:  610 | Steps: 1000 | Reward:  8466.55
+---------------------------------------
+Evaluation over 10 episodes: 9170.393
+---------------------------------------
+Total T:  611000 | Ep:  611 | Steps: 1000 | Reward:  8557.37
+Total T:  612000 | Ep:  612 | Steps: 1000 | Reward:  8389.49
+Total T:  613000 | Ep:  613 | Steps: 1000 | Reward:  8467.04
+Total T:  614000 | Ep:  614 | Steps: 1000 | Reward:  8360.17
+Total T:  615000 | Ep:  615 | Steps: 1000 | Reward:  8249.27
+Total T:  616000 | Ep:  616 | Steps: 1000 | Reward:  8461.76
+Total T:  617000 | Ep:  617 | Steps: 1000 | Reward:  8704.33
+Total T:  618000 | Ep:  618 | Steps: 1000 | Reward:  8496.81
+Total T:  619000 | Ep:  619 | Steps: 1000 | Reward:  8504.38
+Total T:  620000 | Ep:  620 | Steps: 1000 | Reward:  8354.35
+---------------------------------------
+Evaluation over 10 episodes: 9107.050
+---------------------------------------
+Total T:  621000 | Ep:  621 | Steps: 1000 | Reward:  8448.93
+Total T:  622000 | Ep:  622 | Steps: 1000 | Reward:  8690.09
+Total T:  623000 | Ep:  623 | Steps: 1000 | Reward:  8481.75
+Total T:  624000 | Ep:  624 | Steps: 1000 | Reward:  8431.89
+Total T:  625000 | Ep:  625 | Steps: 1000 | Reward:  8479.42
+Total T:  626000 | Ep:  626 | Steps: 1000 | Reward:  8386.35
+Total T:  627000 | Ep:  627 | Steps: 1000 | Reward:  8451.90
+Total T:  628000 | Ep:  628 | Steps: 1000 | Reward:  8574.38
+Total T:  629000 | Ep:  629 | Steps: 1000 | Reward:  8483.28
+Total T:  630000 | Ep:  630 | Steps: 1000 | Reward:  8295.87
+---------------------------------------
+Evaluation over 10 episodes: 9071.886
+---------------------------------------
+Total T:  631000 | Ep:  631 | Steps: 1000 | Reward:  8511.53
+Total T:  632000 | Ep:  632 | Steps: 1000 | Reward:  8620.48
+Total T:  633000 | Ep:  633 | Steps: 1000 | Reward:  8591.45
+Total T:  634000 | Ep:  634 | Steps: 1000 | Reward:  1300.34
+Total T:  635000 | Ep:  635 | Steps: 1000 | Reward:  8461.57
+Total T:  636000 | Ep:  636 | Steps: 1000 | Reward:  8478.85
+Total T:  637000 | Ep:  637 | Steps: 1000 | Reward:  8443.08
+Total T:  638000 | Ep:  638 | Steps: 1000 | Reward:  8538.00
+Total T:  639000 | Ep:  639 | Steps: 1000 | Reward:  8674.93
+Total T:  640000 | Ep:  640 | Steps: 1000 | Reward:  8591.64
+---------------------------------------
+Evaluation over 10 episodes: 9314.801
+---------------------------------------
+Total T:  641000 | Ep:  641 | Steps: 1000 | Reward:  8718.46
+Total T:  642000 | Ep:  642 | Steps: 1000 | Reward:  8252.46
+Total T:  643000 | Ep:  643 | Steps: 1000 | Reward:  8688.96
+Total T:  644000 | Ep:  644 | Steps: 1000 | Reward:  8839.33
+Total T:  645000 | Ep:  645 | Steps: 1000 | Reward:  8739.42
+Total T:  646000 | Ep:  646 | Steps: 1000 | Reward:  8735.88
+Total T:  647000 | Ep:  647 | Steps: 1000 | Reward:  8686.76
+Total T:  648000 | Ep:  648 | Steps: 1000 | Reward:  8490.51
+Total T:  649000 | Ep:  649 | Steps: 1000 | Reward:  8547.54
+Total T:  650000 | Ep:  650 | Steps: 1000 | Reward:  8714.55
+---------------------------------------
+Evaluation over 10 episodes: 9533.124
+---------------------------------------
+Total T:  651000 | Ep:  651 | Steps: 1000 | Reward:  8910.85
+Total T:  652000 | Ep:  652 | Steps: 1000 | Reward:  8523.48
+Total T:  653000 | Ep:  653 | Steps: 1000 | Reward:  8769.04
+Total T:  654000 | Ep:  654 | Steps: 1000 | Reward:  8658.30
+Total T:  655000 | Ep:  655 | Steps: 1000 | Reward:  8349.30
+Total T:  656000 | Ep:  656 | Steps: 1000 | Reward:  8639.10
+Total T:  657000 | Ep:  657 | Steps: 1000 | Reward:  8591.03
+Total T:  658000 | Ep:  658 | Steps: 1000 | Reward:  8890.67
+Total T:  659000 | Ep:  659 | Steps: 1000 | Reward:  8712.17
+Total T:  660000 | Ep:  660 | Steps: 1000 | Reward:  3491.54
+---------------------------------------
+Evaluation over 10 episodes: 9273.137
+---------------------------------------
+Total T:  661000 | Ep:  661 | Steps: 1000 | Reward:  8652.23
+Total T:  662000 | Ep:  662 | Steps: 1000 | Reward:  8450.36
+Total T:  663000 | Ep:  663 | Steps: 1000 | Reward:  8731.95
+Total T:  664000 | Ep:  664 | Steps: 1000 | Reward:  8582.63
+Total T:  665000 | Ep:  665 | Steps: 1000 | Reward:  8730.31
+Total T:  666000 | Ep:  666 | Steps: 1000 | Reward:  8644.48
+Total T:  667000 | Ep:  667 | Steps: 1000 | Reward:  8783.67
+Total T:  668000 | Ep:  668 | Steps: 1000 | Reward:  8546.97
+Total T:  669000 | Ep:  669 | Steps: 1000 | Reward:  8979.23
+Total T:  670000 | Ep:  670 | Steps: 1000 | Reward:  8487.96
+---------------------------------------
+Evaluation over 10 episodes: 9204.809
+---------------------------------------
+Total T:  671000 | Ep:  671 | Steps: 1000 | Reward:  8525.48
+Total T:  672000 | Ep:  672 | Steps: 1000 | Reward:  8476.87
+Total T:  673000 | Ep:  673 | Steps: 1000 | Reward:  8812.17
+Total T:  674000 | Ep:  674 | Steps: 1000 | Reward:  8574.72
+Total T:  675000 | Ep:  675 | Steps: 1000 | Reward:  8921.74
+Total T:  676000 | Ep:  676 | Steps: 1000 | Reward:  8908.38
+Total T:  677000 | Ep:  677 | Steps: 1000 | Reward:  8739.99
+Total T:  678000 | Ep:  678 | Steps: 1000 | Reward:  8563.97
+Total T:  679000 | Ep:  679 | Steps: 1000 | Reward:  8551.46
+Total T:  680000 | Ep:  680 | Steps: 1000 | Reward:  8814.46
+---------------------------------------
+Evaluation over 10 episodes: 9463.408
+---------------------------------------
+Total T:  681000 | Ep:  681 | Steps: 1000 | Reward:  8630.77
+Total T:  682000 | Ep:  682 | Steps: 1000 | Reward:  8662.74
+Total T:  683000 | Ep:  683 | Steps: 1000 | Reward:  8734.46
+Total T:  684000 | Ep:  684 | Steps: 1000 | Reward:  8884.56
+Total T:  685000 | Ep:  685 | Steps: 1000 | Reward:  8775.43
+Total T:  686000 | Ep:  686 | Steps: 1000 | Reward:  8667.76
+Total T:  687000 | Ep:  687 | Steps: 1000 | Reward:  8537.41
+Total T:  688000 | Ep:  688 | Steps: 1000 | Reward:  8761.03
+Total T:  689000 | Ep:  689 | Steps: 1000 | Reward:  8850.06
+Total T:  690000 | Ep:  690 | Steps: 1000 | Reward:  8557.09
+---------------------------------------
+Evaluation over 10 episodes: 9451.199
+---------------------------------------
+Total T:  691000 | Ep:  691 | Steps: 1000 | Reward:  8661.88
+Total T:  692000 | Ep:  692 | Steps: 1000 | Reward:  8750.13
+Total T:  693000 | Ep:  693 | Steps: 1000 | Reward:  8511.56
+Total T:  694000 | Ep:  694 | Steps: 1000 | Reward:  8475.18
+Total T:  695000 | Ep:  695 | Steps: 1000 | Reward:  8950.38
+Total T:  696000 | Ep:  696 | Steps: 1000 | Reward:  8884.31
+Total T:  697000 | Ep:  697 | Steps: 1000 | Reward:  8444.95
+Total T:  698000 | Ep:  698 | Steps: 1000 | Reward:  8719.67
+Total T:  699000 | Ep:  699 | Steps: 1000 | Reward:  9079.08
+Total T:  700000 | Ep:  700 | Steps: 1000 | Reward:  8878.30
+---------------------------------------
+Evaluation over 10 episodes: 9735.739
+---------------------------------------
+Total T:  701000 | Ep:  701 | Steps: 1000 | Reward:  8739.62
+Total T:  702000 | Ep:  702 | Steps: 1000 | Reward:  9045.57
+Total T:  703000 | Ep:  703 | Steps: 1000 | Reward:  8726.26
+Total T:  704000 | Ep:  704 | Steps: 1000 | Reward:  8765.92
+Total T:  705000 | Ep:  705 | Steps: 1000 | Reward:  8920.47
+Total T:  706000 | Ep:  706 | Steps: 1000 | Reward:  8618.66
+Total T:  707000 | Ep:  707 | Steps: 1000 | Reward:  8838.81
+Total T:  708000 | Ep:  708 | Steps: 1000 | Reward:  8759.23
+Total T:  709000 | Ep:  709 | Steps: 1000 | Reward:  8862.98
+Total T:  710000 | Ep:  710 | Steps: 1000 | Reward:  8644.25
+---------------------------------------
+Evaluation over 10 episodes: 8853.879
+---------------------------------------
+Total T:  711000 | Ep:  711 | Steps: 1000 | Reward:  8912.05
+Total T:  712000 | Ep:  712 | Steps: 1000 | Reward:  8787.71
+Total T:  713000 | Ep:  713 | Steps: 1000 | Reward:  8794.75
+Total T:  714000 | Ep:  714 | Steps: 1000 | Reward:  9013.99
+Total T:  715000 | Ep:  715 | Steps: 1000 | Reward:  8718.75
+Total T:  716000 | Ep:  716 | Steps: 1000 | Reward:  8805.14
+Total T:  717000 | Ep:  717 | Steps: 1000 | Reward:  8747.21
+Total T:  718000 | Ep:  718 | Steps: 1000 | Reward:  8578.98
+Total T:  719000 | Ep:  719 | Steps: 1000 | Reward:  8838.79
+Total T:  720000 | Ep:  720 | Steps: 1000 | Reward:  8956.70
+---------------------------------------
+Evaluation over 10 episodes: 9784.680
+---------------------------------------
+Total T:  721000 | Ep:  721 | Steps: 1000 | Reward:  8772.20
+Total T:  722000 | Ep:  722 | Steps: 1000 | Reward:  8804.29
+Total T:  723000 | Ep:  723 | Steps: 1000 | Reward:  5002.62
+Total T:  724000 | Ep:  724 | Steps: 1000 | Reward:  8880.42
+Total T:  725000 | Ep:  725 | Steps: 1000 | Reward:  8832.74
+Total T:  726000 | Ep:  726 | Steps: 1000 | Reward:  7627.09
+Total T:  727000 | Ep:  727 | Steps: 1000 | Reward:  8908.77
+Total T:  728000 | Ep:  728 | Steps: 1000 | Reward:  9033.40
+Total T:  729000 | Ep:  729 | Steps: 1000 | Reward:  8941.09
+Total T:  730000 | Ep:  730 | Steps: 1000 | Reward:  8896.19
+---------------------------------------
+Evaluation over 10 episodes: 9667.698
+---------------------------------------
+Total T:  731000 | Ep:  731 | Steps: 1000 | Reward:  8842.19
+Total T:  732000 | Ep:  732 | Steps: 1000 | Reward:  8816.08
+Total T:  733000 | Ep:  733 | Steps: 1000 | Reward:  9070.22
+Total T:  734000 | Ep:  734 | Steps: 1000 | Reward:  8919.20
+Total T:  735000 | Ep:  735 | Steps: 1000 | Reward:  8818.11
+Total T:  736000 | Ep:  736 | Steps: 1000 | Reward:  8980.39
+Total T:  737000 | Ep:  737 | Steps: 1000 | Reward:  8879.34
+Total T:  738000 | Ep:  738 | Steps: 1000 | Reward:  8880.64
+Total T:  739000 | Ep:  739 | Steps: 1000 | Reward:  9059.46
+Total T:  740000 | Ep:  740 | Steps: 1000 | Reward:  9004.86
+---------------------------------------
+Evaluation over 10 episodes: 9792.307
+---------------------------------------
+Total T:  741000 | Ep:  741 | Steps: 1000 | Reward:  9054.89
+Total T:  742000 | Ep:  742 | Steps: 1000 | Reward:  8376.34
+Total T:  743000 | Ep:  743 | Steps: 1000 | Reward:  8919.84
+Total T:  744000 | Ep:  744 | Steps: 1000 | Reward:  8896.24
+Total T:  745000 | Ep:  745 | Steps: 1000 | Reward:  8960.63
+Total T:  746000 | Ep:  746 | Steps: 1000 | Reward:  8963.29
+Total T:  747000 | Ep:  747 | Steps: 1000 | Reward:  8962.22
+Total T:  748000 | Ep:  748 | Steps: 1000 | Reward:  9172.15
+Total T:  749000 | Ep:  749 | Steps: 1000 | Reward:  8817.35
+Total T:  750000 | Ep:  750 | Steps: 1000 | Reward:  8950.50
+---------------------------------------
+Evaluation over 10 episodes: 9671.652
+---------------------------------------
+Total T:  751000 | Ep:  751 | Steps: 1000 | Reward:  8807.07
+Total T:  752000 | Ep:  752 | Steps: 1000 | Reward:  9103.25
+Total T:  753000 | Ep:  753 | Steps: 1000 | Reward:  9148.61
+Total T:  754000 | Ep:  754 | Steps: 1000 | Reward:  8805.44
+Total T:  755000 | Ep:  755 | Steps: 1000 | Reward:  9069.28
+Total T:  756000 | Ep:  756 | Steps: 1000 | Reward:  9009.76
+Total T:  757000 | Ep:  757 | Steps: 1000 | Reward:  9038.68
+Total T:  758000 | Ep:  758 | Steps: 1000 | Reward:  8938.87
+Total T:  759000 | Ep:  759 | Steps: 1000 | Reward:  8786.89
+Total T:  760000 | Ep:  760 | Steps: 1000 | Reward:  8931.39
+---------------------------------------
+Evaluation over 10 episodes: 9411.025
+---------------------------------------
+Total T:  761000 | Ep:  761 | Steps: 1000 | Reward:  8758.71
+Total T:  762000 | Ep:  762 | Steps: 1000 | Reward:  9122.55
+Total T:  763000 | Ep:  763 | Steps: 1000 | Reward:  9116.56
+Total T:  764000 | Ep:  764 | Steps: 1000 | Reward:  9038.32
+Total T:  765000 | Ep:  765 | Steps: 1000 | Reward:  9062.01
+Total T:  766000 | Ep:  766 | Steps: 1000 | Reward:  9144.04
+Total T:  767000 | Ep:  767 | Steps: 1000 | Reward:  9161.76
+Total T:  768000 | Ep:  768 | Steps: 1000 | Reward:  9139.09
+Total T:  769000 | Ep:  769 | Steps: 1000 | Reward:  8989.53
+Total T:  770000 | Ep:  770 | Steps: 1000 | Reward:  9393.67
+---------------------------------------
+Evaluation over 10 episodes: 9087.626
+---------------------------------------
+Total T:  771000 | Ep:  771 | Steps: 1000 | Reward:  8868.27
+Total T:  772000 | Ep:  772 | Steps: 1000 | Reward:  9179.30
+Total T:  773000 | Ep:  773 | Steps: 1000 | Reward:  8943.51
+Total T:  774000 | Ep:  774 | Steps: 1000 | Reward:  8829.10
+Total T:  775000 | Ep:  775 | Steps: 1000 | Reward:  9162.57
+Total T:  776000 | Ep:  776 | Steps: 1000 | Reward:  9330.91
+Total T:  777000 | Ep:  777 | Steps: 1000 | Reward:  9158.45
+Total T:  778000 | Ep:  778 | Steps: 1000 | Reward:  9048.66
+Total T:  779000 | Ep:  779 | Steps: 1000 | Reward:  9173.45
+Total T:  780000 | Ep:  780 | Steps: 1000 | Reward:  9181.24
+---------------------------------------
+Evaluation over 10 episodes: 9572.451
+---------------------------------------
+Total T:  781000 | Ep:  781 | Steps: 1000 | Reward:  9101.86
+Total T:  782000 | Ep:  782 | Steps: 1000 | Reward:  9229.55
+Total T:  783000 | Ep:  783 | Steps: 1000 | Reward:  9042.40
+Total T:  784000 | Ep:  784 | Steps: 1000 | Reward:  8957.96
+Total T:  785000 | Ep:  785 | Steps: 1000 | Reward:  9000.58
+Total T:  786000 | Ep:  786 | Steps: 1000 | Reward:  9017.36
+Total T:  787000 | Ep:  787 | Steps: 1000 | Reward:  9123.69
+Total T:  788000 | Ep:  788 | Steps: 1000 | Reward:  9244.11
+Total T:  789000 | Ep:  789 | Steps: 1000 | Reward:  9231.07
+Total T:  790000 | Ep:  790 | Steps: 1000 | Reward:  9272.97
+---------------------------------------
+Evaluation over 10 episodes: 9578.314
+---------------------------------------
+Total T:  791000 | Ep:  791 | Steps: 1000 | Reward:  9347.69
+Total T:  792000 | Ep:  792 | Steps: 1000 | Reward:  9176.42
+Total T:  793000 | Ep:  793 | Steps: 1000 | Reward:  9312.23
+Total T:  794000 | Ep:  794 | Steps: 1000 | Reward:  9338.21
+Total T:  795000 | Ep:  795 | Steps: 1000 | Reward:  8961.72
+Total T:  796000 | Ep:  796 | Steps: 1000 | Reward:  9205.22
+Total T:  797000 | Ep:  797 | Steps: 1000 | Reward:  8979.70
+Total T:  798000 | Ep:  798 | Steps: 1000 | Reward:  9114.81
+Total T:  799000 | Ep:  799 | Steps: 1000 | Reward:  9027.31
+Total T:  800000 | Ep:  800 | Steps: 1000 | Reward:  9369.10
+---------------------------------------
+Evaluation over 10 episodes: 9891.789
+---------------------------------------
+Total T:  801000 | Ep:  801 | Steps: 1000 | Reward:  9171.18
+Total T:  802000 | Ep:  802 | Steps: 1000 | Reward:  9148.09
+Total T:  803000 | Ep:  803 | Steps: 1000 | Reward:  8866.94
+Total T:  804000 | Ep:  804 | Steps: 1000 | Reward:  9233.73
+Total T:  805000 | Ep:  805 | Steps: 1000 | Reward:  9014.46
+Total T:  806000 | Ep:  806 | Steps: 1000 | Reward:  9096.99
+Total T:  807000 | Ep:  807 | Steps: 1000 | Reward:  8943.15
+Total T:  808000 | Ep:  808 | Steps: 1000 | Reward:  9354.68
+Total T:  809000 | Ep:  809 | Steps: 1000 | Reward:  9224.48
+Total T:  810000 | Ep:  810 | Steps: 1000 | Reward:  9127.37
+---------------------------------------
+Evaluation over 10 episodes: 9874.503
+---------------------------------------
+Total T:  811000 | Ep:  811 | Steps: 1000 | Reward:  9173.48
+Total T:  812000 | Ep:  812 | Steps: 1000 | Reward:  9000.26
+Total T:  813000 | Ep:  813 | Steps: 1000 | Reward:  9066.01
+Total T:  814000 | Ep:  814 | Steps: 1000 | Reward:  8894.38
+Total T:  815000 | Ep:  815 | Steps: 1000 | Reward:  9157.93
+Total T:  816000 | Ep:  816 | Steps: 1000 | Reward:  9195.68
+Total T:  817000 | Ep:  817 | Steps: 1000 | Reward:  9035.17
+Total T:  818000 | Ep:  818 | Steps: 1000 | Reward:  9283.44
+Total T:  819000 | Ep:  819 | Steps: 1000 | Reward:  9164.70
+Total T:  820000 | Ep:  820 | Steps: 1000 | Reward:  9114.54
+---------------------------------------
+Evaluation over 10 episodes: 10196.098
+---------------------------------------
+Total T:  821000 | Ep:  821 | Steps: 1000 | Reward:  9448.69
+Total T:  822000 | Ep:  822 | Steps: 1000 | Reward:  9421.64
+Total T:  823000 | Ep:  823 | Steps: 1000 | Reward:  9117.07
+Total T:  824000 | Ep:  824 | Steps: 1000 | Reward:  9371.78
+Total T:  825000 | Ep:  825 | Steps: 1000 | Reward:  9420.23
+Total T:  826000 | Ep:  826 | Steps: 1000 | Reward:  9235.15
+Total T:  827000 | Ep:  827 | Steps: 1000 | Reward:  9338.15
+Total T:  828000 | Ep:  828 | Steps: 1000 | Reward:  9052.58
+Total T:  829000 | Ep:  829 | Steps: 1000 | Reward:  8279.43
+Total T:  830000 | Ep:  830 | Steps: 1000 | Reward:  9176.86
+---------------------------------------
+Evaluation over 10 episodes: 9948.982
+---------------------------------------
+Total T:  831000 | Ep:  831 | Steps: 1000 | Reward:  9308.97
+Total T:  832000 | Ep:  832 | Steps: 1000 | Reward:  9232.68
+Total T:  833000 | Ep:  833 | Steps: 1000 | Reward:  9153.82
+Total T:  834000 | Ep:  834 | Steps: 1000 | Reward:  9343.78
+Total T:  835000 | Ep:  835 | Steps: 1000 | Reward:  9222.05
+Total T:  836000 | Ep:  836 | Steps: 1000 | Reward:  9349.35
+Total T:  837000 | Ep:  837 | Steps: 1000 | Reward:  9247.03
+Total T:  838000 | Ep:  838 | Steps: 1000 | Reward:  9129.54
+Total T:  839000 | Ep:  839 | Steps: 1000 | Reward:  9313.70
+Total T:  840000 | Ep:  840 | Steps: 1000 | Reward:  9293.67
+---------------------------------------
+Evaluation over 10 episodes: 10084.636
+---------------------------------------
+Total T:  841000 | Ep:  841 | Steps: 1000 | Reward:  9225.33
+Total T:  842000 | Ep:  842 | Steps: 1000 | Reward:  9388.41
+Total T:  843000 | Ep:  843 | Steps: 1000 | Reward:  9159.37
+Total T:  844000 | Ep:  844 | Steps: 1000 | Reward:  9290.36
+Total T:  845000 | Ep:  845 | Steps: 1000 | Reward:  9161.00
+Total T:  846000 | Ep:  846 | Steps: 1000 | Reward:  9245.22
+Total T:  847000 | Ep:  847 | Steps: 1000 | Reward:  9593.99
+Total T:  848000 | Ep:  848 | Steps: 1000 | Reward:  9331.57
+Total T:  849000 | Ep:  849 | Steps: 1000 | Reward:  9300.75
+Total T:  850000 | Ep:  850 | Steps: 1000 | Reward:  9223.56
+---------------------------------------
+Evaluation over 10 episodes: 10269.121
+---------------------------------------
+Total T:  851000 | Ep:  851 | Steps: 1000 | Reward:  9422.77
+Total T:  852000 | Ep:  852 | Steps: 1000 | Reward:  9514.42
+Total T:  853000 | Ep:  853 | Steps: 1000 | Reward:  9482.89
+Total T:  854000 | Ep:  854 | Steps: 1000 | Reward:  9045.99
+Total T:  855000 | Ep:  855 | Steps: 1000 | Reward:  9496.82
+Total T:  856000 | Ep:  856 | Steps: 1000 | Reward:  9491.27
+Total T:  857000 | Ep:  857 | Steps: 1000 | Reward:  9407.99
+Total T:  858000 | Ep:  858 | Steps: 1000 | Reward:  9186.64
+Total T:  859000 | Ep:  859 | Steps: 1000 | Reward:  9497.53
+Total T:  860000 | Ep:  860 | Steps: 1000 | Reward:  9036.53
+---------------------------------------
+Evaluation over 10 episodes: 9849.535
+---------------------------------------
+Total T:  861000 | Ep:  861 | Steps: 1000 | Reward:  9198.41
+Total T:  862000 | Ep:  862 | Steps: 1000 | Reward:  3660.78
+Total T:  863000 | Ep:  863 | Steps: 1000 | Reward:  9077.09
+Total T:  864000 | Ep:  864 | Steps: 1000 | Reward:  9322.38
+Total T:  865000 | Ep:  865 | Steps: 1000 | Reward:  9586.19
+Total T:  866000 | Ep:  866 | Steps: 1000 | Reward:  9336.78
+Total T:  867000 | Ep:  867 | Steps: 1000 | Reward:  9378.71
+Total T:  868000 | Ep:  868 | Steps: 1000 | Reward:  9210.62
+Total T:  869000 | Ep:  869 | Steps: 1000 | Reward:  9329.32
+Total T:  870000 | Ep:  870 | Steps: 1000 | Reward:  9553.44
+---------------------------------------
+Evaluation over 10 episodes: 10285.009
+---------------------------------------
+Total T:  871000 | Ep:  871 | Steps: 1000 | Reward:  9501.71
+Total T:  872000 | Ep:  872 | Steps: 1000 | Reward:  9329.99
+Total T:  873000 | Ep:  873 | Steps: 1000 | Reward:  9201.43
+Total T:  874000 | Ep:  874 | Steps: 1000 | Reward:  9299.87
+Total T:  875000 | Ep:  875 | Steps: 1000 | Reward:  9255.22
+Total T:  876000 | Ep:  876 | Steps: 1000 | Reward:  9447.27
+Total T:  877000 | Ep:  877 | Steps: 1000 | Reward:  9535.36
+Total T:  878000 | Ep:  878 | Steps: 1000 | Reward:  9109.59
+Total T:  879000 | Ep:  879 | Steps: 1000 | Reward:  9150.36
+Total T:  880000 | Ep:  880 | Steps: 1000 | Reward:  9410.61
+---------------------------------------
+Evaluation over 10 episodes: 10427.790
+---------------------------------------
+Total T:  881000 | Ep:  881 | Steps: 1000 | Reward:  9365.63
+Total T:  882000 | Ep:  882 | Steps: 1000 | Reward:  9377.96
+Total T:  883000 | Ep:  883 | Steps: 1000 | Reward:  9433.18
+Total T:  884000 | Ep:  884 | Steps: 1000 | Reward:  9202.95
+Total T:  885000 | Ep:  885 | Steps: 1000 | Reward:  9472.68
+Total T:  886000 | Ep:  886 | Steps: 1000 | Reward:  9422.51
+Total T:  887000 | Ep:  887 | Steps: 1000 | Reward:  9536.12
+Total T:  888000 | Ep:  888 | Steps: 1000 | Reward:  9293.30
+Total T:  889000 | Ep:  889 | Steps: 1000 | Reward:  9662.82
+Total T:  890000 | Ep:  890 | Steps: 1000 | Reward:  9357.07
+---------------------------------------
+Evaluation over 10 episodes: 10244.242
+---------------------------------------
+Total T:  891000 | Ep:  891 | Steps: 1000 | Reward:  9364.24
+Total T:  892000 | Ep:  892 | Steps: 1000 | Reward:  9421.50
+Total T:  893000 | Ep:  893 | Steps: 1000 | Reward:  9653.27
+Total T:  894000 | Ep:  894 | Steps: 1000 | Reward:  9359.06
+Total T:  895000 | Ep:  895 | Steps: 1000 | Reward:  9356.71
+Total T:  896000 | Ep:  896 | Steps: 1000 | Reward:  9653.97
+Total T:  897000 | Ep:  897 | Steps: 1000 | Reward:  9476.41
+Total T:  898000 | Ep:  898 | Steps: 1000 | Reward:  9349.03
+Total T:  899000 | Ep:  899 | Steps: 1000 | Reward:  9540.26
+Total T:  900000 | Ep:  900 | Steps: 1000 | Reward:  9331.15
+---------------------------------------
+Evaluation over 10 episodes: 10276.437
+---------------------------------------
+Total T:  901000 | Ep:  901 | Steps: 1000 | Reward:  9471.35
+Total T:  902000 | Ep:  902 | Steps: 1000 | Reward:  9444.10
+Total T:  903000 | Ep:  903 | Steps: 1000 | Reward:  9535.81
+Total T:  904000 | Ep:  904 | Steps: 1000 | Reward:  9401.52
+Total T:  905000 | Ep:  905 | Steps: 1000 | Reward:  9525.46
+Total T:  906000 | Ep:  906 | Steps: 1000 | Reward:  9473.73
+Total T:  907000 | Ep:  907 | Steps: 1000 | Reward:  9307.39
+Total T:  908000 | Ep:  908 | Steps: 1000 | Reward:  9315.15
+Total T:  909000 | Ep:  909 | Steps: 1000 | Reward:  9357.13
+Total T:  910000 | Ep:  910 | Steps: 1000 | Reward:  9456.27
+---------------------------------------
+Evaluation over 10 episodes: 9823.980
+---------------------------------------
+Total T:  911000 | Ep:  911 | Steps: 1000 | Reward:  9131.56
+Total T:  912000 | Ep:  912 | Steps: 1000 | Reward:  9549.59
+Total T:  913000 | Ep:  913 | Steps: 1000 | Reward:  9336.26
+Total T:  914000 | Ep:  914 | Steps: 1000 | Reward:  9448.99
+Total T:  915000 | Ep:  915 | Steps: 1000 | Reward:  9485.17
+Total T:  916000 | Ep:  916 | Steps: 1000 | Reward:  9451.25
+Total T:  917000 | Ep:  917 | Steps: 1000 | Reward:  9802.79
+Total T:  918000 | Ep:  918 | Steps: 1000 | Reward:  9570.64
+Total T:  919000 | Ep:  919 | Steps: 1000 | Reward:  9591.55
+Total T:  920000 | Ep:  920 | Steps: 1000 | Reward:  9407.93
+---------------------------------------
+Evaluation over 10 episodes: 10242.440
+---------------------------------------
+Total T:  921000 | Ep:  921 | Steps: 1000 | Reward:  9460.00
+Total T:  922000 | Ep:  922 | Steps: 1000 | Reward:  9528.82
+Total T:  923000 | Ep:  923 | Steps: 1000 | Reward:  9306.49
+Total T:  924000 | Ep:  924 | Steps: 1000 | Reward:  9451.14
+Total T:  925000 | Ep:  925 | Steps: 1000 | Reward:  9365.86
+Total T:  926000 | Ep:  926 | Steps: 1000 | Reward:  9486.42
+Total T:  927000 | Ep:  927 | Steps: 1000 | Reward:  9297.20
+Total T:  928000 | Ep:  928 | Steps: 1000 | Reward:  9500.79
+Total T:  929000 | Ep:  929 | Steps: 1000 | Reward:  9380.79
+Total T:  930000 | Ep:  930 | Steps: 1000 | Reward:  9359.74
+---------------------------------------
+Evaluation over 10 episodes: 9908.151
+---------------------------------------
+Total T:  931000 | Ep:  931 | Steps: 1000 | Reward:  9463.05
+Total T:  932000 | Ep:  932 | Steps: 1000 | Reward:  9555.61
+Total T:  933000 | Ep:  933 | Steps: 1000 | Reward:  9675.03
+Total T:  934000 | Ep:  934 | Steps: 1000 | Reward:  9406.14
+Total T:  935000 | Ep:  935 | Steps: 1000 | Reward:  9418.60
+Total T:  936000 | Ep:  936 | Steps: 1000 | Reward:  9638.01
+Total T:  937000 | Ep:  937 | Steps: 1000 | Reward:  9405.02
+Total T:  938000 | Ep:  938 | Steps: 1000 | Reward:  9610.74
+Total T:  939000 | Ep:  939 | Steps: 1000 | Reward:  9524.26
+Total T:  940000 | Ep:  940 | Steps: 1000 | Reward:  9728.95
+---------------------------------------
+Evaluation over 10 episodes: 10311.736
+---------------------------------------
+Total T:  941000 | Ep:  941 | Steps: 1000 | Reward:  9639.07
+Total T:  942000 | Ep:  942 | Steps: 1000 | Reward:  9501.52
+Total T:  943000 | Ep:  943 | Steps: 1000 | Reward:  9702.76
+Total T:  944000 | Ep:  944 | Steps: 1000 | Reward:  9468.99
+Total T:  945000 | Ep:  945 | Steps: 1000 | Reward:  9583.26
+Total T:  946000 | Ep:  946 | Steps: 1000 | Reward:  9387.28
+Total T:  947000 | Ep:  947 | Steps: 1000 | Reward:  9736.53
+Total T:  948000 | Ep:  948 | Steps: 1000 | Reward:  9485.51
+Total T:  949000 | Ep:  949 | Steps: 1000 | Reward:  9709.06
+Total T:  950000 | Ep:  950 | Steps: 1000 | Reward:  9491.87
+---------------------------------------
+Evaluation over 10 episodes: 10123.948
+---------------------------------------
+Total T:  951000 | Ep:  951 | Steps: 1000 | Reward:  9546.51
+Total T:  952000 | Ep:  952 | Steps: 1000 | Reward:  9818.15
+Total T:  953000 | Ep:  953 | Steps: 1000 | Reward:  9663.07
+Total T:  954000 | Ep:  954 | Steps: 1000 | Reward:  9534.03
+Total T:  955000 | Ep:  955 | Steps: 1000 | Reward:  9572.96
+Total T:  956000 | Ep:  956 | Steps: 1000 | Reward:  9591.64
+Total T:  957000 | Ep:  957 | Steps: 1000 | Reward:  9476.17
+Total T:  958000 | Ep:  958 | Steps: 1000 | Reward:  9539.37
+Total T:  959000 | Ep:  959 | Steps: 1000 | Reward:  9631.22
+Total T:  960000 | Ep:  960 | Steps: 1000 | Reward:  9497.94
+---------------------------------------
+Evaluation over 10 episodes: 10472.955
+---------------------------------------
+Total T:  961000 | Ep:  961 | Steps: 1000 | Reward:  9647.27
+Total T:  962000 | Ep:  962 | Steps: 1000 | Reward:  9797.16
+Total T:  963000 | Ep:  963 | Steps: 1000 | Reward:  9736.18
+Total T:  964000 | Ep:  964 | Steps: 1000 | Reward:  9586.96
+Total T:  965000 | Ep:  965 | Steps: 1000 | Reward:  9620.55
+Total T:  966000 | Ep:  966 | Steps: 1000 | Reward:  9329.48
+Total T:  967000 | Ep:  967 | Steps: 1000 | Reward:  9539.92
+Total T:  968000 | Ep:  968 | Steps: 1000 | Reward:  9607.17
+Total T:  969000 | Ep:  969 | Steps: 1000 | Reward:  9666.07
+Total T:  970000 | Ep:  970 | Steps: 1000 | Reward:  9531.61
+---------------------------------------
+Evaluation over 10 episodes: 10408.151
+---------------------------------------
+Total T:  971000 | Ep:  971 | Steps: 1000 | Reward:  9536.86
+Total T:  972000 | Ep:  972 | Steps: 1000 | Reward:  9246.56
+Total T:  973000 | Ep:  973 | Steps: 1000 | Reward:  9408.22
+Total T:  974000 | Ep:  974 | Steps: 1000 | Reward:  9441.67
+Total T:  975000 | Ep:  975 | Steps: 1000 | Reward:  9706.91
+Total T:  976000 | Ep:  976 | Steps: 1000 | Reward:  9666.67
+Total T:  977000 | Ep:  977 | Steps: 1000 | Reward:  4948.69
+Total T:  978000 | Ep:  978 | Steps: 1000 | Reward:  9763.01
+Total T:  979000 | Ep:  979 | Steps: 1000 | Reward:  9754.58
+Total T:  980000 | Ep:  980 | Steps: 1000 | Reward:  9654.79
+---------------------------------------
+Evaluation over 10 episodes: 10344.752
+---------------------------------------
+Total T:  981000 | Ep:  981 | Steps: 1000 | Reward:  9771.99
+Total T:  982000 | Ep:  982 | Steps: 1000 | Reward:  9544.05
+Total T:  983000 | Ep:  983 | Steps: 1000 | Reward:  9338.43
+Total T:  984000 | Ep:  984 | Steps: 1000 | Reward:  9378.91
+Total T:  985000 | Ep:  985 | Steps: 1000 | Reward:  9440.72
+Total T:  986000 | Ep:  986 | Steps: 1000 | Reward:  9793.45
+Total T:  987000 | Ep:  987 | Steps: 1000 | Reward:  9716.58
+Total T:  988000 | Ep:  988 | Steps: 1000 | Reward:  9824.64
+Total T:  989000 | Ep:  989 | Steps: 1000 | Reward:  9524.18
+Total T:  990000 | Ep:  990 | Steps: 1000 | Reward:  9496.01
+---------------------------------------
+Evaluation over 10 episodes: 10337.011
+---------------------------------------
+Total T:  991000 | Ep:  991 | Steps: 1000 | Reward:  9469.81
+Total T:  992000 | Ep:  992 | Steps: 1000 | Reward:  9437.36
+Total T:  993000 | Ep:  993 | Steps: 1000 | Reward:  9679.67
+Total T:  994000 | Ep:  994 | Steps: 1000 | Reward:  9500.78
+Total T:  995000 | Ep:  995 | Steps: 1000 | Reward:  9597.93
+Total T:  996000 | Ep:  996 | Steps: 1000 | Reward:  9568.71
+Total T:  997000 | Ep:  997 | Steps: 1000 | Reward:  9679.93
+Total T:  998000 | Ep:  998 | Steps: 1000 | Reward:  9790.31
+Total T:  999000 | Ep:  999 | Steps: 1000 | Reward:  9511.43
+Total T: 1000000 | Ep: 1000 | Steps: 1000 | Reward:  9727.82
+---------------------------------------
+Evaluation over 10 episodes: 10399.057
+---------------------------------------
+
+[main] Model saved:
+        actor  -> /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/model_actor
+        critic -> /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/model_critic
+[main] Training history -> /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/episode_rewards.csv
+[main] Eval history     -> /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/eval_rewards.csv
+[main] Summary          -> /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/summary.json
+[main] Unified eval -> /home/naida/Desktop/CS515-Deep-RL/results/continuous/td3/halfcheetah-v4/seed_1.npy
+[main] Wallclock    -> /home/naida/Desktop/CS515-Deep-RL/results/wallclock/continuous/td3/halfcheetah-v4/seed_1.npy
+[plot] Saved plot to /home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10/training_curves.png
+
+============================================================
+Training complete. To watch the trained agent play:
+  python test.py --env_name HalfCheetah-v4 --load_dir "/home/naida/Desktop/CS515-Deep-RL/TD3_algorithm/runs/td3_sweep_halfcheetah-v4_seed1_HalfCheetah-v4_10-05-2026_21-44-10"
+============================================================
