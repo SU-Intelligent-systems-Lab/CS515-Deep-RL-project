@@ -92,7 +92,7 @@ points. Bold is the best per row.
 
 ### Wall-clock cost
 
-<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/a9739ff6-f8ab-4d39-a660-b7fa4db2789f" />
+<img width="728" height="532" alt="Image" src="https://github.com/user-attachments/assets/c2014e7f-af7d-424b-a51b-6f5f8451355e" />
 
 On Hopper-v4 the same 1M environment-step budget takes around 1.5k
 wall-clock seconds for PPO and around 12k seconds for TD3.
